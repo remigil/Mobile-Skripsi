@@ -1,0 +1,2 @@
+export const TRACK_AKTIF = 'TRACK_AKTIF';
+export const TRACK_NONAKTIF = 'TRACK_NONAKTIF';
