@@ -352,7 +352,7 @@ export default props => {
                 marginVertical: heightPercentageToDP('2%'),
               }}>
               <TouchableGradient
-                title={'Tambah Kendaraan'}
+                title={'Kendaraan Baru'}
                 icon={<TambahKendaraan />}
                 onPressData={() =>
                   props.navigation.navigate('tripon.profilKendaraan')

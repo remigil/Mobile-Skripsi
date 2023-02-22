@@ -64,7 +64,7 @@ export default props => {
         containerStyle: {
           paddingVertical: heightPercentageToDP('1%'),
         },
-        title: 'K3I KORLANTAS POLRI',
+        title: 'Selamat Datang di Aplikasi  Tracking',
         titleStyle: {
           color: '#fff',
           backgrounColor: '#00000040',
@@ -81,7 +81,7 @@ export default props => {
         style={{
           marginBottom: responsiveHeight(9),
         }}>
-        <View style={{flex: 1}}>
+        {/* <View style={{flex: 1}}>
           <View
             style={{
               backgroundColor: '#0F6CFA',
@@ -90,7 +90,7 @@ export default props => {
               borderBottomLeftRadius: responsiveWidth(10),
               borderBottomRightRadius: responsiveWidth(10),
               justifyContent: 'center',
-            }}>
+            }}> */}
             <View
               style={{
                 flexDirection: 'row',
@@ -119,9 +119,9 @@ export default props => {
                 </Text>
               </View>
             </View>
-          </View>
+          {/* </View> */}
           <AplikasiKorlantas />
-          <View
+          {/* <View
             style={{
               flex: 1,
               backgroundColor: '#F4F4F4',
@@ -140,8 +140,8 @@ export default props => {
                   ...Constanta({
                     font: 'bold',
                   }),
-                }}>
-                Berita Terkini
+                }}> */}
+                {/* Berita Terkini
               </Text>
               <TouchableOpacity
                 onPress={() => props.navigation.navigate('listberita')}>
@@ -173,13 +173,13 @@ export default props => {
                   ...Constanta({
                     font: 'bold',
                   }),
-                }}>
-                Berita Stakeholder
+                }}> */}
+                {/* Berita Stakeholder
               </Text>
             </View>
             <Beritastakeholder />
           </View>
-        </View>
+        </View> */}
         <Animated.View
           style={{
             position: 'absolute',
