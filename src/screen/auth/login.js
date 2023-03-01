@@ -195,7 +195,7 @@ export default props => {
         justifyContent: 'space-around',
         alignItems: 'center',
       }}>
-      <StatusBar animated={true} backgroundColor="#003A91" hidden={false} />
+      <StatusBar animated={true} backgroundColor="#01796F" hidden={false} />
       <KeyboardAvoiding>
         <>
           <View>
@@ -206,7 +206,7 @@ export default props => {
                 marginVertical: heightPercentageToDP('10%'),
               }}>
               <Image
-                source={require('../../assets/logo-k3i.png')}
+                source={require('../../assets/Bogor_ngawas.png')}
                 style={{
                   width: widthPercentageToDP('35%'),
                   height: widthPercentageToDP('35%'),
@@ -216,12 +216,12 @@ export default props => {
                 style={{
                   textAlign: 'center',
                   // fontWeight: '700',
-                  color: '#003A91',
+                  color: '#01796F',
                   fontSize: widthPercentageToDP('5%'),
                   marginTop: widthPercentageToDP('5%'),
                   ...Constanta({font: 'bold'}),
                 }}>
-                K3I KORLANTAS POLRI
+                BOGOR NGAWAS
               </Text>
               <Text
                 style={{
@@ -264,7 +264,7 @@ export default props => {
                 title: 'No Telepon Seluler',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: formLogin.phone.is_filled ? '#003A91' : '#CE2121',
+                  color: formLogin.phone.is_filled ? '#01796F' : '#CE2121',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -276,7 +276,7 @@ export default props => {
                   borderWidth: 1,
                   // borderColor: '#CDD1E0',
                   borderColor: formLogin.phone.is_filled
-                    ? '#CDD1E0'
+                    ? '#01796F'
                     : '#CE2121',
                   borderRadius: widthPercentageToDP('2%'),
                   height: responsiveWidth(13),
@@ -337,7 +337,7 @@ export default props => {
                   alignItems: 'center',
                   borderWidth: 1,
                   borderColor: formLogin.password.is_filled
-                    ? '#CDD1E0'
+                    ? '#01796F'
                     : '#CE2121',
                   paddingLeft: widthPercentageToDP('3.5%'),
                   borderRadius: widthPercentageToDP('2%'),
@@ -348,7 +348,7 @@ export default props => {
                 title: 'Kata Sandi',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: formLogin.password.is_filled ? '#003A91' : '#CE2121',
+                  color: formLogin.password.is_filled ? '#01796F' : '#CE2121',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -399,7 +399,7 @@ export default props => {
               <Pressable
                 onPress={() => submitLogin()}
                 style={{
-                  backgroundColor: '#003A91',
+                  backgroundColor: '#01796F',
                   width: widthPercentageToDP('80%'),
                   paddingVertical: widthPercentageToDP('4%'),
                   borderRadius: widthPercentageToDP('2%'),
@@ -436,7 +436,7 @@ export default props => {
                   }}>
                   <Text
                     style={{
-                      color: '#00004D',
+                      color: '#01796F',
                       fontWeight: '300',
                       ...Constanta({font: 'regular'}),
                     }}>

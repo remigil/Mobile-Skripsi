@@ -226,7 +226,7 @@ export default props => {
         flex: 1,
         alignItems: 'center',
       }}>
-      <StatusBar animated={true} backgroundColor="#003A91" hidden={false} />
+      <StatusBar animated={true} backgroundColor="#01796F" hidden={false} />
       <KeyboardAvoiding>
         <>
           <View
@@ -236,7 +236,7 @@ export default props => {
               marginVertical: responsiveWidth(14),
             }}>
             <Image
-              source={require('../../assets/logo-k3i.png')}
+              source={require('../../assets/Bogor_ngawas.png')}
               style={{
                 width: responsiveWidth(35),
                 height: responsiveWidth(35),
@@ -246,14 +246,14 @@ export default props => {
               style={{
                 textAlign: 'center',
                 // fontWeight: '700',
-                color: '#003A91',
+                color: '#01796F',
                 fontSize: responsiveWidth(5),
                 marginTop: responsiveWidth(5),
                 ...Constanta({
                   font: 'bold',
                 }),
               }}>
-              K3I KORLANTAS POLRI
+              BOGOR NGAWAS
             </Text>
             <Text
               style={{
@@ -290,7 +290,7 @@ export default props => {
                 : '#CE2121',
               style: {
                 borderWidth: 1,
-                borderColor: formDaftar.nama.is_filled ? '#CDD1E0' : '#CE2121',
+                borderColor: formDaftar.nama.is_filled ? '#01796F' : '#CE2121',
                 height: responsiveHeight(6),
                 paddingLeft: responsiveWidth(3.5),
                 borderRadius: responsiveWidth(2),
@@ -303,7 +303,7 @@ export default props => {
               style: {
                 fontSize: responsiveWidth(5),
 
-                color: formDaftar.nama.is_filled ? '#003A91' : '#CE2121',
+                color: formDaftar.nama.is_filled ? '#01796F' : '#CE2121',
                 fontWeight: '400',
                 marginBottom: responsiveWidth(1.5),
               },
@@ -333,7 +333,7 @@ export default props => {
                 : '#CE2121',
               style: {
                 borderWidth: 1,
-                borderColor: formDaftar.email.is_filled ? '#CDD1E0' : '#CE2121',
+                borderColor: formDaftar.email.is_filled ? '#01796F' : '#CE2121',
                 height: responsiveHeight(6),
                 paddingLeft: responsiveWidth(3.5),
                 borderRadius: responsiveWidth(2),
@@ -345,7 +345,7 @@ export default props => {
               title: 'Email',
               style: {
                 fontSize: responsiveWidth(5),
-                color: formDaftar.email.is_filled ? '#003A91' : '#CE2121',
+                color: formDaftar.email.is_filled ? '#01796F' : '#CE2121',
                 fontWeight: '400',
                 marginBottom: responsiveWidth(1.5),
               },
@@ -411,7 +411,7 @@ export default props => {
                 color: '#9C9D9E',
 
                 borderColor: formDaftar.password.is_filled
-                  ? '#CDD1E0'
+                  ? '#01796F'
                   : '#CE2121',
                 paddingLeft: responsiveWidth(3.5),
                 borderRadius: responsiveWidth(2),
@@ -423,7 +423,7 @@ export default props => {
               style: {
                 fontSize: responsiveWidth(5),
                 // color: '#003A91',
-                color: formDaftar.password.is_filled ? '#003A91' : '#CE2121',
+                color: formDaftar.password.is_filled ? '#01796F' : '#CE2121',
                 ...Constanta({
                   font: 'semibold',
                 }),
@@ -483,7 +483,7 @@ export default props => {
                 alignItems: 'center',
                 borderWidth: 1,
                 borderColor: formDaftar.verifpassword.is_filled
-                  ? '#CDD1E0'
+                  ? '#01796F'
                   : '#CE2121',
                 paddingLeft: responsiveWidth(3.5),
                 borderRadius: responsiveWidth(2),
@@ -496,7 +496,7 @@ export default props => {
               style: {
                 fontSize: responsiveWidth(5),
                 color: formDaftar.verifpassword.is_filled
-                  ? '#003A91'
+                  ? '#01796F'
                   : '#CE2121',
                 fontWeight: '400',
                 marginBottom: responsiveWidth(1.5),
@@ -539,7 +539,7 @@ export default props => {
               style: {
                 marginLeft: 3,
                 borderColor: formDaftar.phone.is_filled ? '#CDD1E0' : '#CE2121',
-                color: ' #9C9D9E',
+                color: '#01796F',
               },
             }}
             labelProps={{
@@ -547,7 +547,7 @@ export default props => {
               title: 'No Telepon Seluler',
               style: {
                 fontSize: responsiveWidth(5),
-                color: formDaftar.phone.is_filled ? '#003A91' : '#CE2121',
+                color: formDaftar.phone.is_filled ? '#01796F' : '#CE2121',
                 fontWeight: '400',
                 marginBottom: responsiveWidth(1.5),
               },
@@ -558,7 +558,7 @@ export default props => {
               title: '+62',
               style: {
                 borderWidth: 1,
-                borderColor: '#CDD1E0',
+                borderColor: '#01796F',
                 height: responsiveWidth(13),
                 borderRadius: responsiveWidth(2),
               },
@@ -586,7 +586,7 @@ export default props => {
 
               style: {
                 borderWidth: 1,
-                borderColor: '#CDD1E0',
+                borderColor: '#01796F',
                 height: responsiveWidth(13),
                 paddingLeft: responsiveWidth(3.5),
                 borderRadius: responsiveWidth(2),
@@ -599,7 +599,7 @@ export default props => {
               title: 'NIK (Nomor Induk Kependudukan)',
               style: {
                 fontSize: responsiveWidth(5),
-                color: '#003A91',
+                color: '#01796F',
                 fontWeight: '400',
                 marginBottom: responsiveWidth(1.5),
               },
@@ -628,7 +628,7 @@ export default props => {
             <Pressable
               onPress={() => submitDaftar()}
               style={{
-                backgroundColor: '#003A91',
+                backgroundColor: '#01796F',
                 width: responsiveWidth(80),
                 paddingVertical: responsiveWidth(4),
                 borderRadius: responsiveWidth(2),
@@ -665,7 +665,7 @@ export default props => {
                 }}>
                 <Text
                   style={{
-                    color: '#00004D',
+                    color: '#01796F',
                     fontWeight: '300',
                     ...Constanta({font: 'regular'}),
                   }}>

@@ -37,10 +37,10 @@ export default props => {
         justifyContent: 'space-around',
         alignItems: 'center',
       }}>
-      <StatusBar animated={true} backgroundColor="#003A91" hidden={false} />
+      <StatusBar animated={true} backgroundColor="#01796F" hidden={false} />
       <View>
         <Image
-          source={require('../../assets/logo-k3i.png')}
+          source={require('../../assets/Bogor_ngawas.png')}
           style={{
             width: widthPercentageToDP('50%'),
             height: widthPercentageToDP('50%'),
@@ -50,14 +50,14 @@ export default props => {
           style={{
             textAlign: 'center',
             // fontWeight: '700',
-            color: '#003A91',
+            color: '#01796F',
             fontSize: widthPercentageToDP('5%'),
             marginTop: widthPercentageToDP('5%'),
             ...Constanta({
               font: 'bold',
             }),
           }}>
-          K3I KORLANTAS POLRI
+          Wilujeung Sumping
         </Text>
       </View>
 
@@ -71,11 +71,11 @@ export default props => {
             }),
             color: '#9C9D9E',
           }}>
-          Sudah Punya Akun?
+          Geus Boga Akun?
         </Text>
         <Pressable
           style={{
-            backgroundColor: '#003A91',
+            backgroundColor: '#01796F',
             width: widthPercentageToDP('80%'),
             paddingVertical: widthPercentageToDP('4%'),
             borderRadius: widthPercentageToDP('2%'),
@@ -99,7 +99,7 @@ export default props => {
             ...Constanta({
               font: 'regular',
             }),
-            color: '#9C9D9E',
+            color: '#01796F',
           }}>
           Atau
         </Text>
@@ -110,12 +110,12 @@ export default props => {
             width: widthPercentageToDP('80%'),
             paddingVertical: widthPercentageToDP('4%'),
             borderRadius: widthPercentageToDP('2%'),
-            borderColor: '#003A91',
+            borderColor: '#01796F',
             borderWidth: 1,
           }}>
           <Text
             style={{
-              color: '#003A91',
+              color: '#01796F',
               textAlign: 'center',
               ...Constanta({
                 font: 'regular',
@@ -125,7 +125,7 @@ export default props => {
           </Text>
         </Pressable>
         {loading ? (
-          <ActivityIndicator color="#003A91" />
+          <ActivityIndicator color="#01796F" />
         ) : (
           <>
             {latestVersion == undefined || null ? (
@@ -135,7 +135,7 @@ export default props => {
                     font: 'semibold',
                   }),
                   textAlign: 'center',
-                  color: '#003A91',
+                  color: '#01796F',
                   marginTop: 3,
                 }}>
                 {' '}
