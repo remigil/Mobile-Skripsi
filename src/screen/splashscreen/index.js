@@ -16,7 +16,7 @@ export default (props = {...props}) => {
         flex: 1,
       }}>
       <ImageBackground
-        source={require('../../assets/splash/Splashscreen.png')}
+        source={require('../../assets/splash/tampilan.png')}
         resizeMode="cover"
         style={{
           flex: 1,
@@ -36,23 +36,7 @@ export default (props = {...props}) => {
           }),
           marginBottom: 5,
         }}>
-        Pusat Kendali, Koordinasi, Komunikasi dan Informasi{`\n`}Korlantas Polri
-      </Text>
-      <Text
-        style={{
-          color: 'white',
-          position: 'absolute',
-          bottom: heightPercentageToDP('3%'),
-          left: 0,
-          right: 0,
-          textAlign: 'center',
-          lineHeight: responsiveHeight(2.6),
-          ...Constanta({
-            font: 'regular',
-          }),
-        }}>
-        Jl.MT Haryono Kav. 37-38, Jakarta 12770{`\n`}Call Center : 1-550-669
-        {`\n`}SMS Center : 9119
+       Aplikasi Bogor Ngawas{`\n`}Aplikasi Tracking Untuk Warga Bogor {'\n'} Yang Ingin Keluar Bogor
       </Text>
     </View>
   );
