@@ -120,7 +120,7 @@ export default props => {
               </View>
             </View>
           {/* </View> */}
-          <AplikasiKorlantas />
+          {/* <AplikasiKorlantas /> */}
           {/* <View
             style={{
               flex: 1,

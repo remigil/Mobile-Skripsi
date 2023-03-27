@@ -214,7 +214,7 @@ export default props => {
                 fontSize: widthPercentageToDP('5%'),
                 marginVertical: 70,
               }}>
-              K3I KORLANTAS POLRI
+              Bogor Ngawas
             </Text>
             <Text
               style={{

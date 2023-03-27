@@ -47,7 +47,7 @@
           <action android:name="android.intent.action.VIEW"/>
           <category android:name="android.intent.category.DEFAULT"/>
           <category android:name="android.intent.category.BROWSABLE"/>
-          <data android:scheme="k3ikorlantas"/>
+          <data android:scheme="Bogor Ngawas"/>
           
       </intent-filter>
       </activity>

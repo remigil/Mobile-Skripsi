@@ -217,7 +217,7 @@ const CustDrawer = props => {
                   font: 'regular',
                 }),
               }}>
-              K3I KORLANTAS POLRI
+              Bogor Ngawas
             </Text>
             <View
               style={{

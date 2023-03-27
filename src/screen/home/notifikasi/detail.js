@@ -83,7 +83,7 @@ export default props => {
               </Text>
               <Text
                 style={{color: '#6574FF', fontWeight: 'bold', lineHeight: 20}}>
-                K3I KORLANTAS
+                Bogor Ngawas
               </Text>
             </View>
           </View>

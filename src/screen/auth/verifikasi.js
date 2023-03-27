@@ -171,7 +171,7 @@ export default props => {
                   font: 'bold',
                 }),
               }}>
-              K3I KORLANTAS POLRI
+              Bogor Ngawas
             </Text>
             <Text
               style={{
