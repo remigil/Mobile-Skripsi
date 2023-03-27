@@ -297,7 +297,7 @@ export default props => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         ...Constanta({
                           font: 'semibold',
                         }),
@@ -336,7 +336,7 @@ export default props => {
                       <Text
                         style={{
                           fontSize: widthPercentageToDP('4.5%'),
-                          color: '#003A91',
+                          color: '#01796F',
                           ...Constanta({
                             font: 'semibold',
                           }),
@@ -644,7 +644,7 @@ export default props => {
                         }}>
                         <Text
                           style={{
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -730,7 +730,7 @@ export default props => {
                       }}>
                       <Text
                         style={{
-                          color: '#003A91',
+                          color: '#01796F',
                           ...Constanta({
                             font: 'semibold',
                           }),
@@ -744,7 +744,7 @@ export default props => {
                       }}>
                       <Text
                         style={{
-                          color: '#003A91',
+                          color: '#01796F',
                           ...Constanta({
                             font: 'semibold',
                           }),
@@ -940,7 +940,7 @@ export default props => {
                   start={{x: 1.0, y: 1.0}}
                   end={{x: 0.0, y: 0.4}}
                   locations={[0, 0.7]}
-                  colors={['#1F5EBB', '#09449C']}
+                  colors={['#1F5EBB', '#01796F']}
                   style={{
                     flex: 1,
                     borderRadius: 5,

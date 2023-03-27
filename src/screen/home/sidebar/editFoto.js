@@ -79,14 +79,14 @@ const FirstRoute = (props) => (
                     style={{
                         marginTop: 12,
 
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('5%')
                     }}>Data Diri</Text>
                 <View style={{ alignItems: 'center' }}>
                     <View style={{
                         marginVertical: 10
                     }}>
-                        <Text style={{ color: '#003A91', fontSize: widthPercentageToDP('4.5%') }}>Nama Lengkap</Text>
+                        <Text style={{ color: '#01796F', fontSize: widthPercentageToDP('4.5%') }}>Nama Lengkap</Text>
                         <View style={{ width: 321, height: 47, borderColor: '#CDD1E0', borderWidth: 1, borderRadius: 6, marginTop: 10, justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}>
                             <Text style={{ color: 'black', fontsize: 12, marginLeft: 16 }}>
                                 Roki Al Akhnafi

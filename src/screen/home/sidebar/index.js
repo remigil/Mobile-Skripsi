@@ -218,7 +218,7 @@ const FirstRoute = ({...props}) => {
                   style={{
                     textAlign: 'center',
                     fontSize: widthPercentageToDP('4.5%'),
-                    color: '#003A91',
+                    color: '#01796F',
                   }}>
                   Scan Ulang e-KTP
                 </Text>
@@ -228,7 +228,7 @@ const FirstRoute = ({...props}) => {
                   style={{
                     marginTop: 12,
 
-                    color: '#003A91',
+                    color: '#01796F',
                     fontSize: widthPercentageToDP('5%'),
                   }}>
                   Data Diri
@@ -240,7 +240,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('4.5%'),
                       }}>
                       Nama Lengkap
@@ -285,7 +285,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('4.5%'),
                       }}>
                       Nomor Induk Kependudukan (NIK)
@@ -325,7 +325,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('4.5%'),
                       }}>
                       Tanggal Lahir
@@ -365,7 +365,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('4.5%'),
                       }}>
                       Kewarganegaraan
@@ -404,7 +404,7 @@ const FirstRoute = ({...props}) => {
                   style={{
                     marginTop: 20,
                     marginLeft: 20,
-                    color: '#003A91',
+                    color: '#01796F',
                     fontSize: widthPercentageToDP('4.5%'),
                   }}>
                   Data Lainnya
@@ -416,7 +416,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('4.5%'),
                       }}>
                       Nomor SIM
@@ -456,7 +456,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         sfontSize: widthPercentageToDP('4.5%'),
                       }}>
                       Email
@@ -496,7 +496,7 @@ const FirstRoute = ({...props}) => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         fontSize: widthPercentageToDP('4.5%'),
                       }}>
                       No Telepon Seluler
@@ -535,7 +535,7 @@ const FirstRoute = ({...props}) => {
                     style={{
                       width: 321,
                       height: 46,
-                      backgroundColor: '#003A91',
+                      backgroundColor: '#01796F',
                       borderRadius: 5,
                       justifyContent: 'center',
                       alignItems: 'center',
@@ -655,7 +655,7 @@ const FirstRoute = ({...props}) => {
               style={{
                 textAlign: 'center',
                 fontSize: responsiveWidth(5),
-                color: '#003A91',
+                color: '#01796F',
                 ...Constanta({
                   font: 'regular',
                 }),

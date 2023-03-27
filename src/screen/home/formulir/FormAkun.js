@@ -9,7 +9,7 @@ import { IconEditData } from '../../../assets/Assets';
 
 export default props => {
     <View style={{flex: 1, backgroundColor: 'white'}}>
-      <Text style={{marginTop: 12, marginLeft: 20, color: '#003A91', size: 14}}>
+      <Text style={{marginTop: 12, marginLeft: 20, color: '#01796F', size: 14}}>
         Data Diri
       </Text>
       <View style={{alignItems: 'center'}}>
@@ -17,7 +17,7 @@ export default props => {
           style={{
             marginVertical: 10,
           }}>
-          <Text style={{color: '#003A91', size: 14}}>Nama Lengkap</Text>
+          <Text style={{color: '#01796F', size: 14}}>Nama Lengkap</Text>
           <View
             style={{
               width: 321,
@@ -31,7 +31,7 @@ export default props => {
               alignItems: 'center',
             }}>
             <Text style={{color: 'black', size: 12, marginLeft: 16}}>
-              Danu Maulana
+              Agil Almunawar
             </Text>
             <View
               style={{
@@ -50,7 +50,7 @@ export default props => {
           style={{
             marginVertical: 10,
           }}>
-          <Text style={{color: '#003A91', size: 14}}>
+          <Text style={{color: '#01796F', size: 14}}>
             Nomor Induk Kependudukan (NIK)
           </Text>
           <View
@@ -85,7 +85,7 @@ export default props => {
           style={{
             marginVertical: 10,
           }}>
-          <Text style={{color: '#003A91', size: 14}}>Tanggal Lahir</Text>
+          <Text style={{color: '#01796F', size: 14}}>Tanggal Lahir</Text>
           <View
             style={{
               width: 321,
@@ -99,7 +99,7 @@ export default props => {
               alignItems: 'center',
             }}>
             <Text style={{color: 'black', size: 12, marginLeft: 16}}>
-              11 Mei 1989
+              01 oktober 2000
             </Text>
             <View
               style={{
@@ -118,7 +118,7 @@ export default props => {
           style={{
             marginVertical: 10,
           }}>
-          <Text style={{color: '#003A91', size: 14}}>Kewarganegaraan</Text>
+          <Text style={{color: '#01796F', size: 14}}>Kewarganegaraan</Text>
           <View
             style={{
               width: 321,
@@ -148,7 +148,7 @@ export default props => {
         </View>
       </View>
 
-      <Text style={{marginTop: 20, marginLeft: 20, color: '#003A91', size: 14}}>
+      <Text style={{marginTop: 20, marginLeft: 20, color: '#01796F', size: 14}}>
         Data Lainnya
       </Text>
       <View style={{alignItems: 'center'}}>
@@ -156,7 +156,7 @@ export default props => {
           style={{
             marginVertical: 10,
           }}>
-          <Text style={{color: '#003A91', size: 14}}>Nomor SIM</Text>
+          <Text style={{color: '#01796F', size: 14}}>Nomor SIM</Text>
           <View
             style={{
               width: 321,
@@ -189,7 +189,7 @@ export default props => {
           style={{
             marginVertical: 10,
           }}>
-          <Text style={{color: '#003A91', size: 14}}>Email</Text>
+          <Text style={{color: '#01796F', size: 14}}>Email</Text>
           <View
             style={{
               width: 321,

@@ -200,7 +200,7 @@ const CustDrawer = props => {
         start={{x: 1.0, y: 1.0}}
         end={{x: 0.0, y: 0.4}}
         locations={[0, 0.7]}
-        colors={['#003A91', '#082A5B']}
+        colors={['#F8C92C', '#01796F']}
         style={{flex: 1, top: -6}}>
         <View style={[{marginBottom: 10}]}>
           <View
@@ -378,7 +378,7 @@ const CustDrawer = props => {
               icon={props => menu.icon}
               labelStyle={[
                 {
-                  color: '#003A91',
+                  color: '#01796F',
                   fontSize: responsiveFontSize(2),
                   ...Constanta({font: 'regular'}),
                 },

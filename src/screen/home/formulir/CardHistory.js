@@ -83,7 +83,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On Card',
+        title: 'Bogor Ngawas Card',
         backIconStyle: true,
         titleStyle: {
           color: '#FFF',

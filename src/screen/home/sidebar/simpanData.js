@@ -275,7 +275,7 @@ export default props => {
                 title: 'Nomor Registrasi',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -358,7 +358,7 @@ export default props => {
                   start={{x: 1.0, y: 1.0}}
                   end={{x: 0.0, y: 0.4}}
                   locations={[0, 0.7]}
-                  colors={['#1F5EBB', '#09449C']}
+                  colors={['#F8C92C', '#01796F']}
                   style={{
                     flex: 1,
                     borderRadius: 8,
@@ -394,7 +394,7 @@ export default props => {
             zIndex: 9999,
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: 'white',

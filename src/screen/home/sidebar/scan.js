@@ -85,7 +85,7 @@ const FirstRoute = props => (
           style={{
             marginTop: 12,
 
-            color: '#003A91',
+            color: '#01796F',
             fontSize: widthPercentageToDP('5%'),
           }}>
           Data Diri

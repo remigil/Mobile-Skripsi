@@ -22,7 +22,7 @@ export default (props = {...ActionBarProps}) => {
     <View
       style={[
         {
-          backgroundColor: !props?.isHome ? '#0F6CFA' : 'white',
+          backgroundColor: !props?.isHome ? '#01796F' : 'white',
           flexDirection: 'row',
           paddingHorizontal: widthPercentageToDP('5%'),
           paddingVertical: widthPercentageToDP('4%'),
@@ -37,7 +37,7 @@ export default (props = {...ActionBarProps}) => {
             borderless: true,
           }}
           style={{
-            width: widthPercentageToDP('10%'),
+            width: widthPercentageToDP('8%'),
             height: widthPercentageToDP('5%'),
           }}
           onPress={() => props.onBackPressed && props.onBackPressed()}>
@@ -46,7 +46,7 @@ export default (props = {...ActionBarProps}) => {
             // <IconKembali />
             <Image source={require('../../assets/icon_back_putih.png')} />
           ) : (
-            <Image source={require('../../assets/icon_bola.png')} />
+            <Image source={require('../../assets/icon_hamburger.png')} />
           )}
         </TouchableOpacity>
       </View>

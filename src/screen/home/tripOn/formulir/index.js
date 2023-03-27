@@ -78,7 +78,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On',
+        title: 'Bogor Ngawas',
         titleStyle: {
           color: 'white',
 
