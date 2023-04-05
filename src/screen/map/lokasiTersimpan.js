@@ -62,7 +62,7 @@ export default props => {
         title: 'Lokasi Tersimpan',
         backIconStyle: true,
         titleStyle: {
-          color: '#003A91',
+          color: '#01796F',
 
           backgrounColor: '#FCFDFF',
           textAlign: 'center',

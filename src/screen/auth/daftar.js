@@ -422,7 +422,7 @@ export default props => {
               title: 'Kata Sandi',
               style: {
                 fontSize: responsiveWidth(5),
-                // color: '#003A91',
+                // color: '#01796F',
                 color: formDaftar.password.is_filled ? '#01796F' : '#CE2121',
                 ...Constanta({
                   font: 'semibold',
@@ -688,7 +688,7 @@ export default props => {
             justifyContent: 'center',
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: '#fff',

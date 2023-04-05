@@ -23,7 +23,7 @@ export default props => {
         title: 'Pusat Bantuan',
         backIconStyle: true,
         titleStyle: {
-          color: '#003A91',
+          color: '#01796F',
           backgrounColor: '#FCFDFF',
           textAlign: 'center',
         },
@@ -42,7 +42,7 @@ export default props => {
           }}>
           <Text
             style={{
-              color: '#003A91',
+              color: '#01796F',
               marginTop: 13,
               fontSize: 16,
               fontWeight: 'bold',
@@ -84,7 +84,7 @@ export default props => {
           <Divider style={{marginTop: 14, backgroundColor: '#ACACAC'}} />
           <Text
             style={{
-              color: '#003A91',
+              color: '#01796F',
               marginTop: 13,
               fontSize: 14,
               fontWeight: 'bold',

@@ -60,18 +60,18 @@ export function BottomHomeNavigation() {
             indicatorColor = focused
               ? (color = '#386BF6')
               : (color = 'transparent');
-          } else if (route.name === 'Kewilayahan') {
-            indicatorColor = focused
-              ? (color = 'darkred')
-              : (color = 'transparent');
-          } else if (route.name === 'Peta') {
-            indicatorColor = focused
-              ? (color = 'darkkhaki')
-              : (color = 'transparent');
-          } else if (route.name === 'Stakeholder') {
-            indicatorColor = focused
-              ? (color = 'deeppink')
-              : (color = 'transparent');
+          // } else if (route.name === 'Kewilayahan') {
+          //   indicatorColor = focused
+          //     ? (color = 'darkred')
+          //     : (color = 'transparent');
+          // } else if (route.name === 'Peta') {
+          //   indicatorColor = focused
+          //     ? (color = 'darkkhaki')
+          //     : (color = 'transparent');
+          // } else if (route.name === 'Stakeholder') {
+          //   indicatorColor = focused
+          //     ? (color = 'deeppink')
+          //     : (color = 'transparent');
           } else if (route.name === 'Trip On') {
             indicatorColor = focused
               ? (color = 'lightgreen')
@@ -86,34 +86,34 @@ export function BottomHomeNavigation() {
                 source={require('../../assets/icon_bottom/home_off.png')}
               />
             );
-          } else if (route.name === 'Kewilayahan') {
-            iconName = focused ? (
-              <Image
-                source={require('../../assets/icon_bottom/Kewilayahan_ON.png')}
-              />
-            ) : (
-              <Image
-                source={require('../../assets/icon_bottom/Kewilayahan_off.png')}
-              />
-            );
-          } else if (route.name === 'Peta') {
-            iconName = focused ? (
-              <Image source={require('../../assets/icon_bottom/Peta_On.png')} />
-            ) : (
-              <Image
-                source={require('../../assets/icon_bottom/Peta_Off.png')}
-              />
-            );
-          } else if (route.name === 'Stakeholder') {
-            iconName = focused ? (
-              <Image
-                source={require('../../assets/icon_bottom/Stakeholder_ON.png')}
-              />
-            ) : (
-              <Image
-                source={require('../../assets/icon_bottom/Stakeholder_off.png')}
-              />
-            );
+          // } else if (route.name === 'Kewilayahan') {
+          //   iconName = focused ? (
+          //     <Image
+          //       source={require('../../assets/icon_bottom/Kewilayahan_ON.png')}
+          //     />
+          //   ) : (
+          //     <Image
+          //       source={require('../../assets/icon_bottom/Kewilayahan_off.png')}
+          //     />
+          //   );
+          // } else if (route.name === 'Peta') {
+          //   iconName = focused ? (
+          //     <Image source={require('../../assets/icon_bottom/Peta_On.png')} />
+          //   ) : (
+          //     <Image
+          //       source={require('../../assets/icon_bottom/Peta_Off.png')}
+          //     />
+          //   );
+          // } else if (route.name === 'Stakeholder') {
+          //   iconName = focused ? (
+          //     <Image
+          //       source={require('../../assets/icon_bottom/Stakeholder_ON.png')}
+          //     />
+          //   ) : (
+          //     <Image
+          //       source={require('../../assets/icon_bottom/Stakeholder_off.png')}
+          //     />
+          //   );
           } else if (route.name === 'Trip On') {
             iconName = focused ? (
               <Image
@@ -217,56 +217,6 @@ export function BottomHomeNavigation() {
           return {
             tabBarShowLabel: false,
           };
-        }}
-      />
-      <BottomTab.Screen
-        name="Kewilayahan"
-        options={({navigation}) => {
-          return {
-            tabBarShowLabel: false,
-          };
-        }}
-        component={KewilayahanNavigation}
-      />
-      <BottomTab.Screen
-        name="Peta"
-        component={MapScreen}
-        options={{
-          // tabBarItemStyle: {display: 'none'},
-          // tabBarStyle: {display: 'none'},
-          tabBarShowLabel: false,
-        }}
-      />
-      <BottomTab.Screen
-        name="Stakeholder"
-        component={StakeholderNavigator}
-        options={({navigation, route}) => {
-          const routeName = getFocusedRouteNameFromRoute(route);
-          if (
-            routeName === 'stakeholder.webview'
-          ) {
-            return {
-              tabBarStyle: {display: 'none', tabBarShowLabel: false},
-            };
-          } else {
-            return {
-              tabBarShowLabel: false,
-            };
-          }
-        }}
-        // options={{
-        //   // tabBarItemStyle: {display: 'none'},
-        //   // tabBarStyle: {display: 'none'},
-        //   tabBarShowLabel: false,
-        // }}
-      />
-      <BottomTab.Screen
-        name="lokasitersimpan"
-        component={LokasiTersimpan}
-        options={{
-          tabBarItemStyle: {display: 'none'},
-          tabBarStyle: {display: 'none'},
-          tabBarShowLabel: false,
         }}
       />
       <BottomTab.Screen

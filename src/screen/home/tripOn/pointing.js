@@ -9,19 +9,13 @@ import {
   Keyboard,
   ActivityIndicator,
 } from 'react-native';
-import {
-  widthPercentageToDP,
-} from 'react-native-responsive-screen';
+import {widthPercentageToDP} from 'react-native-responsive-screen';
 import {CloseModalize, IconLocation, IconSearch} from '../../../assets/Assets';
 import {BaseContainer} from '../../../component';
-import MapView, {
-  Marker,
-} from 'react-native-maps';
+import MapView, {Marker} from 'react-native-maps';
 import {Modalize} from 'react-native-modalize';
 import {useDispatch} from 'react-redux';
-import {
-  animateToCamera,
-} from '../../../component/map/FitZoomToMarker';
+import {animateToCamera} from '../../../component/map/FitZoomToMarker';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import {Portal} from 'react-native-portalize';
 import Constanta from '../../../lib/Constanta';
@@ -369,7 +363,7 @@ export default props => {
                 alignItems: 'center',
                 width: widthPercentageToDP('90%'),
                 height: 46,
-                backgroundColor: '#003A91',
+                backgroundColor: '#01796F',
                 marginHorizontal: widthPercentageToDP('5%'),
                 borderRadius: 5,
                 marginTop: 20,

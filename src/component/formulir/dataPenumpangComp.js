@@ -268,8 +268,8 @@ export default props => {
             height: responsiveHeight(4),
             borderRadius: 5,
             marginHorizontal: widthPercentageToDP('3%'),
-            // backgroundColor: '#003A91',
-            borderColor: '#003A91',
+            // backgroundColor: '#01796F',
+            borderColor: '#01796F',
             borderWidth: 1,
             justifyContent: 'center',
             alignItems: 'center',
@@ -278,7 +278,7 @@ export default props => {
           {/* <IconKembali /> */}
           <Text
             style={{
-              color: '#003A91',
+              color: '#01796F',
               ...Constanta({
                 font: 'regular',
               }),
@@ -307,7 +307,7 @@ export default props => {
             height: responsiveHeight(4),
             borderRadius: 5,
             marginHorizontal: widthPercentageToDP('3%'),
-            backgroundColor: '#003A91',
+            backgroundColor: '#01796F',
             justifyContent: 'center',
             alignItems: 'center',
             width: responsiveWidth(25),

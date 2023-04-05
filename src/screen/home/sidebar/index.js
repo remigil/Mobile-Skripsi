@@ -185,7 +185,7 @@ const FirstRoute = ({...props}) => {
                   borderBottomLeftRadius: 15,
                   borderBottomRightRadius: 15,
                   borderWidth: 2,
-                  borderColor: '#003A91',
+                  borderColor: '#01796F',
                   borderStyle: 'dashed',
                   borderRadius: responsiveWidth(6),
                   marginVertical: 10,
@@ -208,7 +208,7 @@ const FirstRoute = ({...props}) => {
                 style={{
                   marginVertical: widthPercentageToDP('4%'),
                   borderWidth: 1,
-                  borderColor: '#003A91',
+                  borderColor: '#01796F',
                   width: widthPercentageToDP('90%'),
                   paddingVertical: widthPercentageToDP('3%'),
                   borderRadius: 4,
@@ -589,7 +589,7 @@ const FirstRoute = ({...props}) => {
             style={{
               marginTop: responsiveWidth(4),
               borderWidth: 1,
-              borderColor: '#003A91',
+              borderColor: '#01796F',
               width: responsiveWidth(80),
               height: responsiveHeight(6),
               borderRadius: 4,
@@ -768,7 +768,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
       actionBarProps={{
         title: 'Trip On',
         titleStyle: {
-          color: '#003A91',
+          color: '#01796F',
 
           backgrounColor: '#FCFDFF',
           textAlign: 'center',
@@ -951,7 +951,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
                         height: heightPercentageToDP('5%'),
                         borderRadius: 5,
                         borderWidth: 1,
-                        borderColor: '#003A91',
+                        borderColor: '#01796F',
                       }}
                       onPress={() => {
                         setBasicAlertProps({
@@ -1217,7 +1217,7 @@ export default props => {
           style={{
             textAlign: 'center',
             fontWeight: '400',
-            color: '#003A91',
+            color: '#01796F',
             fontSize: responsiveWidth(4),
             ...Constanta({
               font: 'regular',
@@ -1238,13 +1238,13 @@ export default props => {
           <TabBar
             {...props}
             labelStyle={{
-              color: '#003A91',
+              color: '#01796F',
             }}
             style={{
               backgroundColor: 'white',
             }}
             indicatorStyle={{
-              backgroundColor: '#003A91',
+              backgroundColor: '#01796F',
               height: 2,
             }}
           />
@@ -1288,7 +1288,7 @@ export default props => {
             }}>
             <Text
               style={{
-                color: '#003A91',
+                color: '#01796F',
                 alignItems: 'center',
                 paddingVertical: 10,
                 textAlign: 'center',
@@ -1312,7 +1312,7 @@ export default props => {
             }}>
             <Text
               style={{
-                color: '#003A91',
+                color: '#01796F',
                 paddingVertical: 10,
                 alignItems: 'center',
                 textAlign: 'center',

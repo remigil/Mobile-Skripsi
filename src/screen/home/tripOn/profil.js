@@ -189,7 +189,7 @@ export default props => {
       withBasicAlert={true}
       basicAlertProps={basicAlertProps}
       actionBarProps={{
-        title: 'Trip On',
+        title: 'Bogor Ngawas',
 
         titleStyle: {
           color: '#FFF',
@@ -231,7 +231,7 @@ export default props => {
               style={{
                 alignSelf: 'flex-start',
                 fontSize: widthPercentageToDP('5%'),
-                color: '#003A91',
+                color: '#01796F',
                 ...Constanta({font: 'regular'}),
                 marginLeft: responsiveWidth(8),
                 marginBottom: responsiveHeight(2),
@@ -440,7 +440,7 @@ export default props => {
             zIndex: 9999,
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: 'white',

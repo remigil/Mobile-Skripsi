@@ -182,7 +182,7 @@ export default props => {
               <View>
                 <Text
                   style={{
-                    color: '#003A91',
+                    color: '#01796F',
                     marginHorizontal: 12,
                     marginTop: responsiveHeight(2),
                     marginBottom: 10,
@@ -202,7 +202,7 @@ export default props => {
               <View>
                 <Text
                   style={{
-                    color: '#003A91',
+                    color: '#01796F',
                     marginHorizontal: 12,
                     marginTop: responsiveHeight(2),
                     marginBottom: 10,

@@ -6,7 +6,11 @@ import {
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 import {TambahKendaraan} from '../../../assets/Assets';
-import {BaseContainer, InputTextComp, DialogContainer} from '../../../component';
+import {
+  BaseContainer,
+  InputTextComp,
+  DialogContainer,
+} from '../../../component';
 import Constanta from '../../../lib/Constanta';
 import {responsiveHeight} from 'react-native-responsive-dimensions';
 import {BasicAlertProps} from '../../../component/container/dialogContainer';
@@ -172,7 +176,7 @@ export default props => {
             title: 'Nama Lengkap',
             style: {
               fontSize: widthPercentageToDP('5%'),
-              color: '#003A91',
+              color: '#01796F',
               fontWeight: '400',
               marginBottom: widthPercentageToDP('1.5%'),
             },
@@ -210,7 +214,7 @@ export default props => {
             title: 'NIK (Nomor Induk Kependudukan)',
             style: {
               fontSize: widthPercentageToDP('5%'),
-              color: '#003A91',
+              color: '#01796F',
               fontWeight: '400',
               marginBottom: widthPercentageToDP('1.5%'),
             },

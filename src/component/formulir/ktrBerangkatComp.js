@@ -198,7 +198,7 @@ export default props => {
               }}>
               <Text
                 style={{
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   fontSize: responsiveFontSize(2.5),
                   ...Constanta({
@@ -274,7 +274,7 @@ export default props => {
               }}>
               <Text
                 style={{
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   fontSize: responsiveFontSize(2.5),
                   ...Constanta({
@@ -359,8 +359,8 @@ export default props => {
             height: responsiveHeight(4),
             borderRadius: 5,
             marginHorizontal: widthPercentageToDP('3%'),
-            // backgroundColor: '#003A91',
-            borderColor: '#003A91',
+            // backgroundColor: '#01796F',
+            borderColor: '#01796F',
             borderWidth: 1,
             justifyContent: 'center',
             alignItems: 'center',
@@ -370,7 +370,7 @@ export default props => {
           <Text
             style={{
               ...Constanta({font: 'regular'}),
-              color: '#003A91',
+              color: '#01796F',
             }}>
             Sebelumnya
           </Text>
@@ -415,7 +415,7 @@ export default props => {
             height: responsiveHeight(4),
             borderRadius: 5,
             marginHorizontal: widthPercentageToDP('3%'),
-            backgroundColor: '#003A91',
+            backgroundColor: '#01796F',
             justifyContent: 'center',
             alignItems: 'center',
             width: responsiveWidth(25),

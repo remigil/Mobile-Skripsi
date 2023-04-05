@@ -95,7 +95,7 @@ export default forwardRef(({troublespotDetail, direction, ...props}, ref) => {
                 style={{
                   paddingTop: heightPercentageToDP('2%'),
                 }}>
-                <Text style={{color: '#003A91', fontSize: 14}}>
+                <Text style={{color: '#01796F', fontSize: 14}}>
                   Lokasi TroubleSpot
                 </Text>
                 <View
@@ -123,7 +123,7 @@ export default forwardRef(({troublespotDetail, direction, ...props}, ref) => {
                 style={{
                   paddingTop: heightPercentageToDP('2%'),
                 }}>
-                <Text style={{color: '#003A91', fontSize: 14}}>Masalah</Text>
+                <Text style={{color: '#01796F', fontSize: 14}}>Masalah</Text>
                 <View
                   style={{
                     backgroundColor: '#FCFDFF',
@@ -147,7 +147,7 @@ export default forwardRef(({troublespotDetail, direction, ...props}, ref) => {
                 style={{
                   paddingTop: heightPercentageToDP('2%'),
                 }}>
-                <Text style={{color: '#003A91', fontSize: 14}}>Penyebab</Text>
+                <Text style={{color: '#01796F', fontSize: 14}}>Penyebab</Text>
                 <View
                   style={{
                     backgroundColor: '#FCFDFF',

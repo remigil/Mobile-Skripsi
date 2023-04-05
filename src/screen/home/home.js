@@ -34,21 +34,6 @@ export default props => {
   const [openPanicButton, setOpenPanicButton] = useState(false);
   const slideToRight = useRef(new Animated.Value(0)).current;
 
-  useEffect(() => {
-    if (openPanicButton) {
-      Animated.timing(slideToRight, {
-        toValue: -79,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-    } else {
-      Animated.timing(slideToRight, {
-        toValue: 0,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-    }
-  }, [openPanicButton]);
 
   const [basicAlertProps, setBasicAlertProps] = useState(BasicAlertProps);
 
@@ -64,7 +49,7 @@ export default props => {
         containerStyle: {
           paddingVertical: heightPercentageToDP('1%'),
         },
-        title: 'Selamat Datang di Aplikasi  Tracking',
+        title: 'BOGOR NGAWAS',
         titleStyle: {
           color: '#fff',
           backgrounColor: '#00000040',
@@ -81,16 +66,6 @@ export default props => {
         style={{
           marginBottom: responsiveHeight(9),
         }}>
-        {/* <View style={{flex: 1}}>
-          <View
-            style={{
-              backgroundColor: '#0F6CFA',
-              width: responsiveWidth(100),
-              height: responsiveHeight(9),
-              borderBottomLeftRadius: responsiveWidth(10),
-              borderBottomRightRadius: responsiveWidth(10),
-              justifyContent: 'center',
-            }}> */}
             <View
               style={{
                 flexDirection: 'row',
@@ -109,9 +84,9 @@ export default props => {
                 <Text
                   style={{
                     ...Constanta({
-                      font: 'regular',
+                      font: 'roboto',
                     }),
-                    color: 'white',
+                    color: '#01796F',
                     width: responsiveWidth(30),
                     marginLeft: 5,
                   }}>
@@ -119,160 +94,6 @@ export default props => {
                 </Text>
               </View>
             </View>
-          {/* </View> */}
-          {/* <AplikasiKorlantas /> */}
-          {/* <View
-            style={{
-              flex: 1,
-              backgroundColor: '#F4F4F4',
-            }}>
-            <View
-              style={{
-                marginLeft: responsiveWidth(6),
-                marginTop: responsiveHeight(2),
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}>
-              <Text
-                style={{
-                  fontSize: responsiveFontSize(2.1),
-                  color: 'black',
-                  ...Constanta({
-                    font: 'bold',
-                  }),
-                }}> */}
-                {/* Berita Terkini
-              </Text>
-              <TouchableOpacity
-                onPress={() => props.navigation.navigate('listberita')}>
-                <Text
-                  style={{
-                    fontSize: responsiveFontSize(1.5),
-                    marginRight: responsiveWidth(6),
-                    paddingTop: responsiveHeight(0.8),
-                    color: 'black',
-                    ...Constanta({
-                      font: 'regular',
-                    }),
-                  }}>
-                  Lihat semua
-                </Text>
-              </TouchableOpacity>
-            </View>
-            <Berita />
-            <View
-              style={{
-                marginLeft: responsiveWidth(6),
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}>
-              <Text
-                style={{
-                  fontSize: responsiveFontSize(2.1),
-                  color: 'black',
-                  ...Constanta({
-                    font: 'bold',
-                  }),
-                }}> */}
-                {/* Berita Stakeholder
-              </Text>
-            </View>
-            <Beritastakeholder />
-          </View>
-        </View> */}
-        <Animated.View
-          style={{
-            position: 'absolute',
-            right: -widthPercentageToDP('23%'),
-            top: widthPercentageToDP('60'),
-            backgroundColor: '#00000080',
-            width: widthPercentageToDP('30'),
-            height: 80,
-            justifyContent: 'center',
-            borderTopLeftRadius: 13,
-            borderBottomLeftRadius: 13,
-            transform: [
-              {
-                translateX: slideToRight,
-              },
-            ],
-          }}>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-around',
-              alignItems: 'center',
-            }}>
-            <View>
-              <Pressable
-                style={{
-                  width: widthPercentageToDP('3'),
-                  height: 58,
-                  justifyContent: 'center',
-                }}
-                onPress={() => {
-                  if (openPanicButton) {
-                    setOpenPanicButton(false);
-                  } else {
-                    setOpenPanicButton(true);
-                  }
-                }}>
-                <View
-                  style={{
-                    backgroundColor: 'red',
-                    width: responsiveWidth(2.5),
-                    height: responsiveHeight(8),
-                    borderTopLeftRadius: 10,
-                    borderBottomLeftRadius: 10,
-                  }}></View>
-              </Pressable>
-            </View>
-            <View
-              style={{
-                width: widthPercentageToDP('20%'),
-              }}>
-              <Pressable
-                style={{}}
-                onPress={() => {
-                  setBasicAlertProps({
-                    basicAlertVisible: true,
-                    basicAlertShowButton: true,
-                    withTitle: true,
-                    basicAlertTitle:
-                      'Apakah Anda Yakin Membuat Laporan Panic Button',
-                    basicAlertMessage: '',
-                    basicAlertOnOk: () => {
-                      setOpenPanicButton(false);
-                      setBasicAlertProps({
-                        ...basicAlertProps,
-                        basicAlertVisible: false,
-                        basicAlertTitle: null,
-                        basicAlertMessage: null,
-                        onClose: null,
-                        iconClose: false,
-                      });
-                      props.navigation.navigate('PanicButton');
-                    },
-                    basicAlertOnClosed: () => {
-                      setBasicAlertProps({
-                        ...basicAlertProps,
-                        basicAlertVisible: false,
-                        basicAlertTitle: null,
-                        basicAlertMessage: null,
-                        onClose: null,
-                        iconClose: false,
-                      });
-                    },
-                    basicAlertOkBtnOnly: false,
-                    basicAlertBtnOkText: 'Konfirmasi',
-                    basicAlertBtnClosedText: 'Batalkan',
-                  });
-                }}>
-                <IconSpeaker />
-              </Pressable>
-            </View>
-          </View>
-        </Animated.View>
       </ScrollView>
     </BaseContainer>
   );

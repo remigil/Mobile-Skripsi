@@ -16,7 +16,7 @@ export default ({redirect, icon = null, title, ...props}) => {
         height: heightPercentageToDP('5%'),
         borderRadius: 5,
         borderWidth: 1,
-        borderColor: '#003A91',
+        borderColor: '#01796F',
       }}>
       <View
         style={{
@@ -28,7 +28,7 @@ export default ({redirect, icon = null, title, ...props}) => {
         {icon ? icon : <></>}
         <Text
           style={{
-            color: '#003A91',
+            color: '#01796F',
             textAlign: 'center',
             marginLeft: 10,
             ...Constanta({

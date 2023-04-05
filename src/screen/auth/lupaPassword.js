@@ -120,7 +120,7 @@ export default props => {
         flex: 1,
         alignItems: 'center',
       }}>
-      <StatusBar animated={true} backgroundColor="#003A91" hidden={false} />
+      <StatusBar animated={true} backgroundColor="#01796F" hidden={false} />
       <View>
         <Text
           style={{
@@ -128,7 +128,7 @@ export default props => {
             ...Constanta({
               font: 'bold',
             }),
-            color: '#003A91',
+            color: '#01796F',
             fontSize: widthPercentageToDP('5%'),
             marginVertical: heightPercentageToDP('10%'),
           }}>
@@ -149,7 +149,7 @@ export default props => {
             }>
             <Text
               style={{
-                color: '#003A91',
+                color: '#01796F',
                 fontSize: widthPercentageToDP('5%'),
                 ...Constanta({
                   font: 'semibold',
@@ -208,7 +208,7 @@ export default props => {
                 title: 'Email',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   ...Constanta({
                     font: 'semibold',
                   }),
@@ -226,7 +226,7 @@ export default props => {
                 style={{
                   width: widthPercentageToDP('80%'),
                   height: heightPercentageToDP('6%'),
-                  backgroundColor: '#003A91',
+                  backgroundColor: '#01796F',
                   borderRadius: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
@@ -293,7 +293,7 @@ export default props => {
             justifyContent: 'center',
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: '#fff',

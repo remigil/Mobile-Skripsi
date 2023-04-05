@@ -331,7 +331,7 @@ const CustDrawer = props => {
                     paddingRight: widthPercentageToDP('12%'),
                     borderRightWidth: 1,
                   }}>
-                  <Text style={{color: '#003A91'}}>Batalkan</Text>
+                  <Text style={{color: '#01796F'}}>Batalkan</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={() => setModal(false)}
@@ -341,7 +341,7 @@ const CustDrawer = props => {
                     paddingLeft: widthPercentageToDP('10%'),
                   }}>
                   <View style={{justifyContent: 'center'}}>
-                    <Text style={{color: '#003A91'}}>Unduh</Text>
+                    <Text style={{color: '#01796F'}}>Unduh</Text>
                   </View>
                 </TouchableOpacity>
               </View>
@@ -390,7 +390,7 @@ const CustDrawer = props => {
                 marginVertical: 5,
                 paddingLeft: responsiveWidth(8),
                 borderWidth: Platform.OS == 'ios' ? 0.8 : 0,
-                borderColor: Platform.OS == 'ios' ? '#003A91' : 'transparent',
+                borderColor: Platform.OS == 'ios' ? '#01796F' : 'transparent',
               }}
               label={menu.title}
               onPress={() => menu.onPress(props)}

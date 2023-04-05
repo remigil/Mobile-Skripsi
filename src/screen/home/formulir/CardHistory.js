@@ -254,7 +254,7 @@ export default props => {
                 start={{x: 1.0, y: 1.0}}
                 end={{x: 0.0, y: 0.4}}
                 locations={[0, 0.7]}
-                colors={['#275DAD', '#003A91']}
+                colors={['#275DAD', '#01796F']}
                 style={{
                   flex: 1,
                   borderRadius: 5,

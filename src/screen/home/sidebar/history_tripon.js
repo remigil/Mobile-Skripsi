@@ -375,7 +375,7 @@ export default function TabViewExample({props}) {
               backgroundColor: 'white',
             }}
             indicatorStyle={{
-              backgroundColor: '#003A91',
+              backgroundColor: '#01796F',
               height: 2,
             }}
           />

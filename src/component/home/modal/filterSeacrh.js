@@ -142,7 +142,7 @@ export default forwardRef(({filterMenu, processFilter, ...props}, ref) => {
                   }}>
                   <Text
                     style={{
-                      color: filterData.value ? '#003A91' : '#6D7687',
+                      color: filterData.value ? '#01796F' : '#6D7687',
                       fontSize: responsiveWidth(3.5),
                       fontWeight: '400',
                       ...Constanta({

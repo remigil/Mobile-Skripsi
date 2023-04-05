@@ -169,13 +169,13 @@ export default forwardRef(({filterMenu, processFilter, ...props}, ref) => {
               <TabBar
                 {...props}
                 labelStyle={{
-                  color: '#003A91',
+                  color: '#01796F',
                 }}
                 style={{
                   backgroundColor: 'white',
                 }}
                 indicatorStyle={{
-                  backgroundColor: '#003A91',
+                  backgroundColor: '#01796F',
                   height: 1,
                 }}
               />
@@ -311,13 +311,13 @@ export default forwardRef(({filterMenu, processFilter, ...props}, ref) => {
                       paddingVertical: 10,
                       borderRadius: 10,
                       borderWidth: 1,
-                      borderColor: filterData.value ? '#003A91' : '#6D768780',
+                      borderColor: filterData.value ? '#01796F' : '#6D768780',
                       marginVertical: 10,
                       width: widthPercentageToDP('47%'),
                     }}>
                     <Text
                       style={{
-                        color: filterData.value ? '#003A91' : '#6D7687',
+                        color: filterData.value ? '#01796F' : '#6D7687',
                         fontSize: responsiveFontSize(1.9),
                         fontWeight: '400',
                         ...Constanta({

@@ -30,7 +30,7 @@ export default ({
 
   return (
     <View style={{}}>
-      <StatusBarContainer backgroundColor={'#003A91'} statusBarProps={'#fff'} />
+      <StatusBarContainer backgroundColor={'#01796F'} statusBarProps={'#fff'} />
       <SafeAreaView>
         <View
           style={{

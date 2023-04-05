@@ -65,7 +65,7 @@ const FirstRoute = props => (
         style={{
           marginVertical: widthPercentageToDP('4%'),
           borderWidth: 1,
-          borderColor: '#003A91',
+          borderColor: '#01796F',
           width: widthPercentageToDP('90%'),
           paddingVertical: widthPercentageToDP('3%'),
           borderRadius: 4,
@@ -75,7 +75,7 @@ const FirstRoute = props => (
           style={{
             textAlign: 'center',
             fontSize: widthPercentageToDP('4.5%'),
-            color: '#003A91',
+            color: '#01796F',
           }}>
           Scan Ulang e-KTP
         </Text>
@@ -95,7 +95,7 @@ const FirstRoute = props => (
             style={{
               marginVertical: 10,
             }}>
-            {/* <Text style={{ color: '#003A91', fontSize: widthPercentageToDP('4.5%') }}>Nama Lengkap</Text> */}
+            {/* <Text style={{ color: '#01796F', fontSize: widthPercentageToDP('4.5%') }}>Nama Lengkap</Text> */}
             {/* <View style={{ width: 321, height: 47, borderColor: '#CDD1E0', borderWidth: 1, borderRadius: 6, marginTop: 10, justifyContent: 'space-between', flexDirection: 'row', alignItems: 'center' }}> */}
 
             <InputTextWithIcon
@@ -115,7 +115,7 @@ const FirstRoute = props => (
                 title: 'Nama Lengkap',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -158,7 +158,7 @@ const FirstRoute = props => (
                 title: 'Nomor Induk Kependudukan',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -199,7 +199,7 @@ const FirstRoute = props => (
                 title: 'Tanggal Lahir',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -240,7 +240,7 @@ const FirstRoute = props => (
                 title: 'Kewarganegaraan',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -264,7 +264,7 @@ const FirstRoute = props => (
         <Text
           style={{
             marginTop: 12,
-            color: '#003A91',
+            color: '#01796F',
             fontSize: widthPercentageToDP('5%'),
           }}>
           Data Lainnya
@@ -291,7 +291,7 @@ const FirstRoute = props => (
                 title: 'Nomor SIM',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -332,7 +332,7 @@ const FirstRoute = props => (
                 title: 'Email',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -373,7 +373,7 @@ const FirstRoute = props => (
                 title: 'No Telepon Seluler',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -398,7 +398,7 @@ const FirstRoute = props => (
             style={{
               width: 321,
               height: 46,
-              backgroundColor: '#003A91',
+              backgroundColor: '#01796F',
               borderRadius: 5,
               justifyContent: 'center',
               alignItems: 'center',
@@ -445,7 +445,7 @@ const SecondRoute = props => (
       style={{
         marginVertical: widthPercentageToDP('4%'),
         borderWidth: 1,
-        borderColor: '#003A91',
+        borderColor: '#01796F',
         width: widthPercentageToDP('80%'),
         paddingVertical: widthPercentageToDP('3%'),
         borderRadius: 4,
@@ -455,7 +455,7 @@ const SecondRoute = props => (
         style={{
           textAlign: 'center',
           fontSize: widthPercentageToDP('4.5%'),
-          color: '#003A91',
+          color: '#01796F',
         }}>
         Tambah Data Kendaraan
       </Text>
@@ -488,7 +488,7 @@ export default props => {
         title: 'Akun Saya',
         backIconStyle: true,
         titleStyle: {
-          color: '#003A91',
+          color: '#01796F',
 
           backgrounColor: '#FCFDFF',
           textAlign: 'center',
@@ -543,7 +543,7 @@ export default props => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         marginHorizontal: 20,
                         marginBottom: 10,
                       }}>
@@ -558,7 +558,7 @@ export default props => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         marginHorizontal: 20,
                         marginTop: 10,
                       }}>
@@ -583,7 +583,7 @@ export default props => {
           style={{
             textAlign: 'center',
             fontWeight: '400',
-            color: '#003A91',
+            color: '#01796F',
             fontSize: widthPercentageToDP('4.5%'),
           }}>
           Data Kendaraan Belum Lengkap
@@ -601,13 +601,13 @@ export default props => {
           <TabBar
             {...props}
             labelStyle={{
-              color: '#003A91',
+              color: '#01796F',
             }}
             style={{
               backgroundColor: 'white',
             }}
             indicatorStyle={{
-              backgroundColor: '#003A91',
+              backgroundColor: '#01796F',
               height: 2,
             }}
           />

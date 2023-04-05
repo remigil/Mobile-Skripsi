@@ -460,7 +460,7 @@ export default props => {
             justifyContent: 'center',
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: '#fff',

@@ -118,7 +118,7 @@ export default props => {
         title: 'BERITA TERKINI',
         backIconStyle: true,
         titleStyle: {
-          color: '#003A91',
+          color: '#01796F',
           ...Constanta({
             font: 'semibold',
           }),

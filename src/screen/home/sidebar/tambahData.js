@@ -200,7 +200,7 @@ export default props => {
               style={{
                 alignSelf: 'flex-start',
                 fontSize: widthPercentageToDP('5%'),
-                color: '#003A91',
+                color: '#01796F',
                 ...Constanta({font: 'regular'}),
                 marginLeft: responsiveWidth(7.5),
                 marginBottom: responsiveHeight(2),
@@ -249,7 +249,7 @@ export default props => {
                 autoCorrect={false}
                 autoCapitalize="none"
                 maxLength={4}
-                keyboardType='numeric'
+                keyboardType="numeric"
                 style={{
                   borderWidth: 1,
                   borderColor: '#CDD1E0',
@@ -320,7 +320,7 @@ export default props => {
                 title: 'Nomor Registrasi',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                 },
@@ -441,7 +441,7 @@ export default props => {
             zIndex: 9999,
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: 'white',

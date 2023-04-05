@@ -200,7 +200,7 @@ export default props => {
       actionBarProps={{
         title: 'FORMULIR PANIC BUTTON',
         titleStyle: {
-          color: '#003A91',
+          color: '#01796F',
 
           backgrounColor: '#FCFDFF',
           textAlign: 'center',
@@ -259,7 +259,7 @@ export default props => {
             <Text
               style={{
                 fontSize: widthPercentageToDP('5%'),
-                color: '#003A91',
+                color: '#01796F',
                 fontWeight: '400',
                 // ...constanta({
                 //   font: 'regular',
@@ -300,7 +300,7 @@ export default props => {
                     borderBottomLeftRadius: 15,
                     borderBottomRightRadius: 15,
                     borderWidth: 2,
-                    borderColor: '#003A91',
+                    borderColor: '#01796F',
                     borderStyle: 'dashed',
                     borderRadius: widthPercentageToDP('6%'),
                     marginVertical: 10,
@@ -374,7 +374,7 @@ export default props => {
                 style={{
                   height: heightPercentageToDP('20%'),
                   borderWidth: 2,
-                  borderColor: '#003A91',
+                  borderColor: '#01796F',
                   borderStyle: 'dashed',
                   borderRadius: widthPercentageToDP('6%'),
                   marginVertical: 10,
@@ -437,7 +437,7 @@ export default props => {
                 styleData={{
                   titleHeader: {
                     fontSize: widthPercentageToDP('5%'),
-                    color: '#003A91',
+                    color: '#01796F',
                     fontWeight: '400',
                     // ...constanta({
                     //   font: 'regular',
@@ -498,7 +498,7 @@ export default props => {
                 title: 'Keterangan',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
-                  color: '#003A91',
+                  color: '#01796F',
                   fontWeight: '400',
                   marginBottom: widthPercentageToDP('1.5%'),
                   // ...constanta({
@@ -600,7 +600,7 @@ export default props => {
             zIndex: 9999,
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: 'white',

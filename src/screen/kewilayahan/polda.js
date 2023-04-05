@@ -140,10 +140,12 @@ export default props => {
                   />
                 </View>
                 <View
-                  style={{
-                    // position: 'absolute',
-                    // bottom: polda.name_polda.length <= 15 ? -10 : -25,
-                  }}>
+                  style={
+                    {
+                      // position: 'absolute',
+                      // bottom: polda.name_polda.length <= 15 ? -10 : -25,
+                    }
+                  }>
                   <Text
                     style={{
                       textAlign: 'center',
@@ -153,7 +155,7 @@ export default props => {
                       ...Constanta({
                         font: 'regular',
                       }),
-                      fontSize:responsiveFontSize(1.2)
+                      fontSize: responsiveFontSize(1.2),
                     }}>
                     {polda.name_polda}
                     {/* {polda.name_polda.length} */}
@@ -270,7 +272,7 @@ export default props => {
             reducedTransparencyFallbackColor={'#ededed'}
           />
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: 'white',

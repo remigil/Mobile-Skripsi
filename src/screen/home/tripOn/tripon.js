@@ -142,7 +142,7 @@ export default props => {
       basicAlertProps={basicAlertProps}
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On',
+        title: 'Bogor Ngawas',
         titleStyle: {
           color: 'white',
           backgrounColor: '#FCFDFF',

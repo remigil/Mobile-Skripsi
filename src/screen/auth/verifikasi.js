@@ -129,7 +129,7 @@ export default props => {
 
         alignItems: 'center',
       }}>
-      <StatusBar animated={true} backgroundColor="#003A91" hidden={false} />
+      <StatusBar animated={true} backgroundColor="#01796F" hidden={false} />
       {isLoading ? (
         <View
           style={{
@@ -142,7 +142,7 @@ export default props => {
             justifyContent: 'center',
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: '#fff',
@@ -164,7 +164,7 @@ export default props => {
               style={{
                 textAlign: 'center',
                 // fontWeight: '700',
-                color: '#003A91',
+                color: '#01796F',
                 fontSize: widthPercentageToDP('5%'),
                 marginVertical: heightPercentageToDP('3%'),
                 ...Constanta({
@@ -177,7 +177,7 @@ export default props => {
               style={{
                 textAlign: 'center',
 
-                color: '#003A91',
+                color: '#01796F',
                 fontSize: widthPercentageToDP('5%'),
                 marginTop: widthPercentageToDP('5%'),
                 ...Constanta({
@@ -239,7 +239,7 @@ export default props => {
 
             <Pressable
               style={{
-                backgroundColor: '#003A91',
+                backgroundColor: '#01796F',
                 width: widthPercentageToDP('80%'),
                 paddingVertical: widthPercentageToDP('4%'),
                 borderRadius: widthPercentageToDP('2%'),
@@ -300,7 +300,7 @@ export default props => {
                 }}>
                 <Text
                   style={{
-                    color: '#00004D',
+                    color: '#01796F',
                     // fontWeight: '300',
                     ...Constanta({
                       font: 'semibold',

@@ -35,7 +35,7 @@ export default ({
   selectItemAccordian = null,
   styleData = {
     titleHeader: {
-      color: '#003A91',
+      color: '#01796F',
       fontSize: widthPercentageToDP('5%'),
     },
     titlePlaceholder: {

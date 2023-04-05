@@ -71,7 +71,7 @@ export default props => {
             }),
             color: '#9C9D9E',
           }}>
-          Geus Boga Akun?
+          Silahkan Masuk jika Sudah Memiliki Akun
         </Text>
         <Pressable
           style={{
@@ -148,7 +148,7 @@ export default props => {
                     font: 'semibold',
                   }),
                   textAlign: 'center',
-                  color: '#003A91',
+                  color: '#01796F',
                   marginTop: 3,
                 }}>
                 versi {latestVersion}

@@ -283,7 +283,7 @@ export default props => {
                     }}>
                     <Text
                       style={{
-                        color: '#003A91',
+                        color: '#01796F',
                         ...Constanta({
                           font: 'semibold',
                         }),
@@ -372,7 +372,7 @@ export default props => {
                       <Text
                         style={{
                           fontSize: widthPercentageToDP('4.5%'),
-                          color: '#003A91',
+                          color: '#01796F',
                           ...Constanta({
                             font: 'semibold',
                           }),
@@ -408,7 +408,7 @@ export default props => {
                       <Text
                         style={{
                           fontSize: widthPercentageToDP('4.5%'),
-                          color: '#003A91',
+                          color: '#01796F',
                           ...Constanta({
                             font: 'semibold',
                           }),
@@ -447,7 +447,7 @@ export default props => {
                         }}>
                         <Text
                           style={{
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -511,7 +511,7 @@ export default props => {
                         }}>
                         <Text
                           style={{
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -574,7 +574,7 @@ export default props => {
                         }}>
                         <Text
                           style={{
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -620,7 +620,7 @@ export default props => {
                             }}>
                             <Text
                               style={{
-                                color: '#003A91',
+                                color: '#01796F',
                                 ...Constanta({
                                   font: 'bold',
                                 }),
@@ -782,7 +782,7 @@ export default props => {
                         <Text
                           style={{
                             fontSize: widthPercentageToDP('4.5%'),
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -818,7 +818,7 @@ export default props => {
                         <Text
                           style={{
                             fontSize: widthPercentageToDP('4.5%'),
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -854,7 +854,7 @@ export default props => {
                         <Text
                           style={{
                             fontSize: widthPercentageToDP('4.5%'),
-                            color: '#003A91',
+                            color: '#01796F',
                             ...Constanta({
                               font: 'semibold',
                             }),
@@ -900,7 +900,7 @@ export default props => {
                   props.navigation.goBack();
                 }}
                 style={{
-                  borderColor: '#003A91',
+                  borderColor: '#01796F',
                   borderWidth: 1,
                   width: widthPercentageToDP('40%'),
                   height: heightPercentageToDP('5%'),
@@ -912,7 +912,7 @@ export default props => {
                 <IconKembali />
                 <Text
                   style={{
-                    color: '#003A91',
+                    color: '#01796F',
                     textAlign: 'center',
                     marginLeft: 10,
                     ...Constanta({
@@ -979,7 +979,7 @@ export default props => {
             justifyContent: 'center',
           }}>
           <View style={{alignItems: 'center'}}>
-            <ActivityIndicator size="large" color="#003A91" />
+            <ActivityIndicator size="large" color="#01796F" />
             <Text
               style={{
                 color: '#fff',
