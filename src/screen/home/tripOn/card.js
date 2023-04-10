@@ -50,7 +50,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On Card',
+        title: 'Ngawas Card',
         backIconStyle: true,
         titleStyle: {
           color: '#FFF',
@@ -110,7 +110,7 @@ export default props => {
                   marginLeft: responsiveWidth(4),
                   fontSize: responsiveFontSize(2),
                 }}>
-                PUSAT KENDALI KOORDINASI{`\n`}KOMUNIKASI DAN INFORMASI
+                Bogor Ngawas{`\n`}KOMUNIKASI DAN INFORMASI
               </Text>
             </View>
             <Image

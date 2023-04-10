@@ -121,7 +121,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On Map',
+        title: 'Map Bogor Ngawas',
         backIconStyle: true,
         titleStyle: {
           color: 'white',

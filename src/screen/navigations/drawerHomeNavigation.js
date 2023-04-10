@@ -101,7 +101,7 @@ const CustDrawer = props => {
     // },
     {
       icon: <QRtripon width={28} height={28} />,
-      title: 'MyQR TripOn',
+      title: 'QR Bogor Ngawas',
       name: 'historytripon',
       id: 'historytripon',
       onPress: () => {

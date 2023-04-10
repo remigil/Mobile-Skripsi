@@ -97,7 +97,7 @@ const FirstRoute = ({...props}) => {
                     font: 'regular',
                   }),
                 }}>
-                Belum ada data Trip On
+                Anda belum memiliki data
               </Text>
             </View>
           ) : (
@@ -240,7 +240,7 @@ const SecondRoute = ({...props}) => {
                     font: 'regular',
                   }),
                 }}>
-                Belum ada data Trip On
+                Anda Belum Memiliki data apapun
               </Text>
             </View>
           ) : (
@@ -343,7 +343,7 @@ export default function TabViewExample({props}) {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'MyQR Tripon',
+        title: 'QR Bogor Ngawas',
         backIconStyle: true,
         titleStyle: {
           color: '#FFF',

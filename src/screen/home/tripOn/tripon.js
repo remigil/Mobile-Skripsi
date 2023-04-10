@@ -210,10 +210,9 @@ export default props => {
                       }),
                       color: 'black',
                     }}>
-                    Trip On merupakan fitur yang akan menemani perjalanan anda.
-                    Trip On memberikan info tentang rute, lama tempuh
-                    perjalanan, lalu lintas, keberadaan CCTV, fasilitas umum ,
-                    dan banyak lagi.
+                    Aplikasi Bogor Ngawas yaitu aplikasi yang 
+                    dapat Memonitoring perjalanan warga bogor,
+                    untuk mengetahui penyimpangan rute yang ingin di lewati.
                   </Text>
                 </View>
                 {dataKendaraan.length ? (

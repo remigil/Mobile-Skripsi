@@ -80,7 +80,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On Card',
+        title: 'Kartu Jalan',
         backIconStyle: true,
         titleStyle: {
           color: '#FFF',
@@ -122,7 +122,7 @@ export default props => {
                       font: 'regular',
                     }),
                   }}>
-                  Belum ada data Trip On
+                  Anda Belum memiiki data
                 </Text>
               </>
             ) : (
