@@ -697,7 +697,7 @@ export default props => {
                 </Collapsible>
               </View>
               {/* Bagian Penumpang */}
-              {paramsData.passenger.map((dataPenum, ind) => (
+              {paramsData.penumpangs.map((dataPenum, ind) => (
                 <View key={'data-penumpang' + ind + new Date()}>
                   <TouchableOpacity
                     style={{

@@ -177,7 +177,7 @@ export default props => {
                   modalizeRestArea.current.open();
                   handleClose();
                 }}
-                pinColor={'blue'}
+                pinColor={'#01796F'}
                 key={'user-restarea-marker' + restAreaData.id + new Date()}>
                 <Image
                   style={{

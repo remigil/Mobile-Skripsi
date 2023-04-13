@@ -23,22 +23,22 @@ import {
 //   }
 // };
 
-export const GetFAQ = async (filter = {}) => {
-  try {
-    let getFaq = await APISender(
-      APICONFIG.BASE_URL + APICONFIG.FAQ,
-      httpMethod.GET,
-      null,
-      filter,
-      ContentType.formData,
-      // res => res,
-    );
-    // console.log({getListVehicle});
-    return getFaq;
-  } catch (e) {
-    return APIResponse;
-  }
-};
+// export const GetFAQ = async (filter = {}) => {
+//   try {
+//     let getFaq = await APISender(
+//       APICONFIG.BASE_URL + APICONFIG.FAQ,
+//       httpMethod.GET,
+//       null,
+//       filter,
+//       ContentType.formData,
+//       // res => res,
+//     );
+//     // console.log({getListVehicle});
+//     return getFaq;
+//   } catch (e) {
+//     return APIResponse;
+//   }
+// };
 
 // export const ScanKtp = async ({ktp}) => {
 //   try {

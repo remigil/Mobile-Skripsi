@@ -31,7 +31,7 @@ export default props => {
       .then(response => {
         console.log({response: response?.data?.data});
         setDataTripon(response.data.data[0]);
-        setDataPenumpang(response.data.data[0].passenger_trip_ons.length);
+        setDataPenumpang(response.data.data[0].panumpangs.length);
         setDataKendaraan(response.data.data[0].type_vehicle.type_name);
         console.log('nah', response.data.data[0]);
       })

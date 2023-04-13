@@ -163,7 +163,7 @@ export default props => {
                   font: 'regular',
                 }),
               }}>
-              Berlaku untuk {`${paramsData.passenger_trip_ons.length}`} orang
+              Berlaku untuk {`${paramsData.penumpangs.length}`} orang
               dan 1 {`${paramsData.type_vehicle.type_name}`}
             </Text>
             <View>
@@ -254,7 +254,7 @@ export default props => {
                 start={{x: 1.0, y: 1.0}}
                 end={{x: 0.0, y: 0.4}}
                 locations={[0, 0.7]}
-                colors={['#275DAD', '#01796F']}
+                colors={['#F8C92C', '#01796F']}
                 style={{
                   flex: 1,
                   borderRadius: 5,

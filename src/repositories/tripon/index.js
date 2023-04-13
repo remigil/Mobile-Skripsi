@@ -147,7 +147,6 @@ export const GetTripOnHistory = async () => {
   }
 };
 
-
 export const CheckMyTripOn = async () => {
   try {
     let getListVehicle = await APISender(

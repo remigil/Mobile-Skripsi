@@ -624,7 +624,7 @@ export default props => {
         cancelText={'Batal'}
         confirmText={'Simpan'}
         title={'Pilih Tanggal'}
-        fadeToColor="blue"
+        fadeToColor="#01796F"
         open={openDate}
         date={dateNow}
         onConfirm={date => {
@@ -643,7 +643,7 @@ export default props => {
       {/* pilih jam */}
       <DatePicker
         modal
-        fadeToColor="blue"
+        fadeToColor="#01796F"
         open={openTime}
         confirmText={'Simpan'}
         cancelText={'Batal'}

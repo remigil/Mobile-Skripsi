@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {BottomHomeNavigation} from './bottomNavigation';
 import {
   CallCenter,
-  HalamanFAQ,
+  // HalamanFAQ,
   ProfileAccountScreen,
   PusatBantuan,
   ScanKTP,
@@ -20,9 +20,9 @@ export default ProfileNavigation = () => {
       }}
       initialRouteName={'sidebar.index'}>
       <Stack.Screen name="sidebar.index" component={ProfileAccountScreen} />
-      <Stack.Screen name="sidebar.callCenter" component={CallCenter} />
-      <Stack.Screen name="sidebar.faq" component={HalamanFAQ} />
-      <Stack.Screen name="sidebar.sosial_media" component={Sosial_Media} />
+      {/* <Stack.Screen name="sidebar.callCenter" component={CallCenter} /> */}
+      {/* <Stack.Screen name="sidebar.faq" component={HalamanFAQ} /> */}
+      {/* <Stack.Screen name="sidebar.sosial_media" component={Sosial_Media} /> */}
     </Stack.Navigator>
   );
 };

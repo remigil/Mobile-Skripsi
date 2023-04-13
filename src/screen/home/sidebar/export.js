@@ -1,1 +1,1 @@
-export {default as HalamanFAQ} from './faq';
+// export {default as HalamanFAQ} from './faq';

@@ -12,5 +12,3 @@ export {default as TouchebleDisable} from './button/TouchebleDisable';
 export {default as ModalWithPic} from './modal/ModalWithPic';
 export {default as FilterSearch} from './map/modal/FilterSearch';
 export {default as FilterHome} from './home/modal/filterSeacrh';
-
-

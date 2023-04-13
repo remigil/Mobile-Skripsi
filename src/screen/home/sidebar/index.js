@@ -787,7 +787,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
             justifyContent: 'center',
             marginTop: responsiveHeight(20),
           }}>
-          <ActivityIndicator color="blue" />
+          <ActivityIndicator color="#01796F" />
         </View>
       ) : (
         <ScrollView

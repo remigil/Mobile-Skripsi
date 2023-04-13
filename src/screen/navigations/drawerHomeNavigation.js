@@ -54,7 +54,7 @@ import DialogContainer, {
 import Modal from 'react-native-modal';
 
 import {authLogout} from '../../redux/auth/action';
-import {HalamanFAQ} from '../home/sidebar/export';
+// import {HalamanFAQ} from '../home/sidebar/export';
 import Constanta from '../../lib/Constanta';
 import {
   responsiveFontSize,
@@ -81,15 +81,15 @@ const CustDrawer = props => {
   };
   const [modal, setModal] = useState(false);
   const menuDrawer = [
-    {
-      icon: <ContactCentre width={28} height={28} />,
-      title: 'Call Centre',
-      name: 'callcentre',
-      id: 'callcentre',
-      onPress: () => {
-        props.navigation.navigate('CallCenter');
-      },
-    },
+    // {
+    //   icon: <ContactCentre width={28} height={28} />,
+    //   title: 'Call Centre',
+    //   name: 'callcentre',
+    //   id: 'callcentre',
+    //   onPress: () => {
+    //     props.navigation.navigate('CallCenter');
+    //   },
+    // },
     // {
     //   icon: <QRtripon width={28} height={28} />,
     //   title: 'MyQR TripOn',
@@ -108,50 +108,50 @@ const CustDrawer = props => {
         props.navigation.navigate('historytripon');
       },
     },
-    {
-      icon: <Faq width={28} height={28} />,
-      title: 'FAQ',
-      name: 'faq',
-      id: 'faq',
-      onPress: () => {
-        props.navigation.navigate('HalamanFaq');
-      },
-    },
-    {
-      icon: <PanduanIco width={28} height={28} />,
-      title: 'Panduan',
-      name: 'panduan',
-      id: 'panduan',
-      onPress: () => {
-        props.navigation.navigate('Home');
-        setTimeout(() => {
-          setBasicModal({
-            basicAlertVisible: true,
-            basicAlertShowButton: true,
-            withTitle: true,
-            basicAlertTitle:
-              'Apakah Kamu Yakin Ingin Mengunduh file panduan dari Aplikasi ini ?',
+    // {
+    //   icon: <Faq width={28} height={28} />,
+    //   title: 'FAQ',
+    //   name: 'faq',
+    //   id: 'faq',
+    //   onPress: () => {
+    //     props.navigation.navigate('HalamanFaq');
+    //   },
+    // },
+    // {
+    //   icon: <PanduanIco width={28} height={28} />,
+    //   title: 'Panduan',
+    //   name: 'panduan',
+    //   id: 'panduan',
+    //   onPress: () => {
+    //     props.navigation.navigate('Home');
+    //     setTimeout(() => {
+    //       setBasicModal({
+    //         basicAlertVisible: true,
+    //         basicAlertShowButton: true,
+    //         withTitle: true,
+    //         basicAlertTitle:
+    //           'Apakah Kamu Yakin Ingin Mengunduh file panduan dari Aplikasi ini ?',
 
-            basicAlertOnOk: async () => {},
-            basicAlertOnClosed: () => {
-              closeBasicAlert();
-            },
-            basicAlertOkBtnOnly: false,
-            basicAlertBtnOkText: 'Unduh',
-            basicAlertBtnClosedText: 'Batalkan',
-          });
-        }, 1000);
-      },
-    },
-    {
-      icon: <SocialMediIco width={28} height={28} />,
-      title: 'Sosial Media',
-      name: 'sosmed',
-      id: 'sosmed',
-      onPress: () => {
-        props.navigation.navigate('SosialMedia');
-      },
-    },
+    //         basicAlertOnOk: async () => {},
+    //         basicAlertOnClosed: () => {
+    //           closeBasicAlert();
+    //         },
+    //         basicAlertOkBtnOnly: false,
+    //         basicAlertBtnOkText: 'Unduh',
+    //         basicAlertBtnClosedText: 'Batalkan',
+    //       });
+    //     }, 1000);
+    //   },
+    // },
+    // {
+    //   icon: <SocialMediIco width={28} height={28} />,
+    //   title: 'Sosial Media',
+    //   name: 'sosmed',
+    //   id: 'sosmed',
+    //   onPress: () => {
+    //     props.navigation.navigate('SosialMedia');
+    //   },
+    // },
     {
       icon: <LogoutIco width={28} height={28} />,
       title: 'Logout',
@@ -506,7 +506,7 @@ export const HomeDrawerNav = () => {
         component={DetailNotifikasi}
         name="DetailNotifikasi"
       />
-      <Drawer.Screen
+      {/* <Drawer.Screen
         options={{
           drawerItemStyle: {
             display: 'none',
@@ -515,7 +515,7 @@ export const HomeDrawerNav = () => {
         }}
         component={HalamanFAQ}
         name="HalamanFaq"
-      />
+      /> */}
       <Drawer.Screen
         options={{
           drawerItemStyle: {

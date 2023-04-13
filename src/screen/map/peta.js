@@ -681,7 +681,7 @@ export default props => {
                 setCctvDetailClick(cctvData);
                 modalizeCCTV.current.open();
               }}
-              pinColor={'blue'}
+              pinColor={'#01796F'}
               key={'user-cctv-marker' + cctvData.id + new Date()}>
               <Image
                 style={{
@@ -753,7 +753,7 @@ export default props => {
                 setSamsatDetailClick(samsatData);
                 modalizeSamsat.current.open();
               }}
-              pinColor={'blue'}
+              pinColor={'#01796F'}
               key={'user-samsat-marker' + ind + new Date()}>
               <Image
                 style={{
@@ -776,7 +776,7 @@ export default props => {
                 setEtleDetailClick(etleData);
                 modalizeEtle.current.open();
               }}
-              pinColor={'blue'}
+              pinColor={'#01796F'}
               key={'user-etle-marker' + ind + new Date()}>
               <Image
                 style={{
@@ -804,7 +804,7 @@ export default props => {
                 setSimkelDetailClick(simkelilingData);
                 modalizeSimkel.current.open();
               }}
-              pinColor={'blue'}
+              pinColor={'#01796F'}
               key={'user-simkeliling-marker' + ind + new Date()}>
               <Image
                 // style={{
@@ -831,7 +831,7 @@ export default props => {
                 setTroubleClick(troublespotData);
                 modalizeTrouble.current.open();
               }}
-              pinColor={'blue'}
+              pinColor={'#01796F'}
               key={'user-troublespot-marker' + ind + new Date()}>
               <Image
                 resizeMode="cover"

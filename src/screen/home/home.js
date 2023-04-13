@@ -1,43 +1,21 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {
-  View,
-  Text,
-  Pressable,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  Animated,
-} from 'react-native';
-// import {TouchableOpacity} from 'react-native-gesture-handler';
+import React, {useState} from 'react';
 import {
   heightPercentageToDP,
-  widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {AvatarIco, IconSpeaker} from '../../assets/Assets';
 import {BaseContainer} from '../../component';
 
-import Berita from './addOnHome/berita';
+
 import {BasicAlertProps} from '../../component/container/dialogContainer';
 import {useSelector} from 'react-redux';
 
 import Constanta from '../../lib/Constanta';
-import {
-  responsiveFontSize,
-  responsiveHeight,
-  responsiveWidth,
-} from 'react-native-responsive-dimensions';
-import AplikasiKorlantas from './addOnHome/aplikasiKorlantas';
-import Beritastakeholder from './addOnHome/beritastakeholder';
+
 
 export default props => {
   const {auth} = useSelector(state => state);
-  const [openPanicButton, setOpenPanicButton] = useState(false);
-  const slideToRight = useRef(new Animated.Value(0)).current;
 
-
-  const [basicAlertProps, setBasicAlertProps] = useState(BasicAlertProps);
-
-  let firstName = auth?.userData?.getProfile?.person_name.split(' ');
+ 
+  const [basicAlertProps] = useState(BasicAlertProps);
 
   return (
     <BaseContainer
@@ -62,83 +40,8 @@ export default props => {
           props.navigation.openDrawer();
         },
       }}>
-      <ScrollView
-        style={{
-          marginBottom: responsiveHeight(9),
-        }}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                // alignSelf: 'center',
-                width: responsiveWidth(115),
-              }}>
-              <View>
-                <AvatarIco
-                  height={heightPercentageToDP('10%')}
-                  width={widthPercentageToDP('10%')}
-                />
-              </View>
-              <View>
-                <Text
-                  style={{
-                    ...Constanta({
-                      font: 'roboto',
-                    }),
-                    color: '#01796F',
-                    width: responsiveWidth(30),
-                    marginLeft: 5,
-                  }}>
-                  Hi, {firstName[0]}
-                </Text>
-              </View>
-            </View>
-      </ScrollView>
+
+
     </BaseContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:
-      'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
-  },
-  modalView: {
-    backgroundColor: 'white',
-    borderRadius: 20,
-    paddingHorizontal: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-    width: widthPercentageToDP('80%'),
-    height: heightPercentageToDP('38%'),
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-  },
-});

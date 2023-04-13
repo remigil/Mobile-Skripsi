@@ -297,7 +297,7 @@ export default props => {
         <TouchableOpacity
           onPress={() => {
             props.lanjutFormulir(3, {
-              passenger: tampilPenumpang,
+              penumpangs: tampilPenumpang,
             });
           }}
           style={{
