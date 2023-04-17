@@ -92,7 +92,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On',
+        title: 'Bogor Ngawas',
         titleStyle: {
           color: '#FFF',
 
@@ -265,7 +265,7 @@ export default props => {
               start={{x: 1.0, y: 1.0}}
               end={{x: 0.0, y: 0.4}}
               locations={[0, 0.7]}
-              colors={['#1F5EBB', '#09449C']}
+              colors={['#F8C92C', '#01796F']}
               style={{
                 flex: 1,
                 borderRadius: 5,

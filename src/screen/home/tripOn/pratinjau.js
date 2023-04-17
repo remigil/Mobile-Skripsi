@@ -159,7 +159,7 @@ export default props => {
             },
             basicAlertOkBtnOnly: true,
             basicAlertBtnOkText:
-              'Silahkan Coba Kembali setelah trip on sebelumnya',
+              'Silahkan Coba Kembali setelah dengan data sebelumnya',
           });
         } else {
           // alert(ok.data);
@@ -207,7 +207,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Trip On',
+        title: 'Bogor Ngawas',
         titleStyle: {
           color: 'white',
           ...Constanta({
@@ -697,7 +697,7 @@ export default props => {
                 </Collapsible>
               </View>
               {/* Bagian Penumpang */}
-              {paramsData.penumpangs.map((dataPenum, ind) => (
+              {paramsData.passenger.map((dataPenum, ind) => (
                 <View key={'data-penumpang' + ind + new Date()}>
                   <TouchableOpacity
                     style={{
@@ -940,7 +940,7 @@ export default props => {
                   start={{x: 1.0, y: 1.0}}
                   end={{x: 0.0, y: 0.4}}
                   locations={[0, 0.7]}
-                  colors={['#1F5EBB', '#01796F']}
+                  colors={['#F8C92C', '#01796F']}
                   style={{
                     flex: 1,
                     borderRadius: 5,

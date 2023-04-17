@@ -17,7 +17,7 @@ export const SinfoAttr = {
 };
 
 export const APICONFIG = {
-  BASE_URL: 'http://34.101.85.12:8080/v1',
+  BASE_URL: 'http://34.128.65.46:3001/v1',
   BASE_URL_TRACK: API_BASE_URL_TRACK,
   AUTH_URL: {
     LOGIN: '/auth-society/login-mobile',

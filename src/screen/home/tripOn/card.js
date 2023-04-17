@@ -31,7 +31,7 @@ export default props => {
       .then(response => {
         console.log({response: response?.data?.data});
         setDataTripon(response.data.data[0]);
-        setDataPenumpang(response.data.data[0].panumpangs.length);
+        setDataPenumpang(response.data.data[0].penumpangs.length);
         setDataKendaraan(response.data.data[0].type_vehicle.type_name);
         console.log('nah', response.data.data[0]);
       })
@@ -116,7 +116,7 @@ export default props => {
             <Image
               source={{
                 uri: `${
-                  'http://34.101.85.12:8080/uploads/qrcode/' +
+                  'http://34.128.65.46:3001/uploads/qrcode/' +
                   dataTripon.barcode
                 }`,
               }}
@@ -209,7 +209,7 @@ export default props => {
                     ...paramsData,
                   });
                 }}
-                title={'Lihat Trip On Map'}
+                title={'Lihat Ngawas Map'}
                 icon={<IconBackToMaps />}
                 // redirect={'tripon.profilKendaraan'}
                 {...props}

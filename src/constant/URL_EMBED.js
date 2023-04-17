@@ -1,7 +1,7 @@
-export const LINK_ICON_EXTERNAL = 'http://34.101.85.12:8080/uploads/icon/';
-export const LINK_ICON_POLDA = 'http://34.101.85.12:8080/uploads/polda/logo/';
+export const LINK_ICON_EXTERNAL = 'http://34.128.65.46:3001/uploads/icon/';
+export const LINK_ICON_POLDA = 'http://34.128.65.46:3001/uploads/polda/logo/';
 export const LINK_ICON_STAKEHOLDER =
-  'http://34.101.85.12:8080/uploads/stakeholder/';
+  'http://34.128.65.46:3001/uploads/stakeholder/';
 export const Haversine = ({lat1, lon1, lat2, lon2}) => {
   const R = 6371e3; // metres
   const φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians

@@ -766,7 +766,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
       basicAlertProps={basicAlertProps}
       withActionBar={false}
       actionBarProps={{
-        title: 'Trip On',
+        title: 'Bogor Ngawas',
         titleStyle: {
           color: '#01796F',
 
@@ -959,7 +959,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
                           basicAlertShowButton: true,
                           withTitle: true,
                           basicAlertTitle:
-                            'Belum dapat menambahkan Trip On, Anda Masih Memiliki Trip On yang terdaftar',
+                            'Belum dapat menambahkan Data, Anda Masih Memiliki Data yang terdaftar',
                           basicAlertMessage: '',
                           basicAlertOnOk: () => {
                             setBasicAlertProps({
