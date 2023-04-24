@@ -31,13 +31,13 @@ import {
   DataKendaraan,
   DetailBerita,
   DetailNotifikasi,
-  FromTripOn,
-  History_Tripon,
+  FormNgawas,
+  History_Ngawas,
   ListBerita,
   Notifikasi,
   PanicButton,
   PetaHistory,
-  PetaTripOn,
+  PetaNgawas,
   ProfileAccountScreen,
   PusatBantuan,
   PusatBantuan2,
@@ -102,10 +102,10 @@ const CustDrawer = props => {
     {
       icon: <QRtripon width={28} height={28} />,
       title: 'QR Bogor Ngawas',
-      name: 'historytripon',
-      id: 'historytripon',
+      name: 'historyngawas',
+      id: 'historyngawas',
       onPress: () => {
-        props.navigation.navigate('historytripon');
+        props.navigation.navigate('historyngawas');
       },
     },
     // {
@@ -453,8 +453,8 @@ export const HomeDrawerNav = () => {
           },
           title: 'Call Centre',
         }}
-        component={FromTripOn}
-        name="FromTripOn"
+        component={FormNgawas}
+        name="FormNgawas"
       />
       <Drawer.Screen
         options={{
@@ -523,8 +523,8 @@ export const HomeDrawerNav = () => {
           },
           title: 'Faq',
         }}
-        component={PetaTripOn}
-        name="PetaTripOn"
+        component={PetaNgawas}
+        name="PetaNgawas"
       />
       <Drawer.Screen
         options={{
@@ -641,10 +641,10 @@ export const HomeDrawerNav = () => {
           drawerItemStyle: {
             display: 'none',
           },
-          title: 'History Tripon',
+          title: 'History Ngawas',
         }}
-        component={History_Tripon}
-        name="historytripon"
+        component={History_Ngawas}
+        name="historyngawas"
       />
     </Drawer.Navigator>
   );

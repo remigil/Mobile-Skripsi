@@ -32,7 +32,7 @@ import KeyboardAvoiding from '../../../component/form/KeyboardAvoiding';
 import Collapsible from 'react-native-collapsible';
 import moment from 'moment';
 import MapView from 'react-native-maps';
-import CardTripon from '../../../component/card/CardTripon';
+import CardNgawas from '../../../component/card/CardNgawas';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 // import FormAkun from '../Formulir/FormAkun';
 import Modal from 'react-native-modal';
@@ -524,7 +524,7 @@ const SecondRoute = props => {
         ) : (
           <>
             <Image
-              source={require('../../../assets/tripon/icon-tidak-ada-data.png')}
+              source={require('../../../assets/ngawas/icon-tidak-ada-data.png')}
               resizeMode="cover"
               style={{
                 width: widthPercentageToDP('36%'),

@@ -3,7 +3,7 @@ import {View, Text, Image, ActivityIndicator} from 'react-native';
 import {widthPercentageToDP} from 'react-native-responsive-screen';
 import {useSelector} from 'react-redux';
 import Constanta from '../../lib/Constanta';
-import {GetTripOn} from '../../repositories/tripon';
+import {GetNgawaS} from '../../repositories/ngawas';
 
 export default props => {
   const useImage = useRef();
@@ -45,7 +45,7 @@ export default props => {
             width: 359,
             height: 220,
           }}
-          source={require('../../assets/tripon/tripon_card2.png')}
+          source={require('../../assets/ngawas/tripon_card2.png')}
         />
         <Text
           style={{

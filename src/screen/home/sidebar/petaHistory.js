@@ -133,7 +133,7 @@ export default props => {
           }),
         },
         onBackPressed: () => {
-          props.navigation.jumpTo('historytripon');
+          props.navigation.jumpTo('historyngawas');
           //   props.navigation.goBack();
         },
       }}>

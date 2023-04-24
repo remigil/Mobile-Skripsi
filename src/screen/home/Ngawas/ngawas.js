@@ -21,10 +21,10 @@ import {
   TambahKendaraan,
 } from '../../../assets/Assets';
 import {
-  CheckMyTripOn,
+  CheckMyNgawas,
   DeleteKendaraan,
   GetKendaraan,
-} from '../../../repositories/tripon';
+} from '../../../repositories/ngawas';
 import {
   BaseContainer,
   TouchableGradient,
@@ -125,7 +125,7 @@ export default props => {
     getKendaraan();
   }, [refresh]);
   useEffect(() => {
-    CheckMyTripOn()
+    CheckMyNgawas()
       .then(myTrip => {
         console.log({myTrip});
         if (myTrip.data) {
@@ -261,7 +261,7 @@ export default props => {
                           <TouchableOpacity
                             onPress={() => {
                               props.navigation.navigate(
-                                'tripon.profilKendaraan',
+                                'ngawas.profilKendaraan',
                                 kendaraan,
                               );
                             }}
@@ -321,7 +321,7 @@ export default props => {
                   </Text>
                 </View>
                 <Image
-                  source={require('../../../assets/tripon/icon-tidak-ada-data.png')}
+                  source={require('../../../assets/ngawas/icon-tidak-ada-data.png')}
                   resizeMode="contain"
                   style={{
                     ...lebarGambar,
@@ -353,7 +353,7 @@ export default props => {
                 title={'Kendaraan Baru'}
                 icon={<TambahKendaraan />}
                 onPressData={() =>
-                  props.navigation.navigate('tripon.profilKendaraan')
+                  props.navigation.navigate('ngawas.profilKendaraan')
                 }
                 {...props}
               />
@@ -362,14 +362,14 @@ export default props => {
                   title={'Isi Formulir'}
                   icon={
                     <Image
-                      source={require('../../../assets/tripon/tambah_formulir.png')}
+                      source={require('../../../assets/ngawas/tambah_formulir.png')}
                       style={{
                         width: 17.5,
                         height: 20,
                       }}
                     />
                   }
-                  redirect={'tripon.tanggalKeberangkatan'}
+                  redirect={'ngawas.tanggalKeberangkatan'}
                   {...props}
                 />
               ) : (

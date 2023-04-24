@@ -24,7 +24,7 @@ import {BaseContainer, InputTextComp} from '../../../component';
 import KeyboardAvoiding from '../../../component/form/KeyboardAvoiding';
 import Collapsible from 'react-native-collapsible';
 import moment from 'moment';
-import {AddTripON, GetKendaraanId} from '../../../repositories/tripon';
+import {AddTripON, GetKendaraanId} from '../../../repositories/ngawas';
 import DialogContainer, {
   BasicAlertProps,
 } from '../../../component/container/dialogContainer';
@@ -32,7 +32,7 @@ import Constanta from '../../../lib/Constanta';
 import {responsiveHeight} from 'react-native-responsive-dimensions';
 export default props => {
   const {params: paramsData} = props.route;
-  console.log(paramsData, 'ini param dari tripon');
+  console.log(paramsData, 'ini param dari ngawas');
   // console.log('ini', paramsData);
 
   const initState = {
@@ -170,7 +170,7 @@ export default props => {
             basicAlertTitle: 'Berhasil',
             basicAlertMessage: ok.message,
             basicAlertOnOk: () => {
-              props.navigation.navigate('tripon.card', {
+              props.navigation.navigate('ngawas.card', {
                 koorA: paramsData.start_coordinate,
                 koorB: paramsData.end_coordinate,
                 ...ok.data,

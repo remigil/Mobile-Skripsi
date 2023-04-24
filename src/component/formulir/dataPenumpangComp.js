@@ -184,11 +184,7 @@ export default props => {
                     ) : (
                       <TouchableOpacity
                         onPress={() => {
-                          props.navigation.navigate('tripon.tambahpenumpang');
-                          // props.navigation.navigate(
-                          //   'tripon.profilKendaraan',
-                          //   kendaraan,
-                          // );
+                          props.navigation.navigate('ngawas.tambahpenumpang');
                         }}
                         style={{
                           flexDirection: 'row',
@@ -242,9 +238,9 @@ export default props => {
           }}>
           <TouchableGradient
             icon={<IconTambahPenumpang />}
-            redirect={'tripon.tambahpenumpang'}
+            redirect={'ngawas.tambahpenumpang'}
             onPressData={() =>
-              props.navigation.navigate('tripon.tambahpenumpang')
+              props.navigation.navigate('ngawas.tambahpenumpang')
             }
             title={'Tambah Penumpang'}
           />

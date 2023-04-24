@@ -10,7 +10,7 @@ import {
   AddVehicle,
   GetJenisMerk,
   GetKendaraanId,
-} from '../../../repositories/tripon';
+} from '../../../repositories/ngawas';
 import {BaseContainer, DropdownOption, InputTextComp} from '../../../component';
 import {BasicAlertProps} from '../../../component/container/dialogContainer';
 import KeyboardAvoiding from '../../../component/form/KeyboardAvoiding';

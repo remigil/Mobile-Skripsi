@@ -375,7 +375,7 @@ export default props => {
                 });
                 // props.navigation.navigate('tripon.tanggalKeberangkatan');
                 props.navigation.navigate({
-                  name: 'tripon.tanggalKeberangkatan',
+                  name: 'ngawas.tanggalKeberangkatan',
                   params: {
                     [paramsData.code]: searchPlace,
                     [paramsData.code + 'ss']: address,

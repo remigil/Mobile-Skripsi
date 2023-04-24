@@ -16,7 +16,7 @@ import {
   TripOnActive,
   TripOnInActive,
 } from '../../assets/Assets';
-import TripOnNavigation from './tripOnNavigation';
+import TripOnNavigation from './NgawasNavigation';
 import KewilayahanNavigation from './kewilayahan';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import {LokasiTersimpan, MapScreen} from '../map';
@@ -225,13 +225,13 @@ export function BottomHomeNavigation() {
           const routeName = getFocusedRouteNameFromRoute(route);
           if (
             // routeName != 'tripon.index'
-            routeName === 'tripon.card' ||
-            routeName === 'tripon.pointingMaps' ||
-            routeName === 'tripon.tambahpenumpang' ||
-            routeName === 'tripon.profilKendaraan' ||
-            routeName === 'tripon.pratinjau' ||
-            routeName === 'tripon.tanggalKeberangkatan' ||
-            routeName === 'tripon.peta'
+            routeName === 'ngawas.card' ||
+            routeName === 'ngawas.pointingMaps' ||
+            routeName === 'ngawas.tambahpenumpang' ||
+            routeName === 'ngawas.profilKendaraan' ||
+            routeName === 'ngawas.pratinjau' ||
+            routeName === 'ngawas.tanggalKeberangkatan' ||
+            routeName === 'ngawas.peta'
           ) {
             return {
               tabBarStyle: {display: 'none', tabBarShowLabel: false},

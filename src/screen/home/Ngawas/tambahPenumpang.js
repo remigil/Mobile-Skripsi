@@ -251,7 +251,7 @@ export default props => {
               if (formTambahPenumpang.nik.value.length < 16) {
                 onReach_MAX_Length(formTambahPenumpang.nik.value);
               } else {
-                props.navigation.navigate('tripon.tanggalKeberangkatan', {
+                props.navigation.navigate('ngawas.tanggalKeberangkatan', {
                   penumpang: objData,
                 });
               }

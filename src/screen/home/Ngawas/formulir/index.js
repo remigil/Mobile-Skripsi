@@ -54,7 +54,7 @@ export default props => {
             title="Data Penumpang"
             stateFormData={stateFormData}
             lanjutFormulir={(prev, formPenumpang) => {
-              props.navigation.navigate('tripon.pratinjau', {
+              props.navigation.navigate('ngawas.pratinjau', {
                 ...stateFormData,
                 ...formPenumpang,
               });

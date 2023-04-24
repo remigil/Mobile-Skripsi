@@ -34,7 +34,7 @@ import {
 import {ActivityIndicator, Avatar, Divider, List} from 'react-native-paper';
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {useSelector} from 'react-redux';
-import {DeleteKendaraan, GetKendaraan} from '../../../repositories/tripon';
+import {DeleteKendaraan, GetKendaraan} from '../../../repositories/ngawas';
 import {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Modal from 'react-native-modal';
@@ -904,7 +904,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
             ) : (
               <>
                 <Image
-                  source={require('../../../assets/tripon/icon-tidak-ada-data.png')}
+                  source={require('../../../assets/ngawas/icon-tidak-ada-data.png')}
                   resizeMode="contain"
                   style={{
                     ...lebarGambar,
@@ -986,7 +986,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
                         });
                       }}>
                       <Image
-                        source={require('../../../assets/tripon/tambah_formulir.png')}
+                        source={require('../../../assets/ngawas/tambah_formulir.png')}
                         style={{
                           width: 17.5,
                           height: 20,
@@ -1007,14 +1007,14 @@ const SecondRoute = ({kendaraan, ...props}) => {
                       title={'Isi Formulir'}
                       icon={
                         <Image
-                          source={require('../../../assets/tripon/tambah_formulir.png')}
+                          source={require('../../../assets/ngawas/tambah_formulir.png')}
                           style={{
                             width: 17.5,
                             height: 20,
                           }}
                         />
                       }
-                      redirect={'tripon.tanggalKeberangkatan'}
+                      redirect={'ngawas.tanggalKeberangkatan'}
                       {...props}
                     />
                   )}

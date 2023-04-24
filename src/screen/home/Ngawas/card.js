@@ -20,17 +20,17 @@ import {
 import {IconBackToHome, IconBackToMaps, LogoK3I} from '../../../assets/Assets';
 import {BaseContainer, TouchableGradient} from '../../../component';
 import Constanta from '../../../lib/Constanta';
-import {GetTripOn} from '../../../repositories/tripon';
+import {GetNgawaS} from '../../../repositories/ngawas';
 export default props => {
   const {params: paramsData} = props.route;
   console.log(paramsData);
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    GetTripOn()
+    GetNgawaS()
       .then(response => {
         console.log({response: response?.data?.data});
-        setDataTripon(response.data.data[0]);
+        setDataNgawas(response.data.data[0]);
         setDataPenumpang(response.data.data[0].penumpangs.length);
         setDataKendaraan(response.data.data[0].type_vehicle.type_name);
         console.log('nah', response.data.data[0]);
@@ -42,7 +42,7 @@ export default props => {
         setIsLoading(false);
       });
   }, []);
-  const [dataTripon, setDataTripon] = useState([]);
+  const [dataNgawas, setDataNgawas] = useState([]);
   const [dataPenumpang, setDataPenumpang] = useState('');
   const [dataKendaraan, setDataKendaraan] = useState('');
 
@@ -77,8 +77,8 @@ export default props => {
               marginVertical: heightPercentageToDP('3%'),
             }}>
             {/* <CardTripon
-              nopol={dataTripon.public_vehicle?.no_vehicle}
-              code={dataTripon.code}
+              nopol={dataNgawas.public_vehicle?.no_vehicle}
+              code={dataNgawas.code}
             /> */}
             <View
               style={{
@@ -92,14 +92,14 @@ export default props => {
                 // marginHorizontal: responsiveWidth(2),
                 alignSelf: 'center',
               }}>
-              <Image
+              {/* <Image
                 source={LogoK3I}
                 resizeMode="contain"
                 style={{
                   width: responsiveWidth(20),
                   height: responsiveHeight(20),
                 }}
-              />
+              /> */}
               <Text
                 style={{
                   color: '#000',
@@ -110,14 +110,14 @@ export default props => {
                   marginLeft: responsiveWidth(4),
                   fontSize: responsiveFontSize(2),
                 }}>
-                Bogor Ngawas{`\n`}KOMUNIKASI DAN INFORMASI
+                BOGOR NGAWAS{`\n`}KOTA BOGOR
               </Text>
             </View>
             <Image
               source={{
                 uri: `${
                   'http://34.128.65.46:3001/uploads/qrcode/' +
-                  dataTripon.barcode
+                  dataNgawas.barcode
                 }`,
               }}
               style={{
@@ -136,7 +136,7 @@ export default props => {
                 }),
               }}>
               Berlaku untuk {dataPenumpang} orang dan 1 {dataKendaraan}
-              {/* {dataTripon.type_vehicle.type_name} */}
+              {/* {dataNgawas.type_vehicle.type_name} */}
             </Text>
             <View>
               <Text
@@ -192,7 +192,7 @@ export default props => {
                 }),
               }}>
               Masa Berlaku Sampai :{' '}
-              {moment(dataTripon.validity_period).format('DD MMMM YYYY')}
+              {moment(dataNgawas.validity_period).format('DD MMMM YYYY')}
             </Text>
             <View
               style={{
@@ -205,21 +205,15 @@ export default props => {
               <TouchableGradient
                 onPressData={() => {
                   // console.log(props);
-                  props.navigation.navigate('tripon.peta', {
+                  props.navigation.navigate('ngawas.peta', {
                     ...paramsData,
                   });
                 }}
                 title={'Lihat Ngawas Map'}
                 icon={<IconBackToMaps />}
-                // redirect={'tripon.profilKendaraan'}
+               
                 {...props}
               />
-              {/* <TouchableWithoutGradient
-                title={'Isi Formulir'}
-                icon={<IconBackToHome />}
-                redirect={'tripon.tanggalKeberangkatan'}
-                {...props}
-              /> */}
               <TouchableOpacity
                 onPress={() => props.navigation.jumpTo('Home')}
                 style={{

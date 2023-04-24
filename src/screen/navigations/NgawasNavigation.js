@@ -1,10 +1,10 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import tripon from '../home/tripOn/tripon';
+import ngawas from '../home/Ngawas/ngawas';
 import {
   CardScreen,
-  PetaTripOn,
+  PetaNgawas,
   PointingMaps,
   PratinjauScreen,
   ProfilKendaraan,
@@ -21,27 +21,27 @@ const TripOnNavigation = () => {
       screenOptions={{
         headerMode: 'none',
       }}
-      initialRouteName={'tripon.index'}>
-      <Stack.Screen name="tripon.index" component={tripon} />
+      initialRouteName={'ngawas.index'}>
+      <Stack.Screen name="ngawas.index" component={ngawas} />
       <Stack.Screen
-        name="tripon.tambahpenumpang"
+        name="ngawas.tambahpenumpang"
         component={TambahPenumpangComp}
       />
-      <Stack.Screen name="tripon.profilKendaraan" component={ProfilKendaraan} />
+      <Stack.Screen name="ngawas.profilKendaraan" component={ProfilKendaraan} />
       <Stack.Screen
-        name="tripon.tanggalKeberangkatan"
+        name="ngawas.tanggalKeberangkatan"
         component={TanggalKeberangkatan}
       />
-      <Stack.Screen name="tripon.pratinjau" component={PratinjauScreen} />
+      <Stack.Screen name="ngawas.pratinjau" component={PratinjauScreen} />
       <Stack.Screen
-        name="tripon.peta"
-        component={PetaTripOn}
+        name="ngawas.peta"
+        component={PetaNgawas}
         options={{
           tabBarVisible: false,
         }}
       />
       <Stack.Screen
-        name="tripon.card"
+        name="ngawas.card"
         component={CardScreen}
         options={{
           tabBarVisible: false,
@@ -49,7 +49,7 @@ const TripOnNavigation = () => {
       />
 
       <Stack.Screen
-        name="tripon.pointingMaps"
+        name="ngawas.pointingMaps"
         component={PointingMaps}
         options={{
           tabBarVisible: false,

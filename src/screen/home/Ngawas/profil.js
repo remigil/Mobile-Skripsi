@@ -12,7 +12,7 @@ import {
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
 import {TambahKendaraan} from '../../../assets/Assets';
-import {AddVehicle, GetJenisMerk} from '../../../repositories/tripon';
+import {AddVehicle, GetJenisMerk} from '../../../repositories/ngawas';
 import {BaseContainer, DropdownOption, InputTextComp} from '../../../component';
 import {BasicAlertProps} from '../../../component/container/dialogContainer';
 import KeyboardAvoiding from '../../../component/form/KeyboardAvoiding';
@@ -157,7 +157,7 @@ export default props => {
                 basicAlertMessage: null,
                 iconClose: false,
               });
-              props.navigation.navigate('tripon.index', {
+              props.navigation.navigate('ngawas.index', {
                 refresh: true,
               });
             },

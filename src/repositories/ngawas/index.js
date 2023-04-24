@@ -113,7 +113,7 @@ export const AddTripON = async data => {
   }
 };
 
-export const GetTripOn = async () => {
+export const GetNgawaS = async () => {
   try {
     let getListVehicle = await APISender(
       APICONFIG.BASE_URL + APICONFIG.TRIPON_URL.SCHEDULE,
@@ -130,7 +130,7 @@ export const GetTripOn = async () => {
   }
 };
 
-export const GetTripOnHistory = async () => {
+export const GetNgawasHistory = async () => {
   try {
     let getListVehicle = await APISender(
       APICONFIG.BASE_URL + APICONFIG.TRIPON_URL.HISTORY,
@@ -147,7 +147,7 @@ export const GetTripOnHistory = async () => {
   }
 };
 
-export const CheckMyTripOn = async () => {
+export const CheckMyNgawas = async () => {
   try {
     let getListVehicle = await APISender(
       APICONFIG.BASE_URL + APICONFIG.TRIPON_URL.CHECK_MY_TRIPON,

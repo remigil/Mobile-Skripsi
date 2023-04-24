@@ -27,7 +27,7 @@ import {
 } from 'react-native-responsive-dimensions';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import DropdownOption from '../form/DropdownOption';
-import {GetKendaraan} from '../../repositories/tripon';
+import {GetKendaraan} from '../../repositories/ngawas';
 import {decryptResponseAPI} from '../../lib/decrptyResponApi';
 export default props => {
   const route = useRoute();
@@ -437,7 +437,7 @@ export default props => {
                 width: widthPercentageToDP('90%'),
               }}
               onPress={() =>
-                navigasi.navigate('tripon.pointingMaps', {
+                navigasi.navigate('ngawas.pointingMaps', {
                   title: 'Titik Lokasi Keberangkatan',
                   code: 'awal',
                   tempat: 'berangkat',
@@ -515,7 +515,7 @@ export default props => {
                 width: widthPercentageToDP('85%'),
               }}
               onPress={() =>
-                navigasi.navigate('tripon.pointingMaps', {
+                navigasi.navigate('ngawas.pointingMaps', {
                   title: 'Titik Lokasi Tujuan',
                   code: 'akhir',
                 })

@@ -24,7 +24,7 @@ import {
 import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
 import {BaseContainer} from '../../../component';
 import Constanta from '../../../lib/Constanta';
-import {GetTripOn, GetTripOnHistory} from '../../../repositories/tripon';
+import {GetNgawaS, GetNgawasHistory} from '../../../repositories/ngawas';
 
 const FirstRoute = ({...props}) => {
   const scrWidth = Dimensions.get('screen').width;
@@ -43,7 +43,7 @@ const FirstRoute = ({...props}) => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    GetTripOn()
+    GetNgawaS()
       .then(response => {
         console.log({responsesss: response.data.data});
 
@@ -57,9 +57,9 @@ const FirstRoute = ({...props}) => {
       });
   }, []);
 
-  const [dataTripon, setDataTripon] = useState([]);
+  const [dataNgawas, setDataNgawas] = useState([]);
   const [dataSchedule, setDataSchedule] = useState([]);
-  // console.log('ini data tripon yang lu mau', dataTripon);
+  // console.log('ini data tripon yang lu mau', dataNgawas);
   console.log('ini data schedule', dataSchedule);
 
   const navigation = useNavigation();
@@ -82,7 +82,7 @@ const FirstRoute = ({...props}) => {
                 alignItems: 'center',
               }}>
               <Image
-                source={require('../../../assets/tripon/icon-tidak-ada-data.png')}
+                source={require('../../../assets/ngawas/icon-tidak-ada-data.png')}
                 resizeMode="contain"
                 style={{
                   ...lebarGambar,
@@ -187,7 +187,7 @@ const SecondRoute = ({...props}) => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    GetTripOnHistory()
+    GetNgawasHistory()
       .then(response => {
         console.log({response: response.data.data});
 
@@ -201,8 +201,8 @@ const SecondRoute = ({...props}) => {
       });
   }, []);
 
-  // const [dataTripon, setDataTripon] = useState([]);
-  // console.log('ini data tripon yang lu mau', dataTripon);
+  // const [dataNgawas, setDataNgawas] = useState([]);
+  // console.log('ini data tripon yang lu mau', dataNgawas);
   const [dataHistory, setDataHistory] = useState({});
 
   // console.log('ini validity period', asd.)
@@ -225,7 +225,7 @@ const SecondRoute = ({...props}) => {
                 alignItems: 'center',
               }}>
               <Image
-                source={require('../../../assets/tripon/icon-tidak-ada-data.png')}
+                source={require('../../../assets/ngawas/icon-tidak-ada-data.png')}
                 resizeMode="contain"
                 style={{
                   ...lebarGambar,

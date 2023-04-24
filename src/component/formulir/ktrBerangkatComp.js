@@ -18,7 +18,7 @@ import {DropdownOption} from '..';
 import {useSelector} from 'react-redux';
 import DialogContainer, {BasicAlertProps} from '../container/dialogContainer';
 import {useRoute} from '@react-navigation/native';
-import {GetKendaraan} from '../../repositories/tripon';
+import {GetKendaraan} from '../../repositories/ngawas';
 import Constanta from '../../lib/Constanta';
 import {
   responsiveFontSize,
@@ -225,7 +225,7 @@ export default props => {
                   width: widthPercentageToDP('80%'),
                 }}
                 onPress={() =>
-                  props.navigation.navigate('tripon.pointingMaps', {
+                  props.navigation.navigate('ngawas.pointingMaps', {
                     title: 'Titik Lokasi Keberangkatan',
                     code: 'awal',
                     tempat: 'berangkat',
@@ -301,7 +301,7 @@ export default props => {
                   width: widthPercentageToDP('80%'),
                 }}
                 onPress={() =>
-                  props.navigation.navigate('tripon.pointingMaps', {
+                  props.navigation.navigate('ngawas.pointingMaps', {
                     title: 'Titik Lokasi Tujuan',
                     code: 'akhir',
                   })

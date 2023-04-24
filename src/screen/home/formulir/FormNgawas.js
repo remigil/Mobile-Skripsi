@@ -17,7 +17,7 @@ import {BaseContainer, TouchableGradient} from '../../../component';
 // import QRCode from 'react-native-qrcode-svg';
 import LinearGradient from 'react-native-linear-gradient';
 import {useSelector} from 'react-redux';
-import {GetTripOn} from '../../../repositories/tripon';
+import {GetNgawaS} from '../../../repositories/ngawas';
 import Constanta from '../../../lib/Constanta';
 import {
   responsiveFontSize,
@@ -42,10 +42,10 @@ export default props => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    GetTripOn()
+    GetNgawaS()
       .then(response => {
         console.log({response: response.data.data});
-        setDataTripon(response.data.data[0]);
+        setDataNgawas(response.data.data[0]);
         // console.log('nah', response.data.data);
       })
       .catch(err => {
@@ -55,7 +55,7 @@ export default props => {
         setIsLoading(false);
       });
   }, []);
-  const [dataTripon, setDataTripon] = useState([]);
+  const [dataNgawas, setDataNgawas] = useState([]);
   const initState = {
     actionBar: {
       title: 'Main Menus',
@@ -104,10 +104,10 @@ export default props => {
               marginTop: heightPercentageToDP('2%'),
               alignItems: 'center',
             }}>
-            {dataTripon == null ? (
+            {dataNgawas == null ? (
               <>
                 <Image
-                  source={require('../../../assets/tripon/icon-tidak-ada-data.png')}
+                  source={require('../../../assets/ngawas/icon-tidak-ada-data.png')}
                   resizeMode="contain"
                   style={{
                     ...lebarGambar,
@@ -154,7 +154,7 @@ export default props => {
                           font: 'regular',
                         }),
                       }}>
-                      {dataTripon.code}
+                      {dataNgawas.code}
                     </Text>
                     <Text
                       style={{
@@ -190,7 +190,7 @@ export default props => {
                       color:
                         'linear-gradient(0deg, rgba(242, 218, 3, 1), rgba(114, 103, 4, 1))',
                     }}>
-                    {dataTripon.public_vehicle?.no_vehicle}
+                    {dataNgawas.public_vehicle?.no_vehicle}
                   </Text>
                 </View> */}
                 <View
@@ -230,7 +230,7 @@ export default props => {
                   source={{
                     uri: `${
                       'http://34.128.65.46:3001/uploads/qrcode/' +
-                      dataTripon.barcode
+                      dataNgawas.barcode
                     }`,
                   }}
                   style={{
@@ -310,13 +310,13 @@ export default props => {
                       }),
                     }}>
                     Masa Berlaku Sampai :{' '}
-                    {moment(dataTripon.validity_period).format('DD MMMM YYYY')}
+                    {moment(dataNgawas.validity_period).format('DD MMMM YYYY')}
                   </Text>
                 </View>
                 <TouchableOpacity
                   onPress={() => {
-                    props.navigation.jumpTo('PetaTripOn', {
-                      ...dataTripon,
+                    props.navigation.jumpTo('PetaNgawas', {
+                      ...dataNgawas,
                     });
                     // console.log(props.navigation);
                     //   props.navigation.navigate('tripon.index', {
