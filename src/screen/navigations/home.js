@@ -2,7 +2,7 @@ import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import {BottomHomeNavigation} from './bottomNavigation';
-import panicButton from '../home/formulir/panicButton';
+// import panicButton from '../home/formulir/panicButton';
 const Stack = createStackNavigator();
 export default HomeNavigation = () => {
   const HomeNavigation = () => {

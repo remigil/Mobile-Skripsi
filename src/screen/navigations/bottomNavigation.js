@@ -16,7 +16,7 @@ import {
   TripOnActive,
   TripOnInActive,
 } from '../../assets/Assets';
-import TripOnNavigation from './NgawasNavigation';
+import NgawasNavigation from './NgawasNavigation';
 import KewilayahanNavigation from './kewilayahan';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import {LokasiTersimpan, MapScreen} from '../map';
@@ -26,8 +26,16 @@ import {
   responsiveWidth,
 } from 'react-native-responsive-dimensions';
 import Constanta from '../../lib/Constanta';
-import {Stakeholder} from '../stakeholder';
-import StakeholderNavigator from './stakeholderNav';
+import {
+  CallCenter,
+  // HalamanFAQ,
+  ProfileAccountScreen,
+  PusatBantuan,
+  ScanKTP,
+  Sosial_Media,
+} from '../home';
+// import {Stakeholder} from '../stakeholder';
+// import StakeholderNavigator from './stakeholderNav';
 
 export function BottomHomeNavigation() {
   const BottomTab = createBottomTabNavigator();
@@ -58,70 +66,45 @@ export function BottomHomeNavigation() {
           let labelName = '';
           if (route.name === 'Home') {
             indicatorColor = focused
-              ? (color = '#386BF6')
+              ? (color = '#01796F')
               : (color = 'transparent');
-            // } else if (route.name === 'Kewilayahan') {
-            //   indicatorColor = focused
-            //     ? (color = 'darkred')
-            //     : (color = 'transparent');
-            // } else if (route.name === 'Peta') {
-            //   indicatorColor = focused
-            //     ? (color = 'darkkhaki')
-            //     : (color = 'transparent');
-            // } else if (route.name === 'Stakeholder') {
-            //   indicatorColor = focused
-            //     ? (color = 'deeppink')
-            //     : (color = 'transparent');
-          } else if (route.name === 'Trip On') {
+            } else if (route.name === 'Ngawas') {
+              indicatorColor = focused
+                ? (color = '#01796F')
+                : (color = 'transparent');
+              sizeData = true;
+          } else if (route.name === 'Akun') {
             indicatorColor = focused
-              ? (color = 'lightgreen')
+              ? (color = '#01796F')
               : (color = 'transparent');
             sizeData = true;
           }
           if (route.name === 'Home') {
             iconName = focused ? (
-              <Image source={require('../../assets/icon_bottom/Home_on.png')} />
-            ) : (
-              <Image
-                source={require('../../assets/icon_bottom/home_off.png')}
+              <Image source={require('../../assets/icon_bottom/Dash_On.png')} />
+              ) : (
+                <Image
+                  source={require('../../assets/icon_bottom/Dash_Off.png')}
               />
             );
-            // } else if (route.name === 'Kewilayahan') {
-            //   iconName = focused ? (
-            //     <Image
-            //       source={require('../../assets/icon_bottom/Kewilayahan_ON.png')}
-            //     />
-            //   ) : (
-            //     <Image
-            //       source={require('../../assets/icon_bottom/Kewilayahan_off.png')}
-            //     />
-            //   );
-            // } else if (route.name === 'Peta') {
-            //   iconName = focused ? (
-            //     <Image source={require('../../assets/icon_bottom/Peta_On.png')} />
-            //   ) : (
-            //     <Image
-            //       source={require('../../assets/icon_bottom/Peta_Off.png')}
-            //     />
-            //   );
-            // } else if (route.name === 'Stakeholder') {
-            //   iconName = focused ? (
-            //     <Image
-            //       source={require('../../assets/icon_bottom/Stakeholder_ON.png')}
-            //     />
-            //   ) : (
-            //     <Image
-            //       source={require('../../assets/icon_bottom/Stakeholder_off.png')}
-            //     />
-            //   );
-          } else if (route.name === 'Trip On') {
+            } else if (route.name === 'Ngawas') {
+              iconName = focused ? (
+                <Image
+                source={require('../../assets/icon_bottom/Ngawas_On.png')}
+                />
+              ) : (
+                <Image
+                  source={require('../../assets/icon_bottom/Ngawas_Off.png')}
+                />
+              );
+          }  else if (route.name === 'Akun') {
             iconName = focused ? (
               <Image
-                source={require('../../assets/icon_bottom/TripOn_ON.png')}
+                source={require('../../assets/icon_bottom/Akun_On.png')}
               />
             ) : (
               <Image
-                source={require('../../assets/icon_bottom/Tripon_off.png')}
+                source={require('../../assets/icon_bottom/Akun_Off.png')}
               />
             );
             sizeData = true;
@@ -220,7 +203,7 @@ export function BottomHomeNavigation() {
         }}
       />
       <BottomTab.Screen
-        name="Trip On"
+        name="Ngawas"
         options={({navigation, route}) => {
           const routeName = getFocusedRouteNameFromRoute(route);
           if (
@@ -242,7 +225,16 @@ export function BottomHomeNavigation() {
             };
           }
         }}
-        component={TripOnNavigation}
+        component={NgawasNavigation}
+      />
+          <BottomTab.Screen
+        name="Akun"
+        component={ProfileAccountScreen}
+        options={({navigation}) => {
+          return {
+            tabBarShowLabel: false,
+          };
+        }}
       />
     </BottomTab.Navigator>
   );

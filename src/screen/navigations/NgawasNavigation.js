@@ -14,7 +14,7 @@ import {
 } from '../home';
 
 const Stack = createStackNavigator();
-const TripOnNavigation = () => {
+const NgawasNavigation = () => {
   return (
     <Stack.Navigator
       key="nav.homes"
@@ -58,4 +58,4 @@ const TripOnNavigation = () => {
     </Stack.Navigator>
   );
 };
-export default TripOnNavigation;
+export default NgawasNavigation;

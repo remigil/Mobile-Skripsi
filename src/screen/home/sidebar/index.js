@@ -98,39 +98,22 @@ const FirstRoute = ({...props}) => {
 
   const [formFormulir, setFormFormulir] = useState(initState.formulir);
 
-  // const AddKtp = fotoktp => {
-  //   // setIsLoading(true);
-  //   console.log('foto ktpp iniiii', fotoktp);
-  //   scanKTP({
-  //     fotoktp,
+  // const AddKtp = fotoprofil => {
+  //   ScanKTP({
+  //     //  foto: fotoprofil,
+  //     foto: fotoprofil,
   //   })
   //     .then(succ => {
-  //       console.log('hey ktp', succ);
+  //       //  setIsLoading(true);
+  //       console.log('scan KTP sukses dong pliss', succ);
   //     })
   //     .catch(err => {
   //       console.log(err);
   //     })
   //     .finally(() => {
-  //       // setIsLoading(false);
+  //       //  setIsLoading(false);
   //     });
   // };
-
-  const AddKtp = fotoprofil => {
-    ScanKTP({
-      //  foto: fotoprofil,
-      foto: fotoprofil,
-    })
-      .then(succ => {
-        //  setIsLoading(true);
-        console.log('scan KTP sukses dong pliss', succ);
-      })
-      .catch(err => {
-        console.log(err);
-      })
-      .finally(() => {
-        //  setIsLoading(false);
-      });
-  };
 
   const compProps = {
     mediaType: 'photo',
@@ -154,7 +137,7 @@ const FirstRoute = ({...props}) => {
         <>
           <ScrollView>
             <View style={{flex: 1, alignItems: 'center'}}>
-              <TouchableOpacity
+              {/* <TouchableOpacity
                 onPress={() => {
                   setFormFormulir({
                     ...formFormulir,
@@ -177,8 +160,8 @@ const FirstRoute = ({...props}) => {
                   alignItems: 'center',
                 }}>
                 <IconHapusSilang width={40} height={40} />
-              </TouchableOpacity>
-              <View
+              </TouchableOpacity> */}
+              {/* <View
                 style={{
                   borderTopLeftRadius: 15,
                   borderTopRightRadius: 15,
@@ -203,8 +186,8 @@ const FirstRoute = ({...props}) => {
                     margin: 5,
                   }}
                 />
-              </View>
-              <TouchableOpacity
+              </View> */}
+              {/* <TouchableOpacity
                 style={{
                   marginVertical: widthPercentageToDP('4%'),
                   borderWidth: 1,
@@ -222,7 +205,7 @@ const FirstRoute = ({...props}) => {
                   }}>
                   Scan Ulang e-KTP
                 </Text>
-              </TouchableOpacity>
+              </TouchableOpacity> */}
               <View>
                 <Text
                   style={{
@@ -234,7 +217,7 @@ const FirstRoute = ({...props}) => {
                   Data Diri
                 </Text>
                 <View style={{alignItems: 'center'}}>
-                  <View
+                  {/* <View
                     style={{
                       marginVertical: 10,
                     }}>
@@ -277,7 +260,7 @@ const FirstRoute = ({...props}) => {
                         <IconEditData />
                       </View>
                     </View>
-                  </View>
+                  </View> */}
 
                   <View
                     style={{
@@ -558,7 +541,7 @@ const FirstRoute = ({...props}) => {
         </>
       ) : (
         <View style={{alignItems: 'center', justifyContent: 'center'}}>
-          <View
+          {/* <View
             style={{
               marginTop: responsiveHeight(2),
               paddingHorizontal: responsiveWidth(9),
@@ -584,8 +567,8 @@ const FirstRoute = ({...props}) => {
               }}>
               Belum ada data e-KTP
             </Text>
-          </View>
-          <TouchableOpacity
+          </View> */}
+          {/* <TouchableOpacity
             style={{
               marginTop: responsiveWidth(4),
               borderWidth: 1,
@@ -616,20 +599,7 @@ const FirstRoute = ({...props}) => {
                     console.log('ini ress', res);
                     if (res?.assets) {
                       setPhotoData(res?.assets[0]);
-                      // setFormFormulir({
-                      //   ...formFormulir,
-                      //   foto: {
-                      //     ...formFormulir.foto,
-                      //     value: res.assets[0],
-                      //   },
-                      // });
-                      // console.log(
-                      //   'ini formmulir foto',
-                      //   formFormulir.foto.value,
-                      // );
                       AddKtp(res?.assets[0]);
-
-                      // props.onPress(res?.assets[0]);
                     }
                   },
                 );
@@ -662,7 +632,7 @@ const FirstRoute = ({...props}) => {
               }}>
               Scan e-KTP
             </Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       )}
     </View>
@@ -1068,7 +1038,7 @@ export default props => {
 
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
-    {key: 'first', title: 'Data Diri'},
+    // {key: 'first', title: 'Data Diri'},
     {key: 'second', title: 'Data Kendaraan'},
   ]);
   const layout = useWindowDimensions();

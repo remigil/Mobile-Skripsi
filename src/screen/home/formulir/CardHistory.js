@@ -273,7 +273,7 @@ export default props => {
                       font: 'regular',
                     }),
                   }}>
-                  Lihat TripOn Map
+                  Lihat Ngawas Map
                 </Text>
               </LinearGradient>
             </TouchableOpacity>

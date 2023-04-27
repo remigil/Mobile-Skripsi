@@ -126,7 +126,7 @@ const FirstRoute = ({...props}) => {
                           width: responsiveWidth(10),
                           height: responsiveHeight(10),
                         }}
-                        source={require('../../../assets/icon_bottom/TripOn_ON.png')}
+                        source={require('../../../assets/icon_bottom/Ngawas_On.png')}
                         resizeMode="contain"
                       />
                     </View>
@@ -269,7 +269,7 @@ const SecondRoute = ({...props}) => {
                           width: responsiveWidth(10),
                           height: responsiveHeight(10),
                         }}
-                        source={require('../../../assets/icon_bottom/TripOn_ON.png')}
+                        source={require('../../../assets/icon_bottom/Ngawas_On.png')}
                         resizeMode="contain"
                       />
                     </View>
@@ -343,7 +343,7 @@ export default function TabViewExample({props}) {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'QR Bogor Ngawas',
+        title: 'Bogor Ngawas',
         backIconStyle: true,
         titleStyle: {
           color: '#FFF',
