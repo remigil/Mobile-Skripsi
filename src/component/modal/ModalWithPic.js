@@ -29,7 +29,7 @@ export default props => {
           modalHeight={heightPercentageToDP('65%')}
           handlePosition="inside"
           handleStyle={{
-            backgroundColor: '#135AAC',
+            backgroundColor: '#01796F',
           }}
           HeaderComponent={
             <View
@@ -156,7 +156,7 @@ export default props => {
           modalHeight={heightPercentageToDP('50%')}
           handlePosition="inside"
           handleStyle={{
-            backgroundColor: '#135AAC',
+            backgroundColor: '#01796F',
           }}
           HeaderComponent={
             <View

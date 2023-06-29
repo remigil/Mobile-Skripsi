@@ -40,7 +40,7 @@ export default forwardRef(({cctvDetail, direction, ...props}, ref) => {
           modalHeight={heightPercentageToDP('50%')}
           handlePosition="inside"
           handleStyle={{
-            backgroundColor: '#135AAC',
+            backgroundColor: '#01796F',
           }}
           HeaderComponent={
             <View

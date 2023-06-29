@@ -97,7 +97,7 @@ export const DeleteKendaraan = async id => {
   }
 };
 
-export const AddTripON = async data => {
+export const AddNgawas = async data => {
   try {
     return await APISender(
       APICONFIG.BASE_URL + APICONFIG.TRIPON_URL.ADD_TRIPON,

@@ -24,7 +24,7 @@ import {BaseContainer, InputTextComp} from '../../../component';
 import KeyboardAvoiding from '../../../component/form/KeyboardAvoiding';
 import Collapsible from 'react-native-collapsible';
 import moment from 'moment';
-import {AddTripON, GetKendaraanId} from '../../../repositories/ngawas';
+import {AddNgawas, GetKendaraanId} from '../../../repositories/ngawas';
 import DialogContainer, {
   BasicAlertProps,
 } from '../../../component/container/dialogContainer';
@@ -140,9 +140,9 @@ export default props => {
       iconClose: false,
     });
   };
-  const submitTripOn = () => {
+  const submitNgawas = () => {
     setIsLoading(true);
-    AddTripON(paramsData)
+    AddNgawas(paramsData)
       .then(ok => {
         console.log('ok', ok.data);
 
@@ -697,7 +697,7 @@ export default props => {
                 </Collapsible>
               </View>
               {/* Bagian Penumpang */}
-              {paramsData.passenger.map((dataPenum, ind) => (
+              {paramsData.penumpangs.map((dataPenum, ind) => (
                 <View key={'data-penumpang' + ind + new Date()}>
                   <TouchableOpacity
                     style={{
@@ -924,7 +924,7 @@ export default props => {
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => {
-                  submitTripOn();
+                  submitNgawas();
                   // props.navigation.navigate('tripon.peta', {
                   //   koorA: paramsData.start_coordinate,
                   //   koorB: paramsData.end_coordinate,
@@ -940,7 +940,7 @@ export default props => {
                   start={{x: 1.0, y: 1.0}}
                   end={{x: 0.0, y: 0.4}}
                   locations={[0, 0.7]}
-                  colors={['#F8C92C', '#01796F']}
+                  colors={['#01796F', '#01796F']}
                   style={{
                     flex: 1,
                     borderRadius: 5,

@@ -94,7 +94,7 @@ export default props => {
                   font: 'bold',
                 }),
               }}>
-             Bogor Ngawas
+              Bogor Ngawas
             </Text>
           </View>
           <View
@@ -147,7 +147,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -173,7 +173,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -199,7 +199,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -231,7 +231,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -282,7 +282,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -305,7 +305,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -330,7 +330,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>
@@ -360,7 +360,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     fontSize: 14,
                   }}>

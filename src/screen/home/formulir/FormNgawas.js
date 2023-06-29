@@ -229,7 +229,7 @@ export default props => {
                 <Image
                   source={{
                     uri: `${
-                      'http://34.128.65.46:3001/uploads/qrcode/' +
+                      'http://108.136.137.131:3001/uploads/qrcode/' +
                       dataNgawas.barcode
                     }`,
                   }}
@@ -336,7 +336,7 @@ export default props => {
                     start={{x: 1.0, y: 1.0}}
                     end={{x: 0.0, y: 0.4}}
                     locations={[0, 0.7]}
-                    colors={['#F8C92C', '#01796F']}
+                    colors={['#01796F', '#01796F']}
                     style={{
                       flex: 1,
                       borderRadius: 5,
@@ -355,7 +355,7 @@ export default props => {
                           font: 'regular',
                         }),
                       }}>
-                      Lihat TripOn Map
+                      Lihat Ngawas Map
                     </Text>
                   </LinearGradient>
                 </TouchableOpacity>

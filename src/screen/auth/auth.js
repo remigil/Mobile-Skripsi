@@ -139,7 +139,7 @@ export default props => {
                   marginTop: 3,
                 }}>
                 {' '}
-                versi 1.0
+                Bogor Ngawas
               </Text>
             ) : (
               <Text

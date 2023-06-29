@@ -209,7 +209,7 @@ export default props => {
                   language="en"
                   strokeWidth={5}
                   strokeColor="#00B0FF"
-                  apikey={'AIzaSyAk5aBw69zZTlOgfVL5PMkKyhRlx1F30UI'}
+                  apikey={'AIzaSyAEY9jbE_zL8SV7c6meCf7-lV3JLcbKnlY'}
                   onStart={params => {
                     console.log(
                       `Started routing between "${params.origin}" and "${

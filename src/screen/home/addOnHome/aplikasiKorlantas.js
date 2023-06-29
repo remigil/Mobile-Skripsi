@@ -242,7 +242,7 @@ export default (props = {...props}) => {
                         <Image
                           source={{
                             uri:
-                              'http://34.128.65.46:3001/uploads/icon/' +
+                              'http://108.136.137.131:3001/uploads/icon/' +
                               itemmodal.icon,
                           }}
                           // size icon di modalize

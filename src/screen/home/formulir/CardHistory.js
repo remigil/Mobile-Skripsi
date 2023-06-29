@@ -119,14 +119,14 @@ export default props => {
                 // marginHorizontal: responsiveWidth(2),
                 alignSelf: 'center',
               }}>
-              <Image
+              {/* <Image
                 source={LogoK3I}
                 resizeMode="contain"
                 style={{
                   width: responsiveWidth(20),
                   height: responsiveHeight(20),
                 }}
-              />
+              /> */}
               <Text
                 style={{
                   color: '#000',
@@ -137,14 +137,14 @@ export default props => {
                   marginLeft: responsiveWidth(2),
                   fontSize: responsiveFontSize(2),
                 }}>
-                PUSAT KENDALI KOORDINASI{`\n`}KOMUNIKASI DAN INFORMASI
+                BOGOR NGAWAS
               </Text>
             </View>
 
             <Image
               source={{
                 uri: `${
-                  'http://34.128.65.46:3001/uploads/qrcode/' +
+                  'http://108.136.137.131:3001/uploads/qrcode/' +
                   paramsData.barcode
                 }`,
               }}
@@ -177,7 +177,7 @@ export default props => {
                   }),
                   marginBottom: 3,
                 }}>
-                Syarat dan Ketentuan:
+                Selamat Datang Di Kota Bogor
               </Text>
               <Text
                 style={{
@@ -188,7 +188,7 @@ export default props => {
                   }),
                   fontSize: responsiveFontSize(1.7),
                 }}>
-                1. Dilarang menggandakan/memperbanyak QR Code
+                1. Stay Safe
               </Text>
               <Text
                 style={{
@@ -198,7 +198,7 @@ export default props => {
                     font: 'regular',
                   }),
                 }}>
-                2. QR Code tidak boleh diperjualbelikan
+                2. Bogor Aman
               </Text>
               <Text
                 style={{
@@ -208,7 +208,7 @@ export default props => {
                     font: 'regular',
                   }),
                 }}>
-                3. Menunjukkan QR Code kepada petugas
+                3. Tegar Beriman
               </Text>
             </View>
             <View
@@ -254,7 +254,7 @@ export default props => {
                 start={{x: 1.0, y: 1.0}}
                 end={{x: 0.0, y: 0.4}}
                 locations={[0, 0.7]}
-                colors={['#F8C92C', '#01796F']}
+                colors={['#01796F', '#01796F']}
                 style={{
                   flex: 1,
                   borderRadius: 5,

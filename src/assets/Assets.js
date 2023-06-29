@@ -123,6 +123,14 @@ import IconIRMS from './home/aplikasi/irms.png';
 import IconBackBerita from './home/icon_back_berita.svg';
 import KewilayahanOn from '../assets/icon on.svg';
 import KewilayahanOff from '../assets/icon_off.svg';
+import { ImageBanner } from './home/images';
+import { ImageAkun } from './ngawas/icon/Akun.png';
+import {ImageNgawas} from './ngawas/icon/Ngawas.png';
+import {ImageInformasi} from './ngawas/icon/Informasi.png';
+import IconAkun from './AKUN.svg';
+import IconNgawas from './Ngawas.svg';
+import IconInformasi from './Informasi.svg'
+
 
 export {
   KewilayahanOn,
@@ -250,4 +258,11 @@ export {
   IconLayerMap,
   LogoK3I,
   IconFacebook,
+  ImageBanner,
+  ImageAkun,
+  ImageNgawas,
+  ImageInformasi,
+  IconAkun,
+  IconNgawas,
+  IconInformasi,
 };

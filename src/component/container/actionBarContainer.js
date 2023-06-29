@@ -46,7 +46,7 @@ export default (props = {...ActionBarProps}) => {
             // <IconKembali />
             <Image source={require('../../assets/icon_back_putih.png')} />
           ) : (
-            <Image source={require('../../assets/icon_hamburger.png')} />
+            <Image source={require('../../assets/Settings.png')} />
           )}
         </TouchableOpacity>
       </View>

@@ -43,7 +43,7 @@ export default forwardRef(({simkelDetail, direction, ...props}, ref) => {
           modalHeight={heightPercentageToDP('60%')}
           handlePosition="inside"
           handleStyle={{
-            backgroundColor: '#135AAC',
+            backgroundColor: '#01796F',
           }}
           HeaderComponent={
             <View

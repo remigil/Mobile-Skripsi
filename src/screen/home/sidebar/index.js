@@ -1322,7 +1322,7 @@ export default props => {
         modalHeight={responsiveHeight(48)}
         handlePosition="inside"
         handleStyle={{
-          backgroundColor: '#135AAC',
+          backgroundColor: '#01796F',
         }}
         HeaderComponent={
           <View
@@ -1372,7 +1372,7 @@ export default props => {
             }}>
             <TouchableOpacity
               style={{
-                backgroundColor: '#135AAC',
+                backgroundColor: '#01796F',
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: 10,
@@ -1441,7 +1441,7 @@ export default props => {
             </TouchableOpacity>
             <TouchableOpacity
               style={{
-                backgroundColor: '#135AAC',
+                backgroundColor: '#01796F',
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: 10,
@@ -1525,7 +1525,7 @@ export default props => {
             </TouchableOpacity>
             <TouchableOpacity
               style={{
-                backgroundColor: '#135AAC',
+                backgroundColor: '#01796F',
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: 10,

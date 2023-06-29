@@ -1,1 +1,1 @@
-Mobile Korlantas Bogor Ngawas
+Bogor Ngawas Skripsi

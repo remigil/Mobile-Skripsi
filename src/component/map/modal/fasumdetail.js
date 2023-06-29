@@ -40,7 +40,7 @@ export default forwardRef(
             modalHeight={heightPercentageToDP('62%')}
             handlePosition="inside"
             handleStyle={{
-              backgroundColor: '#135AAC',
+              backgroundColor: '#01796F',
             }}
             HeaderComponent={
               <View

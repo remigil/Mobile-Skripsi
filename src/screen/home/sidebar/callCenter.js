@@ -176,7 +176,7 @@ export default props => {
               <View
                 style={{
                   width: widthPercentageToDP('40%'),
-                  backgroundColor: '#A2C7FD',
+                  backgroundColor: '#01796FD',
                   borderRadius: 28,
                   marginHorizontal: 13,
                   justifyContent: 'center',
@@ -187,7 +187,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     textAlign: 'center',
                     ...Constanta({

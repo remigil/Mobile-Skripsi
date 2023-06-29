@@ -78,11 +78,11 @@ export default props => {
               </Text>
             </View>
             <View style={{paddingBottom: heightPercentageToDP('5%')}}>
-              <Text style={{color: '#6574FF', lineHeight: 20}}>
+              <Text style={{color: '#01796F', lineHeight: 20}}>
                 Telepon admin CALL CENTRE
               </Text>
               <Text
-                style={{color: '#6574FF', fontWeight: 'bold', lineHeight: 20}}>
+                style={{color: '#01796F', fontWeight: 'bold', lineHeight: 20}}>
                 Bogor Ngawas
               </Text>
             </View>
@@ -90,7 +90,7 @@ export default props => {
         </View>
         <View
           style={{
-            backgroundColor: '#D9D9D938',
+            backgroundColor: '#01796F',
             paddingVertical: heightPercentageToDP('10%'),
             alignItems: 'center',
           }}>
@@ -99,7 +99,7 @@ export default props => {
               <View
                 style={{
                   width: widthPercentageToDP('40%'),
-                  backgroundColor: '#A2C7FD',
+                  backgroundColor: '#01796FD',
                   borderRadius: 28,
                   marginHorizontal: 13,
                   justifyContent: 'center',
@@ -110,7 +110,7 @@ export default props => {
                 <Text
                   style={{
                     textAlign: 'center',
-                    color: '#234FA2',
+                    color: '#01796F',
                     marginTop: 10,
                     textAlign: 'center',
                     fontSize: 10,

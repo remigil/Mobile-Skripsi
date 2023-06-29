@@ -26,3 +26,5 @@ export {default as DetailBerita} from './detailBerita';
 export {default as WebKorlantas} from './webview/korlantas';
 export {default as BeritaKorlantas} from './webview/berita';
 export {default as PetaHistory} from './sidebar/petaHistory';
+
+

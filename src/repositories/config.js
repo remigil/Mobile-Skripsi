@@ -17,7 +17,7 @@ export const SinfoAttr = {
 };
 
 export const APICONFIG = {
-  BASE_URL: 'http://34.128.65.46:3001/v1',
+  BASE_URL: 'http://108.136.137.131:3001/v1',
   BASE_URL_TRACK: API_BASE_URL_TRACK,
   AUTH_URL: {
     LOGIN: '/auth-society/login-mobile',
@@ -49,7 +49,7 @@ export const APICONFIG = {
     GET_MY_TRIPON: '/ngawas/getbysocietyId',
     SCHEDULE: '/ngawas/schedule',
     HISTORY: '/ngawas/history',
-    CHECK_MY_TRIPON: '/ngawas/cektripon',
+    CHECK_MY_TRIPON: '/ngawas/cekngawas',
   },
   BERITA: '/news',
   // BERITA_STAKEHOLDER: '/news/newsbycategory/',

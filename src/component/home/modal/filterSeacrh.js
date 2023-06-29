@@ -41,7 +41,7 @@ export default forwardRef(({filterMenu, processFilter, ...props}, ref) => {
           modalHeight={responsiveHeight(40)}
           handlePosition="inside"
           handleStyle={{
-            backgroundColor: '#135AAC',
+            backgroundColor: '#01796F',
           }}
           HeaderComponent={
             <View
@@ -175,7 +175,7 @@ export default forwardRef(({filterMenu, processFilter, ...props}, ref) => {
                 start={{x: 1.0, y: 1.0}}
                 end={{x: 0.0, y: 0.4}}
                 locations={[0, 0.7]}
-                colors={['#F8C92C', '#01796F']}
+                colors={['#01796F', '#01796F']}
                 style={{
                   flex: 1,
                   borderRadius: 4,

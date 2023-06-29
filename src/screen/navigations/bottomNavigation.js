@@ -81,10 +81,10 @@ export function BottomHomeNavigation() {
           }
           if (route.name === 'Home') {
             iconName = focused ? (
-              <Image source={require('../../assets/icon_bottom/Dash_On.png')} />
+              <Image source={require('../../assets/icon_bottom/Home_On.png')} />
               ) : (
                 <Image
-                  source={require('../../assets/icon_bottom/Dash_Off.png')}
+                  source={require('../../assets/icon_bottom/Home_Off.png')}
               />
             );
             } else if (route.name === 'Ngawas') {

@@ -14,6 +14,7 @@ export default HomeNavigation = () => {
         }}>
         <Stack.Screen name="home.index" component={BottomHomeNavigation} />
         <Stack.Screen name="home.panic" component={panicButton} />
+        
       </Stack.Navigator>
     );
   };

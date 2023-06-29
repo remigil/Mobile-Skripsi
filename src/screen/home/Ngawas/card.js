@@ -116,7 +116,7 @@ export default props => {
             <Image
               source={{
                 uri: `${
-                  'http://34.128.65.46:3001/uploads/qrcode/' +
+                  'http://108.136.137.131:3001/uploads/qrcode/' +
                   dataNgawas.barcode
                 }`,
               }}
@@ -211,7 +211,6 @@ export default props => {
                 }}
                 title={'Lihat Ngawas Map'}
                 icon={<IconBackToMaps />}
-               
                 {...props}
               />
               <TouchableOpacity

@@ -200,7 +200,7 @@ export default props => {
                           <Image
                             source={{
                               uri:
-                                'http://34.128.65.46:3001/uploads/news/' +
+                                'http://108.136.137.131:3001/uploads/news/' +
                                 item2.picture,
                             }}
                             style={{

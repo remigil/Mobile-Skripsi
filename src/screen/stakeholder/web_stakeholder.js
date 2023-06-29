@@ -29,7 +29,7 @@ export default props => {
         width: '100%',
         height: '100%',
       }}
-      color="#135AAC"
+      color="#01796F"
       size="large"
     />
   );
@@ -97,7 +97,7 @@ export default props => {
         />
         <View
           style={{
-            backgroundColor: '#135AAC',
+            backgroundColor: '#01796F',
             padding: 12,
             justifyContent: 'space-around',
             flexDirection: 'row',
