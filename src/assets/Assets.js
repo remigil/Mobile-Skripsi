@@ -129,11 +129,13 @@ import {ImageNgawas} from './ngawas/icon/Ngawas.png';
 import {ImageInformasi} from './ngawas/icon/Informasi.png';
 import IconAkun from './AKUN.svg';
 import IconNgawas from './Ngawas.svg';
+import IconSettings from './Settings.png';
 import IconInformasi from './Informasi.svg'
 
 
 export {
   KewilayahanOn,
+  IconSettings,
   KewilayahanOff,
   IconDestinasi,
   IconTambah,

@@ -3,6 +3,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {BottomHomeNavigation} from './bottomNavigation';
 // import panicButton from '../home/formulir/panicButton';
+import ngawas from '../home/Ngawas/ngawas';
+
 const Stack = createStackNavigator();
 export default HomeNavigation = () => {
   const HomeNavigation = () => {
@@ -14,7 +16,7 @@ export default HomeNavigation = () => {
         }}>
         <Stack.Screen name="home.index" component={BottomHomeNavigation} />
         <Stack.Screen name="home.panic" component={panicButton} />
-        
+        <Stack.Screen name="home.ngawas" component={ngawas} />
       </Stack.Navigator>
     );
   };
@@ -27,6 +29,7 @@ export default HomeNavigation = () => {
       }}
       initialRouteName={'homes.index'}>
       <Stack.Screen name="homes.index" component={HomeNavigation} />
+      <Stack.Screen name="home.ngawas" component={ngawas} />
     </Stack.Navigator>
   );
 };

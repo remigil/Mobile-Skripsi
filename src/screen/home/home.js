@@ -1,251 +1,184 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useState} from 'react';
 import {
   View,
   Text,
+  StatusBar,
   Pressable,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  Animated,
   Image,
-  Dimensions,
+  ImageBackground,
+  ScrollView,
 } from 'react-native';
-// import {TouchableOpacity} from 'react-native-gesture-handler';
+import MapView from 'react-native-maps';
 import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {AvatarIco, IconSpeaker} from '../../assets/Assets';
-import {BaseContainer, Menu} from '../../component';
-
-
-import {BasicAlertProps} from '../../component/container/dialogContainer';
-import {useSelector} from 'react-redux';
-import { ImageBanner } from '../../assets/Assets';
-
-import Constanta from '../../lib/Constanta';
 import {
-  responsiveFontSize,
-  responsiveHeight,
-  responsiveWidth,
-} from 'react-native-responsive-dimensions';
-
-
+  IconEditData,
+  IconSilangIco,
+  IsiFormulir,
+  TambahKendaraan,
+} from '../../assets/Assets';
+import {BaseContainer,
+  TouchableGradient,
+  TouchableWithoutGradient,
+  TouchebleDisable,} from '../../component';
+import FilterAddOnHome from './addOnHome/filterAddOnHome';
 
 export default props => {
-  const {auth} = useSelector(state => state);
-  const [openPanicButton, setOpenPanicButton] = useState(false);
-  const slideToRight = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    if (openPanicButton) {
-      Animated.timing(slideToRight, {
-        toValue: -79,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-    } else {
-      Animated.timing(slideToRight, {
-        toValue: 0,
-        duration: 500,
-        useNativeDriver: true,
-      }).start();
-    }
-  }, [openPanicButton]);
-
-  const [basicAlertProps, setBasicAlertProps] = useState(BasicAlertProps);
-
-  let firstName = auth?.userData?.getProfile?.person_name.split(' ');
-
   return (
     <BaseContainer
-      {...props}
       withActionBar={true}
-      withBasicAlert={true}
-      basicAlertProps={basicAlertProps}
       actionBarProps={{
-        containerStyle: {
-          paddingVertical: heightPercentageToDP('1%'),
-        },
         title: 'BOGOR NGAWAS',
         titleStyle: {
-          color: '#fff',
-          backgrounColor: '#00000040',
+          color: '#FFFFFF',
+          backgrounColor: '#01796F',
           textAlign: 'center',
-          ...Constanta({
-            font: 'bold',
-          }),
         },
         onBackPressed: () => {
           props.navigation.openDrawer();
         },
-      }}>
-      <ScrollView
+      }}
+      {...props}>
+      <View
         style={{
-          marginBottom: responsiveHeight(9),
+          flex: 1,
+          height: heightPercentageToDP('100%'),
         }}>
-        <View style={{flex: 1}}>
-          <View
-            style={{
-              backgroundColor: '#01796F',
-              width: responsiveWidth(100),
-              height: responsiveHeight(9),
-              borderBottomLeftRadius: responsiveWidth(10),
-              borderBottomRightRadius: responsiveWidth(10),
-              justifyContent: 'center',
-            }}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                // alignSelf: 'center',
-                width: responsiveWidth(115),
-              }}>
-              <View>
-                <AvatarIco
-                  height={heightPercentageToDP('10%')}
-                  width={widthPercentageToDP('10%')}
-                />
-              </View>
-              <View>
-                <Text
-                  style={{
-                    ...Constanta({
-                      font: 'regular',
-                    }),
-                    color: 'white',
-                    width: responsiveWidth(30),
-                    marginLeft: 5,
-                  }}>
-                  Hi, {firstName[0]}
-                </Text>
-              </View>
-            </View>
-          </View>
+        <ImageBackground
+          source={require('../../assets/background.png')}
+          resizeMode="cover"
+          style={{
+            flex: 1,
+          }}
+        />
+        <View
+          style={{
+            flex: 1,
+            position: 'absolute',
+          }}>
           <View
             style={{
               flex: 1,
-              backgroundColor: '#FFFF',
+              borderBottomLeftRadius: 19,
+              borderBottomRightRadius: 19,
+              overflow: 'hidden',
+              alignItems: 'center',
+              justifyContent: 'center',
+              elevation: 25,
             }}>
+            <ImageBackground
+          source={require('../../assets/tugu_kujang1.jpg')}
+          resizeMode="cover"
+              style={{
+                top: 0,
+                bottom: 0,
+                left: 0,
+                right: 0,
+                height: heightPercentageToDP('30%'),
+                width: widthPercentageToDP('100%'),
+                borderWidth: 1,
+              }}
+            />
             <View
               style={{
-                marginLeft: responsiveWidth(5),
-                marginTop: responsiveHeight(2),
-                flexDirection: 'row',
-                justifyContent: 'space-between',
+                position: 'absolute',
+                top: 12,
+                right: 8,
               }}>
-                <Image source={ImageBanner} />
-        </View>
-
-         </View>
-
-              <View
-              style={{
-                marginLeft: responsiveWidth(5),
-                marginTop: responsiveHeight(2),
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}>
-
-              <Text
-                style={{
-                  fontSize: responsiveFontSize(2.1),
-                  color: '#01796F',
-                  ...Constanta({
-                    font: 'bold',
-                    marginLeft: responsiveWidth(5),
-                    marginTop: responsiveHeight(2),
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                  }),
-                }}>
-             Menu
-              </Text>
-         </View>
-         
-         <View
-              style={{
-                marginLeft: responsiveWidth(5),
-                marginTop: responsiveHeight(2),
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-              }}>
-
-              <Text
-                style={{
-                  fontSize: responsiveFontSize(2.1),
-                  color: '#01796F',
-                  ...Constanta({
-                    font: 'bold',
-                    marginLeft: responsiveWidth(5),
-                    marginTop: responsiveHeight(2),
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                  }),
-                }}>
-             Ngawas                Akun                  Informasi
-              </Text>
-         </View>
-         <View
-             style={styles.Menu}>
-              {/* <Menu title="Ngawas"/>
-              <Menu title="Akun"/>
-              <Menu title="Informasi"/> */}
-             
-
-         </View>
+              {/* <IconFullMap /> */}
+            </View>
           </View>
-      </ScrollView>
+          <View>
+            <View
+              style={{
+                alignItems: 'center',
+                position: 'absolute',
+                top: -23,
+                left: 0,
+                right: 0,
+                elevation: 30,
+              }}>
+              <Pressable
+                style={{
+                  backgroundColor: '#01796F',
+                  width: widthPercentageToDP('80%'),
+                  justifyContent: 'center',
+                  paddingHorizontal: 25,
+                  paddingVertical: 15,
+                  borderRadius: 14,
+                  elevation: 30,
+                }}>
+                <Text
+                  style={{
+                    color: '#FFFFFF',
+                  }}>
+                  - SELAMAT DATANG WARGA KOTA BOGOR -
+                </Text>
+              </Pressable>
+              
+            </View>
+            <View
+              style={{
+                marginVertical: 40,
+                // flex: 1,
+                borderBottomLeftRadius: 19,
+                borderBottomRightRadius: 19,
+                overflow: 'hidden',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+         <TouchableGradient
+                title={'Informasi'}
+                icon={<TambahKendaraan />}
+                onPress={() =>
+                  props.navigation.navigate('ngawas')
+              }
+                
+            />
+            </View>
+            <View
+              style={{
+                // flex: 1,
+                borderBottomLeftRadius: 10,
+                borderBottomRightRadius: 10,
+                overflow: 'hidden',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+         <TouchableGradient
+                title={'Perjalanan'}
+                icon={<TambahKendaraan />}
+                onPress={() =>
+                  navigation.navigate('ngawas')
+                }
+              
+            />
+            </View>
+            <View
+              style={{
+                // flex: 1,
+                borderBottomLeftRadius: 19,
+                borderBottomRightRadius: 19,
+                overflow: 'hidden',
+                alignItems: 'center',
+                justifyContent: 'center',
+                paddingHorizontal: widthPercentageToDP('10%'),
+                paddingVertical: heightPercentageToDP('4%'),
+              }}>
+         <TouchableGradient
+                title={'Perjalanan'}
+                icon={<TambahKendaraan />}
+                onPress={() =>
+                  props.navigation.navigate('ngawas')
+                }
+               
+            />
+            </View>
+          </View>
+        </View>
+      </View>
     </BaseContainer>
   );
 };
-
-const windowHeight = Dimensions.get('window').height;
-
-const styles = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor:
-      'linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))',
-  },
-  modalView: {
-    backgroundColor: 'white',
-    borderRadius: 20,
-    paddingHorizontal: 10,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-    width: widthPercentageToDP('80%'),
-    height: heightPercentageToDP('38%'),
-  },
-  button: {
-    borderRadius: 20,
-    padding: 10,
-    elevation: 2,
-  },
-  buttonOpen: {
-    backgroundColor: '#F194FF',
-  },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
-  textStyle: {
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-  modalText: {
-    marginBottom: 15,
-  },
-  Menu: {
-    flexDirection: 'row',
-  }
-});
