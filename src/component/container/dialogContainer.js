@@ -152,7 +152,7 @@ export default (props = BasicAlertProps) => {
                       <Text
                         style={{
                           ...Constanta({font: 'regular'}),
-                          color: '#2E81FF',
+                          color: '#01796F',
                           fontSize: responsiveFontSize(1.55),
                         }}>
                         Jarak Dengan lokasi anda sekarang
@@ -163,7 +163,7 @@ export default (props = BasicAlertProps) => {
                     <Text
                       style={{
                         ...Constanta({font: 'regular'}),
-                        color: '#2E81FF',
+                        color: '#01796F',
                         fontSize: responsiveFontSize(1.55),
                       }}>
                       {/* {Haversine({

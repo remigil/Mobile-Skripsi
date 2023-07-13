@@ -68,7 +68,7 @@ export function BottomHomeNavigation() {
             indicatorColor = focused
               ? (color = '#01796F')
               : (color = 'transparent');
-            } else if (route.name === 'Ngawas') {
+            } else if (route.name === 'Perjalanan') {
               indicatorColor = focused
                 ? (color = '#01796F')
                 : (color = 'transparent');
@@ -87,7 +87,7 @@ export function BottomHomeNavigation() {
                   source={require('../../assets/icon_bottom/Home_Off.png')}
               />
             );
-            } else if (route.name === 'Ngawas') {
+            } else if (route.name === 'Perjalanan') {
               iconName = focused ? (
                 <Image
                 source={require('../../assets/icon_bottom/Ngawas_On.png')}
@@ -203,7 +203,7 @@ export function BottomHomeNavigation() {
         }}
       />
       <BottomTab.Screen
-        name="Ngawas"
+        name="Perjalanan"
         options={({navigation, route}) => {
           const routeName = getFocusedRouteNameFromRoute(route);
           if (

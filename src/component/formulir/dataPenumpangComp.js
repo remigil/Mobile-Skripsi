@@ -47,7 +47,7 @@ export default props => {
     {
       // nationality: auth.userData.getProfile.nationality,
       name: auth.userData.getProfile.person_name,
-      nik: auth.userData.getProfile.nik,
+      no_hp: auth.userData.getProfile.no_hp,
     },
   ]);
 
@@ -172,7 +172,7 @@ export default props => {
                         }),
                       }}>
                       {/* {kendaraan.tipe_kendaraan_title} */}
-                      {tampil.nationality}
+                     {/* {tampil.nationality}  */}
                     </Text>
                   </View>
                   <View
@@ -214,9 +214,11 @@ export default props => {
                   ) : (
                     <TouchableOpacity
                       onPress={() => {
-                        console.log(indexPenum, tampilPenumpang, tampil.nik);
+                        console.log(indexPenum, tampilPenumpang, tampil.no_hp);
                         setTampilPenumpang(prev => {
-                          return prev.filter(penum => penum.nik != tampil.nik);
+                          return prev.filter(
+                            penum => penum.no_hp != tampil.no_hp,
+                          );
                         });
                         // deleteAction(kendaraan.id);
                       }}>

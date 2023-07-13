@@ -498,7 +498,7 @@ export default props => {
                   style={{
                     width: responsiveWidth(10),
                     height: responsiveHeight(1),
-                    backgroundColor: '#2E81FF',
+                    backgroundColor: '#01796F',
                     borderRadius: responsiveWidth(2),
                   }}></View>
                 <View
@@ -695,7 +695,7 @@ export default props => {
                                 <Text
                                   style={{
                                     ...Constanta({font: 'regular'}),
-                                    color: '#2E81FF',
+                                    color: '#01796F',
                                     fontSize: responsiveFontSize(1.8),
                                   }}>
                                   Jarak Dengan lokasi anda sekarang
@@ -706,7 +706,7 @@ export default props => {
                               <Text
                                 style={{
                                   ...Constanta({font: 'regular'}),
-                                  color: '#2E81FF',
+                                  color: '#01796F',
                                   fontSize: responsiveFontSize(1.8),
                                 }}>
                                 {Haversine({
@@ -851,7 +851,7 @@ export default props => {
                                 <Text
                                   style={{
                                     ...Constanta({font: 'regular'}),
-                                    color: '#2E81FF',
+                                    color: '#01796F',
                                     fontSize: responsiveFontSize(1.8),
                                   }}>
                                   Jarak Dengan lokasi anda sekarang
@@ -862,7 +862,7 @@ export default props => {
                               <Text
                                 style={{
                                   ...Constanta({font: 'regular'}),
-                                  color: '#2E81FF',
+                                  color: '#01796F',
                                   fontSize: responsiveFontSize(1.8),
                                 }}>
                                 {Haversine({
@@ -1006,7 +1006,7 @@ export default props => {
                                 <Text
                                   style={{
                                     ...Constanta({font: 'regular'}),
-                                    color: '#2E81FF',
+                                    color: '#01796F',
                                     fontSize: responsiveFontSize(1.8),
                                   }}>
                                   Jarak Dengan lokasi anda sekarang
@@ -1017,7 +1017,7 @@ export default props => {
                               <Text
                                 style={{
                                   ...Constanta({font: 'regular'}),
-                                  color: '#2E81FF',
+                                  color: '#01796F',
                                   fontSize: responsiveFontSize(1.8),
                                 }}>
                                 {Haversine({

@@ -860,7 +860,7 @@ export default props => {
                             }),
                             marginBottom: widthPercentageToDP('1.5%'),
                           }}>
-                          Nomor Induk Kewarganegaraan
+                          Nomor Telefon
                         </Text>
                       </View>
                       <View
@@ -879,7 +879,7 @@ export default props => {
                               font: 'regular',
                             }),
                           }}>
-                          {dataPenum.nik}
+                          {dataPenum.no_hp}
                         </Text>
                       </View>
                     </View>

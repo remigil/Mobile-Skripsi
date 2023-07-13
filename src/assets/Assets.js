@@ -16,6 +16,7 @@ import Lonceng from './actionbar/lonceng.svg';
 import Settings from './drawer/setting.svg';
 import Faq from './drawer/FAQ.svg';
 import ContactCentre from './drawer/contact-centre.svg';
+import information from './drawer/information(2).png'
 import LogoutIco from './drawer/logout.svg';
 import QRtripon from './drawer/MyQR-Tripon.svg';
 import PanduanIco from './drawer/panduan.svg';
@@ -63,7 +64,7 @@ import CircleTwitter from './home/circle_twitter.svg';
 import CircleShare from './home/circle_share.svg';
 import SalinLink from './home/salin.svg';
 import IconFullMap from './home/icon full map peta.svg';
-import CardTripOn from './sidebar/qr_tripon/triponcard.png';
+import CradNgawas from './sidebar/qr_tripon/triponcard.png';
 import LogoK3I from './sidebar/qr_tripon/logo_k3i.png';
 import CarbonMap from './sidebar/qr_tripon/carbon_map.svg';
 import IconPanicButton from './home/panic button.svg';
@@ -123,17 +124,21 @@ import IconIRMS from './home/aplikasi/irms.png';
 import IconBackBerita from './home/icon_back_berita.svg';
 import KewilayahanOn from '../assets/icon on.svg';
 import KewilayahanOff from '../assets/icon_off.svg';
-import { ImageBanner } from './home/images';
-import { ImageAkun } from './ngawas/icon/Akun.png';
+import {ImageBanner} from './home/images';
+import {ImageAkun} from './ngawas/icon/Akun.png';
 import {ImageNgawas} from './ngawas/icon/Ngawas.png';
 import {ImageInformasi} from './ngawas/icon/Informasi.png';
 import IconAkun from './AKUN.svg';
 import IconNgawas from './Ngawas.svg';
 import IconSettings from './Settings.png';
-import IconInformasi from './Informasi.svg'
-
+import IconInformasi from './Informasi.svg';
+import tentang from './sidebar/call_center/tentang.png'
+import Logo from './sidebar/call_center/logo.svg'
 
 export {
+  information,
+  Logo,
+  tentang,
   KewilayahanOn,
   IconSettings,
   KewilayahanOff,
@@ -210,7 +215,7 @@ export {
   CircleShare,
   SalinLink,
   IconFullMap,
-  CardTripOn,
+  CradNgawas,
   CarbonMap,
   IconPanicButton,
   IconYoutube,

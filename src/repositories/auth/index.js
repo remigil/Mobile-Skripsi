@@ -40,7 +40,7 @@ export const AuthLogin = async (no_hp, password) => {
   }
 };
 
-export const AuthRegister = async (no_hp, password, nama, email, nik) => {
+export const AuthRegister = async (no_hp, password, nama, email) => {
   try {
     // console.log(formData, 'formdata');
     let formData = new FormData();
@@ -49,7 +49,7 @@ export const AuthRegister = async (no_hp, password, nama, email, nik) => {
     formData.append('password', password);
     formData.append('person_name', nama);
     formData.append('email', email);
-    formData.append('nik', nik);
+    // formData.append('nik', nik);
 
     return await APISenderBasic(
       APICONFIG.BASE_URL + APICONFIG.AUTH_URL.REGISTER,

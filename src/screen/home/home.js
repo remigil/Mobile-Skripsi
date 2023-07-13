@@ -7,6 +7,7 @@ import {
   Image,
   ImageBackground,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 import MapView from 'react-native-maps';
 import {
@@ -24,6 +25,7 @@ import {BaseContainer,
   TouchableWithoutGradient,
   TouchebleDisable,} from '../../component';
 import FilterAddOnHome from './addOnHome/filterAddOnHome';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 export default props => {
   return (
@@ -47,7 +49,7 @@ export default props => {
           height: heightPercentageToDP('100%'),
         }}>
         <ImageBackground
-          source={require('../../assets/background.png')}
+          source={require('../../assets/Hometampilan.png')}
           resizeMode="cover"
           style={{
             flex: 1,
@@ -121,43 +123,6 @@ export default props => {
             </View>
             <View
               style={{
-                marginVertical: 40,
-                // flex: 1,
-                borderBottomLeftRadius: 19,
-                borderBottomRightRadius: 19,
-                overflow: 'hidden',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-         <TouchableGradient
-                title={'Informasi'}
-                icon={<TambahKendaraan />}
-                onPress={() =>
-                  props.navigation.navigate('ngawas')
-              }
-                
-            />
-            </View>
-            <View
-              style={{
-                // flex: 1,
-                borderBottomLeftRadius: 10,
-                borderBottomRightRadius: 10,
-                overflow: 'hidden',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}>
-         <TouchableGradient
-                title={'Perjalanan'}
-                icon={<TambahKendaraan />}
-                onPress={() =>
-                  navigation.navigate('ngawas')
-                }
-              
-            />
-            </View>
-            <View
-              style={{
                 // flex: 1,
                 borderBottomLeftRadius: 19,
                 borderBottomRightRadius: 19,
@@ -171,10 +136,34 @@ export default props => {
                 title={'Perjalanan'}
                 icon={<TambahKendaraan />}
                 onPress={() =>
-                  props.navigation.navigate('ngawas')
+                  props.navigation.navigate('Informasi')
                 }
-               
             />
+            </View>
+            <View
+              style={{
+                // flex: 1,
+                borderBottomLeftRadius: 19,
+                borderBottomRightRadius: 19,
+                overflow: 'hidden',
+                alignItems: 'center',
+                justifyContent: 'center',
+                paddingHorizontal: widthPercentageToDP('10%'),
+                paddingVertical: heightPercentageToDP('4%'),
+              }}>
+      <TouchableOpacity
+          style={{
+            width: 250,
+            height: 46,
+            backgroundColor: '#01796F',
+            borderRadius: 5,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginVertical: 30,
+          }}
+          onPress={() => props.navigation.navigate('DetailScreen')}>
+          <Text style={{color: 'white', size: 15}}>Informasi</Text>
+          </TouchableOpacity>
             </View>
           </View>
         </View>

@@ -237,7 +237,7 @@ export default props => {
                   font: 'regular',
                 }),
               }}>
-              Kode unik akan dikirimkan ke Email Anda
+              Kode kode akan dikirimkan ke Email Anda
             </Text>
           </View>
 

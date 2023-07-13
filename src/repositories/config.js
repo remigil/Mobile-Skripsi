@@ -42,7 +42,7 @@ export const APICONFIG = {
     GET_MY_VEHICLE: '/public_vehicle/getbysocietyId',
     ADD_VEHICLE: '/public_vehicle/add',
     GET_VEHICLE: '/public_vehicle',
-    VEHICLE_TYPE: '/type_vehicle',
+    VEHICLE_TYPE: '/type_brand_vehicle',
     GET_VEHICLE_ID: '/public_vehicle/getId/',
     DELETE_VEHICLE: '/public_vehicle/delete',
     ADD_TRIPON: '/ngawas/add',
@@ -109,7 +109,7 @@ export const API_PHONE_VALUE = 'no_hp';
 export const API_PASSWORD_VALUE = 'password';
 export const API_USERNAME = 'person_name';
 export const API_EMAIL = 'email';
-export const API_NIK = 'nik';
+export const API_NIK = 'no_hp';
 
 const generateAccessToken = async (attempt, token = null) => {
   const existingToken = await AsyncStorage.getItem(API_AUTH_KEY);

@@ -12,7 +12,7 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {CarbonMap, CardTripOn, LogoK3I} from '../../../assets/Assets';
+import {CarbonMap, CradNgawas, LogoK3I} from '../../../assets/Assets';
 import {BaseContainer, TouchableGradient} from '../../../component';
 // import QRCode from 'react-native-qrcode-svg';
 import LinearGradient from 'react-native-linear-gradient';
@@ -128,7 +128,7 @@ export default props => {
             ) : (
               <>
                 {/* <Image
-                  source={CardTripOn}
+                  source={CradNgawas}
                   style={{
                     marginRight: widthPercentageToDP('6.5%'),
                     width: widthPercentageToDP('95%'),

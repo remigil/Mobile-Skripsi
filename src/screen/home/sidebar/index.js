@@ -822,7 +822,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
                               }),
                             }}>
                             {/* {kendaraan.tipe_kendaraan_title} */}
-                            {kendaraan?.type_vehicle?.type_name}
+                            {kendaraan?.type_brand_vehicle?.type_name}
                           </Text>
                         </View>
                         <View

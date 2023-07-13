@@ -35,14 +35,14 @@ export default props => {
       },
       tipeKendaraan: {
         value:
-          paramsData?.type_vehicle === undefined
+          paramsData?.type_brand_vehicle === undefined
             ? ''
-            : paramsData?.type_vehicle?.type_name,
+            : paramsData?.type_brand_vehicle?.type_name,
         is_require: false,
         placeholder:
-          paramsData?.type_vehicle === undefined
+          paramsData?.type_brand_vehicle === undefined
             ? 'Pilih Model'
-            : paramsData?.type_vehicle?.type_name,
+            : paramsData?.type_brand_vehicle?.type_name,
         children: [],
       },
       merk: {
@@ -82,7 +82,7 @@ export default props => {
       .then(hasil => {
         // console.log(hasil.data.data);
         // let refactor = [];
-        // console.log(paramsData?.type_vehicle?.type_name, 'nah nah');
+        // console.log(paramsData?.type_brand_vehicle?.type_name, 'nah nah');
         let refactor = hasil.data.data.map(list => ({
           ...list,
           title: list.type_name,

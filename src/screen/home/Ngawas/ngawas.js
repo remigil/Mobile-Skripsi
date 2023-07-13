@@ -210,9 +210,9 @@ export default props => {
                       }),
                       color: 'black',
                     }}>
-                    Aplikasi Bogor Ngawas yaitu aplikasi yang 
-                    dapat Memonitoring perjalanan warga bogor,
-                    untuk mengetahui penyimpangan rute yang ingin di lewati.
+                    Aplikasi Bogor Ngawas yaitu aplikasi yang dapat Memonitoring
+                    perjalanan warga bogor, untuk mengetahui penyimpangan rute
+                    yang ingin di lewati.
                   </Text>
                 </View>
                 {dataKendaraan.length ? (
@@ -251,7 +251,7 @@ export default props => {
                               }),
                             }}>
                             {/* {kendaraan.tipe_kendaraan_title} */}
-                            {kendaraan?.type_vehicle?.type_name}
+                            {kendaraan?.type_brand_vehicle?.type_name}
                           </Text>
                         </View>
                         <View
@@ -315,9 +315,9 @@ export default props => {
                       }),
                       color: 'black',
                     }}>
-                   Aplikasi Bogor Ngawas yaitu aplikasi yang 
-                    dapat Memonitoring perjalanan warga bogor,
-                    untuk mengetahui penyimpangan rute yang ingin di lewati.
+                    Aplikasi Bogor Ngawas yaitu aplikasi yang dapat Memonitoring
+                    perjalanan warga bogor, untuk mengetahui penyimpangan rute
+                    yang ingin di lewati.
                   </Text>
                 </View>
                 <Image

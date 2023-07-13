@@ -22,6 +22,9 @@ import {
   QRtripon,
   Settings,
   SocialMediIco,
+  information,
+  IconInformasi,
+  IconNgawas,
 } from '../../assets/Assets';
 import LinearGradient from 'react-native-linear-gradient';
 import {
@@ -81,15 +84,15 @@ const CustDrawer = props => {
   };
   const [modal, setModal] = useState(false);
   const menuDrawer = [
-    // {
-    //   icon: <ContactCentre width={28} height={28} />,
-    //   title: 'Call Centre',
-    //   name: 'callcentre',
-    //   id: 'callcentre',
-    //   onPress: () => {
-    //     props.navigation.navigate('CallCenter');
-    //   },
-    // },
+    {
+      icon: <IconInformasi width={28} height={28} />,
+      title: 'Informasi Aplikasi',
+      name: 'Informasi',
+      id: 'callcentre',
+      onPress: () => {
+        props.navigation.navigate('CallCenter');
+      },
+    },
     // {
     //   icon: <QRtripon width={28} height={28} />,
     //   title: 'MyQR TripOn',
@@ -100,8 +103,8 @@ const CustDrawer = props => {
     //   },
     // },
     {
-      icon: <QRtripon width={28} height={28} />,
-      title: 'Bogor Ngawas',
+      icon: <IconNgawas width={25} height={26} />,
+      title: 'Riwayat Data Perjalanan',
       name: 'historyngawas',
       id: 'historyngawas',
       onPress: () => {
@@ -441,7 +444,7 @@ export const HomeDrawerNav = () => {
           drawerItemStyle: {
             display: 'none',
           },
-          title: 'Call Centre',
+          title: 'Informasi',
         }}
         component={CallCenter}
         name="CallCenter"

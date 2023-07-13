@@ -16,13 +16,13 @@ export default (props = {...props}) => {
         flex: 1,
       }}>
       <ImageBackground
-        source={require('../../assets/splash/tampilan.png')}
+        source={require('../../assets/splash/splash.png')}
         resizeMode="cover"
         style={{
           flex: 1,
           justifyContent: 'center',
         }}></ImageBackground>
-      <Text
+      {/* <Text
         style={{
           color: 'white',
           position: 'absolute',
@@ -37,7 +37,7 @@ export default (props = {...props}) => {
           marginBottom: 5,
         }}>
        Aplikasi Bogor Ngawas{`\n`}Aplikasi Tracking Untuk Warga Bogor {'\n'} Yang Ingin Keluar Bogor
-      </Text>
+      </Text> */}
     </View>
   );
 };

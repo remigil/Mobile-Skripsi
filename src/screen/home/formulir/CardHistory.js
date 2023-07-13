@@ -12,7 +12,7 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {CarbonMap, CardTripOn, LogoK3I} from '../../../assets/Assets';
+import {CarbonMap, CradNgawas, LogoK3I} from '../../../assets/Assets';
 import {BaseContainer, TouchableGradient} from '../../../component';
 // import QRCode from 'react-native-qrcode-svg';
 import LinearGradient from 'react-native-linear-gradient';
@@ -142,16 +142,11 @@ export default props => {
             </View>
 
             <Image
-              source={{
-                uri: `${
-                  'http://108.136.137.131:3001/uploads/qrcode/' +
-                  paramsData.barcode
-                }`,
-              }}
+              source={require('../../../assets/Bogor_ngawas.png')}
               style={{
-                width: widthPercentageToDP('50%'),
-                height: widthPercentageToDP('50%'),
-                marginTop: heightPercentageToDP('20%'),
+                width: widthPercentageToDP('60%'),
+                height: widthPercentageToDP('60%'),
+                marginTop: heightPercentageToDP('18%'),
               }}
             />
             <Text

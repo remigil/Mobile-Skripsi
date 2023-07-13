@@ -28,10 +28,10 @@ export default props => {
         is_require: false,
         placeholder: 'Masukan Nama',
       },
-      nik: {
+      no_hp: {
         value: '',
         is_require: false,
-        placeholder: 'Masukkan Nik',
+        placeholder: 'Masukkan Nomor Telefon',
       },
     },
     kewarganegaraan: [
@@ -58,13 +58,13 @@ export default props => {
   );
 
   const onReach_MAX_Length = temp => {
-    let tempLength = temp?.length.toString();
+    let tempLength = temp?.length.toInt();
 
-    if (tempLength < 16) {
+    if (tempLength < 12) {
       setBasicAlertProps({
         basicAlertVisible: true,
         basicAlertTitle: 'Perhatian',
-        basicAlertMessage: 'Jumlah digit NIK anda kurang',
+        basicAlertMessage: 'Jumlah nomer telefon anda kurang',
         basicAlertOkBtnOnly: true,
         basicAlertBtnOkText: 'OK',
         basicAlertOnOk: () => {
@@ -188,14 +188,14 @@ export default props => {
         />
         <InputTextComp
           inputProps={{
-            placeholder: 'Masukan NIK',
+            placeholder: 'Masukan Nomor Telefon',
             keyboardType: 'numeric',
-            value: formTambahPenumpang.nik.value,
+            value: formTambahPenumpang.no_hp.value,
             onChangeText: value =>
               setFormTambahPenumpang({
                 ...formTambahPenumpang,
-                nik: {
-                  ...formTambahPenumpang.nik,
+                no_hp: {
+                  ...formTambahPenumpang.no_hp,
                   value: value,
                 },
               }),
@@ -207,11 +207,11 @@ export default props => {
               width: widthPercentageToDP('90%'),
               height: responsiveHeight(6),
             },
-            maxLength: 16,
+            maxLength: 12,
           }}
           labelProps={{
             status: true,
-            title: 'NIK (Nomor Induk Kependudukan)',
+            title: 'Nomor Telefon',
             style: {
               fontSize: widthPercentageToDP('5%'),
               color: '#01796F',
@@ -236,7 +236,7 @@ export default props => {
               let objData = {
                 // nationality: formTambahPenumpang?.wargaNegara?.value || null,
                 name: formTambahPenumpang?.nama_lengkap?.value || null,
-                nik: formTambahPenumpang?.nik?.value || null,
+                no_hp: formTambahPenumpang?.no_hp?.value || null,
               };
               // console.log(objData);
               let validate = true;
@@ -248,8 +248,8 @@ export default props => {
               if (!validate) {
                 Alert.alert('Perhatian!', 'Formulir tidak boleh kosong');
               }
-              if (formTambahPenumpang.nik.value.length < 16) {
-                onReach_MAX_Length(formTambahPenumpang.nik.value);
+              if (formTambahPenumpang.no_hp.value.length < 12) {
+                onReach_MAX_Length(formTambahPenumpang.no_hp.value);
               } else {
                 props.navigation.navigate('ngawas.tanggalKeberangkatan', {
                   penumpang: objData,

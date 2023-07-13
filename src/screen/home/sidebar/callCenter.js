@@ -15,7 +15,7 @@ import {
   heightPercentageToDP,
   widthPercentageToDP,
 } from 'react-native-responsive-screen';
-import {Bg_CC, CC_Telepon, CC_Wa, LogoCC} from '../../../assets/Assets';
+import {Bg_CC, CC_Telepon, CC_Wa, LogoCC, tentang, Logo} from '../../../assets/Assets';
 import {BaseContainer} from '../../../component';
 import Constanta from '../../../lib/Constanta';
 
@@ -29,7 +29,7 @@ export default props => {
     <BaseContainer
       withActionBar={true}
       actionBarProps={{
-        title: 'Call Centre',
+        title: 'Informasi Bogor Ngawas',
         backIconStyle: true,
         titleStyle: {
           color: '#FFF',
@@ -44,7 +44,7 @@ export default props => {
         },
       }}>
       <ImageBackground
-        source={Bg_CC}
+        source={tentang}
         style={{
           flex: 1,
         }}
@@ -70,7 +70,7 @@ export default props => {
                   font: 'bold',
                 }),
               }}>
-              K31 KORLANTAS POLRI
+             BOGOR NGAWAS
             </Text>
             <View
               style={{
@@ -85,7 +85,7 @@ export default props => {
                   }),
                   fontSize: responsiveFontSize(2),
                 }}>
-                INFO KONTAK
+                DEAR MASYARAKAT KOTA BOGOR
               </Text>
               <Text
                 style={{
@@ -98,8 +98,9 @@ export default props => {
                   lineHeight: 20,
                   marginTop: responsiveHeight(2),
                 }}>
-                Pusat Kendali, Koordinasi,{`\n`} Komunikasi dan Informasi{`\n`}
-                Korlantas Polri
+                Aplikasi Bogor Ngawas hadir untuk{`\n`} mempermudah Masyarakat Kota Bogor dalam mencari rute perjalanan 
+                {`\n`}
+                Dan Bogor Ngawas ini terkoneksi pada web Bogor ngawas yang Memberikan Informasi Kepada pihak {`\n`}Berwenang berdasarkan data yang terdaftar {`\n`}serta memberikan keamanan Kepada Masyarakat yang sedang melakukan perjalanan.
               </Text>
               <Text
                 style={{
@@ -112,7 +113,7 @@ export default props => {
                   fontSize: responsiveFontSize(2),
                   lineHeight: 20,
                 }}>
-                Jl. MT Haryono Kab. 37 - 38,{`\n`} Jakarta 12770
+                Sekian Dan{`\n`} Terima Kasih
               </Text>
             </View>
             {/* <View></View> */}
@@ -122,93 +123,19 @@ export default props => {
               flexDirection: 'row',
               marginTop: heightPercentageToDP('4%'),
             }}>
-            <TouchableOpacity
-              onPress={() => {
-                Linking.openURL(`tel:${number}`);
-              }}>
-              <View
-                style={{
-                  width: widthPercentageToDP('40%'),
-                  backgroundColor: '#F5D8D8',
-                  borderRadius: 28,
-                  marginHorizontal: 13,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  paddingVertical: 18,
-                }}>
-                <View>
-                  <CC_Telepon />
-                </View>
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    color: '#B81F1F',
-                    ...Constanta({
-                      font: 'regular',
-                    }),
-                    marginTop: 10,
-                    fontSize: 10,
-                  }}>
-                  Hubungi{' '}
-                  {
-                    <Text
-                      style={{
-                        color: '#B81F1F',
-                        ...Constanta({
-                          font: 'bold',
-                        }),
-                        opacity: 10,
-                        textAlign: 'center',
-                      }}>
-                      Hotline
-                    </Text>
-                  }
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <TouchableOpacity
-              onPress={() =>
-                // Linking.openURL(
-                //   `whatsapp://send?phone=${contact}$text=${message}`,
-                // );
-                Linking.openURL('https://wa.me/6285171552928')
-              }>
+            {/*  */}
               <View
                 style={{
                   width: widthPercentageToDP('40%'),
                   backgroundColor: '#01796FD',
-                  borderRadius: 28,
-                  marginHorizontal: 13,
+                  borderRadius: 20,
+                  marginHorizontal: 10,
                   justifyContent: 'center',
                   alignItems: 'center',
                   paddingVertical: 18,
                 }}>
-                <CC_Wa />
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    color: '#01796F',
-                    marginTop: 10,
-                    textAlign: 'center',
-                    ...Constanta({
-                      font: 'regular',
-                    }),
-                    fontSize: 10,
-                  }}>
-                  Hubungi{' '}
-                  {
-                    <Text
-                      style={{
-                        ...Constanta({
-                          font: 'bold',
-                        }),
-                      }}>
-                      WHATSAPP
-                    </Text>
-                  }
-                </Text>
+                <Logo />
               </View>
-            </TouchableOpacity>
           </View>
           <View
             style={{
@@ -223,18 +150,7 @@ export default props => {
                   font: 'regular',
                 }),
               }}>
-              Powered by POLRI
-            </Text>
-            <Text
-              style={{
-                color: 'black',
-                textAlign: 'center',
-                fontSize: 10,
-                ...Constanta({
-                  font: 'regular',
-                }),
-              }}>
-              Versi 1.0
+              Bogor Ngawas
             </Text>
           </View>
         </View>

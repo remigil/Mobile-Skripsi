@@ -59,11 +59,11 @@ export default props => {
         require: true,
         is_filled: true,
       },
-      nik: {
-        value: paramsData?.nik === undefined ? '' : paramsData?.nik,
-        require: false,
-        is_filled: true,
-      },
+      // no_hp: {
+      //   value: paramsData?.no_hp === undefined ? '' : paramsData?.no_hp,
+      //   require: false,
+      //   is_filled: true,
+      // },
     },
     rememberMe: false,
     basicAlertProps: {
@@ -79,20 +79,20 @@ export default props => {
   const onReach_MAX_Length = temp => {
     let tempLength = temp?.length.toString();
 
-    if (tempLength < 16) {
-      setBasicAlertProps({
-        basicAlertVisible: true,
-        basicAlertTitle: 'Perhatian',
-        basicAlertMessage: 'Jumlah digit NIK anda kurang',
-        basicAlertOkBtnOnly: true,
-        basicAlertBtnOkText: 'OK',
-        basicAlertOnOk: () => {
-          closeBasicAlert();
-        },
-        basicAlertShowButton: true,
-        withTitle: true,
-      });
-    }
+    // if (tempLength < 16) {
+    //   setBasicAlertProps({
+    //     basicAlertVisible: true,
+    //     basicAlertTitle: 'Perhatian',
+    //     basicAlertMessage: 'Jumlah digit NIK anda kurang',
+    //     basicAlertOkBtnOnly: true,
+    //     basicAlertBtnOkText: 'OK',
+    //     basicAlertOnOk: () => {
+    //       closeBasicAlert();
+    //     },
+    //     basicAlertShowButton: true,
+    //     withTitle: true,
+    //   });
+    // }
   };
 
   const submitDaftar = async () => {
@@ -100,7 +100,7 @@ export default props => {
       let isFilled = true;
       let isFilledField = '';
       // if () {
-      //   onReach_MAX_Length(formDaftar.nik.value);
+      //   onReach_MAX_Length(formDaftar.no_hp.value);
       // }
 
       console.log({formDaftar});
@@ -127,9 +127,10 @@ export default props => {
           basicAlertBtnClosedText: 'Tutup juga',
         });
       }
-      if (formDaftar.nik.value.length < 16) {
-        onReach_MAX_Length(formDaftar.nik.value);
-      } else {
+      // if (formDaftar.no_hp.value.length < 16) {
+      //   onReach_MAX_Length(formDaftar.no_hp.value);
+      // } else 
+      {
         if (isFilled) {
           if (formDaftar.phone.value[0] == '0') {
             formDaftar.phone.value = '62' + formDaftar.phone.value.substring(1);
@@ -143,7 +144,7 @@ export default props => {
             formDaftar.password.value,
             formDaftar.nama.value,
             formDaftar.email.value,
-            formDaftar.nik.value,
+            // formDaftar.no_hp.value,
           )
             .then(success => {
               console.log({success});
@@ -567,19 +568,19 @@ export default props => {
               marginBottom: responsiveWidth(3),
             }}
           />
-          <InputTextComp
+          {/* <InputTextComp
             inputProps={{
               placeholder: 'Masukan NIK',
               keyboardType: 'numeric',
-              value: formDaftar.nik.value,
-              placeholderTextColor: formDaftar.nik.is_filled
+              value: formDaftar.no_hp.value,
+              placeholderTextColor: formDaftar.no_hp.is_filled
                 ? '#9C9D9E'
                 : '#CE2121',
               onChangeText: value =>
                 setFormDaftar({
                   ...formDaftar,
-                  nik: {
-                    ...formDaftar.nik,
+                  no_hp: {
+                    ...formDaftar.no_hp,
                     value: value,
                   },
                 }),
@@ -603,14 +604,14 @@ export default props => {
                 fontWeight: '400',
                 marginBottom: responsiveWidth(1.5),
               },
-              is_false: formDaftar.nik.is_filled,
+              is_false: formDaftar.no_hp.is_filled,
               status: true,
               // require: true,
             }}
             containerProps={{
               marginBottom: responsiveWidth(3),
             }}
-          />
+          /> */}
 
           <Text
             style={{

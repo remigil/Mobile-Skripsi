@@ -32,7 +32,7 @@ export default props => {
         console.log({response: response?.data?.data});
         setDataNgawas(response.data.data[0]);
         setDataPenumpang(response.data.data[0].penumpangs.length);
-        setDataKendaraan(response.data.data[0].type_vehicle.type_name);
+        setDataKendaraan(response.data.data[0].type_brand_vehicle.type_name);
         console.log('nah', response.data.data[0]);
       })
       .catch(err => {
@@ -76,7 +76,7 @@ export default props => {
               alignItems: 'center',
               marginVertical: heightPercentageToDP('3%'),
             }}>
-            {/* <CardTripon
+            {/* <CradNgawas
               nopol={dataNgawas.public_vehicle?.no_vehicle}
               code={dataNgawas.code}
             /> */}
@@ -110,16 +110,13 @@ export default props => {
                   marginLeft: responsiveWidth(4),
                   fontSize: responsiveFontSize(2),
                 }}>
-                BOGOR NGAWAS{`\n`}KOTA BOGOR
+                "Hati-hati, bepergian dengan aman, dan semoga perjalananmu
+                menyenangkan."{`\n`}
+                {`\n`}BOGOR NGAWAS
               </Text>
             </View>
             <Image
-              source={{
-                uri: `${
-                  'http://108.136.137.131:3001/uploads/qrcode/' +
-                  dataNgawas.barcode
-                }`,
-              }}
+              source={require('../../../assets/Bogor_ngawas.png')}
               style={{
                 width: widthPercentageToDP('60%'),
                 height: widthPercentageToDP('60%'),
@@ -136,51 +133,57 @@ export default props => {
                 }),
               }}>
               Berlaku untuk {dataPenumpang} orang dan 1 {dataKendaraan}
-              {/* {dataNgawas.type_vehicle.type_name} */}
+              {/* {dataNgawas.type_brand_vehicle.type_name} */}
             </Text>
             <View>
               <Text
                 style={{
                   color: '#000',
                   marginTop: widthPercentageToDP('3%'),
-                  textAlign: 'left',
+                  textAlign: 'center',
                   ...Constanta({
                     font: 'regular',
                   }),
                   marginBottom: 3,
                 }}>
-                Syarat dan Ketentuan:
+                DOA SELAMAT NAIK KENDARAAN
               </Text>
               <Text
                 style={{
                   color: '#000',
-                  lineHeight: 20,
+                  lineHeight: 40,
+                  textAlign: 'center',
                   ...Constanta({
                     font: 'regular',
                   }),
                   fontSize: responsiveFontSize(1.7),
                 }}>
-                1. Dilarang menggandakan/memperbanyak QR Code
+                سُبْحَانَ الَّذِى سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ
+                مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ
               </Text>
               <Text
                 style={{
                   color: '#000',
-                  lineHeight: 20,
+                  lineHeight: 30,
+                  textAlign: 'center',
                   ...Constanta({
                     font: 'regular',
                   }),
                 }}>
-                2. QR Code tidak boleh diperjualbelikan
+                Alhamdulillahil ladzi sakhkhoro lana hadza wa ma kunna lahu
+                muqrinina wa inna ila rabbina lamunqalibun.
               </Text>
               <Text
                 style={{
                   color: '#000',
-                  lineHeight: 20,
+                  lineHeight: 25,
                   ...Constanta({
                     font: 'regular',
                   }),
                 }}>
-                3. Menunjukkan QR Code kepada petugas
+                Artinya: “Segala puji bagi Allah yang telah menundukkan semua
+                ini bagi kami, padahal sebelumnya kami tidak mampu menguasainya,
+                dan sesungguhnya hanya kepada Tuhan kami-lah kami akan kembali.”
               </Text>
             </View>
             <Text
