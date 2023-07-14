@@ -19,6 +19,7 @@ import {
   IconSilangIco,
   IsiFormulir,
   TambahKendaraan,
+  Logo,
 } from '../../assets/Assets';
 import {BaseContainer,
   TouchableGradient,
@@ -124,34 +125,56 @@ export default props => {
             <View
               style={{
                 // flex: 1,
-                borderBottomLeftRadius: 19,
-                borderBottomRightRadius: 19,
+                borderBottomLeftRadius: 23,
+                borderBottomRightRadius: 23,
                 overflow: 'hidden',
                 alignItems: 'center',
                 justifyContent: 'center',
                 paddingHorizontal: widthPercentageToDP('10%'),
-                paddingVertical: heightPercentageToDP('4%'),
+                paddingVertical: heightPercentageToDP('7%'),
               }}>
-         <TouchableGradient
-                title={'Perjalanan'}
-                icon={<TambahKendaraan />}
-                onPress={() =>
-                  props.navigation.navigate('Informasi')
-                }
-            />
+                 <Text
+                  style={{
+                    color: '#01796F',
+                  }}>
+                  - DEAR MASYARAKAT KOTA BOGOR - 
+                  </Text>
+
             </View>
             <View
               style={{
                 // flex: 1,
-                borderBottomLeftRadius: 19,
-                borderBottomRightRadius: 19,
-                overflow: 'hidden',
-                alignItems: 'center',
-                justifyContent: 'center',
-                paddingHorizontal: widthPercentageToDP('10%'),
-                paddingVertical: heightPercentageToDP('4%'),
+                // alignItems: 'center',
+                top: -30,
+                left: 0,
+                right: 0,
+                paddingHorizontal: widthPercentageToDP('5%'),
               }}>
-      <TouchableOpacity
+                 <Text
+                  style={{
+                    color: '#01796F',
+                    fontsize: 15,
+                  }}>
+                   Aplikasi Bogor Ngawas hadir untuk mempermudah{`\n`}Masyarakat Kota Bogor dalam mencari rute perjalanan yang
+                {`\n`}memanfaatkan layanan Location Based Service (LBS) {`\n`}yang disediakan penyedia layanan internet serta telah {`\n`}menggabungkannya dengan Global Positioning System (GPS) yang terdapat pada perangkat smartphone anda.
+                  </Text>
+            </View>
+              <View
+                style={{
+                  width: widthPercentageToDP('100%'),
+                  alignItems: 'center',
+                  top: -100,
+                }}>
+                <Logo />
+              </View>
+          </View>
+        </View>
+      </View>
+    </BaseContainer>
+  );
+};
+
+ {/* <TouchableOpacity
           style={{
             width: 250,
             height: 46,
@@ -163,11 +186,4 @@ export default props => {
           }}
           onPress={() => props.navigation.navigate('DetailScreen')}>
           <Text style={{color: 'white', size: 15}}>Informasi</Text>
-          </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      </View>
-    </BaseContainer>
-  );
-};
+          </TouchableOpacity> */}

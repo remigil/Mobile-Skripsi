@@ -63,7 +63,7 @@ export default props => {
             <Text
               style={{
                 textAlign: 'center',
-                color: '#7E7E7E',
+                color: '#01796F',
                 fontSize: responsiveFontSize(2.5),
 
                 ...Constanta({
@@ -78,7 +78,7 @@ export default props => {
               }}>
               <Text
                 style={{
-                  color: '#7E7E7E',
+                  color: '#01796F',
                   textAlign: 'center',
                   ...Constanta({
                     font: 'semibold',
@@ -89,7 +89,7 @@ export default props => {
               </Text>
               <Text
                 style={{
-                  color: '#7E7E7E',
+                  color: '#01796F',
                   textAlign: 'center',
                   ...Constanta({
                     font: 'regular',
@@ -105,7 +105,7 @@ export default props => {
               <Text
                 style={{
                   marginTop: responsiveHeight(2),
-                  color: '#7E7E7E',
+                  color: '#01796F',
                   textAlign: 'center',
                   ...Constanta({
                     font: 'semibold',
