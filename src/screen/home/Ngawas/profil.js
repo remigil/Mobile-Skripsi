@@ -35,27 +35,27 @@ export default props => {
       },
       tipeKendaraan: {
         value:
-          paramsData?.type_brand_vehicle === undefined
+          paramsData?.type_vehicle === undefined
             ? ''
-            : paramsData?.type_brand_vehicle?.type_name,
+            : paramsData?.type_vehicle?.type_name,
         is_require: false,
         placeholder:
-          paramsData?.type_brand_vehicle === undefined
+          paramsData?.type_vehicle === undefined
             ? 'Pilih Model'
-            : paramsData?.type_brand_vehicle?.type_name,
+            : paramsData?.type_vehicle?.type_name,
         children: [],
       },
       merk: {
         // value: '',
         value:
-          paramsData?.brand_vehicle === undefined
+          paramsData?.brand_vehicles === undefined
             ? ''
-            : paramsData?.brand_vehicle?.brand_name,
+            : paramsData?.brand_vehicles?.brand_name,
         is_require: false,
         placeholder:
-          paramsData?.brand_vehicle === undefined
+          paramsData?.brand_vehicles === undefined
             ? 'Pilih Merk'
-            : paramsData?.brand_vehicle?.brand_name,
+            : paramsData?.brand_vehicles?.brand_name,
         children: [],
       },
     },
@@ -82,12 +82,12 @@ export default props => {
       .then(hasil => {
         // console.log(hasil.data.data);
         // let refactor = [];
-        // console.log(paramsData?.type_brand_vehicle?.type_name, 'nah nah');
+        // console.log(paramsData?.type_vehicle?.type_name, 'nah nah');
         let refactor = hasil.data.data.map(list => ({
           ...list,
           title: list.type_name,
           valueToDatabase: list.id,
-          brand_vehicle: list.brand_vehicle.map(ers => ({
+          brand_vehicles: list.brand_vehicles.map(ers => ({
             ...ers,
             title: ers.brand_name,
             valueToDatabase: ers.id,
@@ -236,7 +236,7 @@ export default props => {
                 marginLeft: responsiveWidth(8),
                 marginBottom: responsiveHeight(2),
               }}>
-              Nomor Registrasi
+              Nomor Registrasi / Nomor Polisi
             </Text>
             <View
               style={{
@@ -343,7 +343,7 @@ export default props => {
                   let datas = jenisMerk.filter(er => er.id === value);
                   setListMerk([]);
                   setTimeout(() => {
-                    setListMerk(datas[0].brand_vehicle);
+                    setListMerk(datas[0].brand_vehicles);
                   }, 1000);
                   setFormProfilKendaraan({
                     ...formProfilKendaraan,
@@ -362,7 +362,7 @@ export default props => {
                 marginTop: heightPercentageToDP('1%'),
               }}>
               <DropdownOption
-                titleMaster={'Model Kendaraan'}
+                titleMaster={'Merk Kendaraan'}
                 AccordianData={{
                   title: 'Pilih Model',
                   data: listMerk,

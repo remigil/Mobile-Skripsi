@@ -17,7 +17,7 @@ import {BaseContainer, TouchableGradient} from '../../../component';
 // import QRCode from 'react-native-qrcode-svg';
 import LinearGradient from 'react-native-linear-gradient';
 import {useSelector} from 'react-redux';
-import {GetNgawaS} from '../../../repositories/ngawas';
+import {GetNgawaS,  NgawasUpdate} from '../../../repositories/ngawas';
 import Constanta from '../../../lib/Constanta';
 import {
   responsiveFontSize,
@@ -79,6 +79,51 @@ export default props => {
 
   const {params: paramsData} = props.route;
   console.log(paramsData, 'ini params dataaa woy');
+  const updateNgawas = () => {
+    setIsLoading(true);
+    NgawasUpdate (paramsData)
+      .then(ok => {
+        console.log('ok', ok.data);
+
+        if (!ok.success) {
+          // alert(ok.message + ',' + JSON.stringify(ok.data));
+          setBasicAlertProps({
+            basicAlertVisible: true,
+            basicAlertShowButton: true,
+            withTitle: true,
+            basicAlertTitle: 'Gagal',
+            basicAlertMessage: ok.message,
+            basicAlertOnOk: () => {
+              closeBasicAlert();
+            },
+            basicAlertOkBtnOnly: true,
+            basicAlertBtnOkText:
+              'Silahkan Coba Kembali setelah dengan data sebelumnya',
+          });
+        } else {
+          // alert(ok.data);
+          setBasicAlertProps({
+            basicAlertVisible: true,
+            basicAlertShowButton: true,
+            withTitle: true,
+            basicAlertTitle: 'Berhasil',
+            basicAlertMessage: ok.message,
+            basicAlertOnOk: () => {
+              props.navigation.navigate('PanicButton', item)
+              closeBasicAlert();
+            },
+            basicAlertOkBtnOnly: true,
+            basicAlertBtnOkText: 'OK',
+          });
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
   return (
     <BaseContainer
       withActionBar={true}
@@ -104,7 +149,7 @@ export default props => {
         ) : (
           <View
             style={{
-              marginTop: heightPercentageToDP('2%'),
+              marginTop: heightPercentageToDP('-2%'),
               alignItems: 'center',
             }}>
             <View
@@ -269,6 +314,50 @@ export default props => {
                     }),
                   }}>
                   Lihat Ngawas Map
+                </Text>
+              </LinearGradient>
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => {
+                  updateNgawas();
+                  props.navigation.jumpTo('PanicButton', {
+                    ...paramsData,
+                  });
+
+              }}
+              style={[
+                {
+                  width: widthPercentageToDP('80%'),
+                  height: heightPercentageToDP('7%'),
+                  borderRadius: 5,
+                  marginTop: heightPercentageToDP('1%'),
+                },
+                props.styles,
+              ]}>
+              <LinearGradient
+                start={{x: 1.0, y: 1.0}}
+                end={{x: 0.0, y: 0.4}}
+                locations={[0, 0.7]}
+                colors={['#01796F', '#01796F']}
+                style={{
+                  flex: 1,
+                  borderRadius: 5,
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  height: heightPercentageToDP('80%'),
+                }}>
+                {/* <CarbonMap /> */}
+                <Text
+                  style={{
+                    color: '#FFF',
+                    textAlign: 'center',
+                    marginLeft: 10,
+                    ...Constanta({
+                      font: 'regular',
+                    }),
+                  }}>
+                  Selesai Perjalanan
                 </Text>
               </LinearGradient>
             </TouchableOpacity>

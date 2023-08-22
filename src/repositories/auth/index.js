@@ -5,6 +5,9 @@ import {
   APISenderBasic,
   API_PASSWORD_VALUE,
   API_PHONE_VALUE,
+  API_email,
+  API_person_name,
+  API_id_google,
   ContentType,
   httpMethod,
   SinfoAttr,
@@ -23,9 +26,6 @@ export const AuthLogin = async (no_hp, password) => {
       ...SinfoAttr,
     });
 
-    // console.log('=======================');
-    // console.log(APICONFIG.BASE_URL + APICONFIG.AUTH_URL.LOGIN);
-
     return await APISenderBasic(
       APICONFIG.BASE_URL + APICONFIG.AUTH_URL.LOGIN,
       httpMethod.POST,
@@ -39,6 +39,50 @@ export const AuthLogin = async (no_hp, password) => {
     return APIResponse;
   }
 };
+export const LoginGoogle = async () => {
+  try {
+    return await APISenderBasic(
+      APICONFIG.BASE_URL + APICONFIG.AUTH_URL.LOGIN_GOOGLE,
+      httpMethod.POST,
+      null,
+      null,
+      ContentType.json,
+      res => res,
+    );
+  } catch (e) {
+    console.log(e.message);
+    return APIResponse;
+  }
+};
+// export const LoginGoogle = async (email, person_name, id_google) => {
+//   try {
+//     let formData = new FormData();
+//     formData.append('email', email);
+//     formData.append('name', person_name);
+//     formData.append('uid', id_google);
+//     await Sinfo.setItem(API_email, email, {
+//       ...SinfoAttr,
+//     });
+//     await Sinfo.setItem(API_person_name, person_name, {
+//       ...SinfoAttr,
+//     });
+//     await Sinfo.setItem(API_id_google, id_google, {
+//       ...SinfoAttr,
+//     });
+
+//     return await APISenderBasic(
+//       APICONFIG.BASE_URL + APICONFIG.AUTH_URL. LOGIN_GOOGLE,
+//       httpMethod.POST,
+//       formData,
+//       null,
+//       ContentType.formData,
+//       res => res,
+//     );
+//   } catch (e) {
+//     console.log(e.message);
+//     return APIResponse;
+//   }
+// };
 
 export const AuthRegister = async (no_hp, password, nama, email) => {
   try {

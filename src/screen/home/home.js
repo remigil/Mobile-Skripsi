@@ -116,6 +116,7 @@ export default props => {
                 <Text
                   style={{
                     color: '#FFFFFF',
+                    alignItems: 'center',
                   }}>
                   - SELAMAT DATANG WARGA KOTA BOGOR -
                 </Text>
@@ -136,6 +137,7 @@ export default props => {
                  <Text
                   style={{
                     color: '#01796F',
+                    alignItems: 'center',
                   }}>
                   - DEAR MASYARAKAT KOTA BOGOR - 
                   </Text>
@@ -144,19 +146,24 @@ export default props => {
             <View
               style={{
                 // flex: 1,
-                // alignItems: 'center',
+                alignItems: 'center',
                 top: -30,
-                left: 0,
-                right: 0,
+                // left: 0,
+                // right: 0,
+                textAlign: 'justify',
                 paddingHorizontal: widthPercentageToDP('5%'),
               }}>
                  <Text
                   style={{
                     color: '#01796F',
                     fontsize: 15,
+                    alignItems: 'center',
+                    textAlign: 'justify',
                   }}>
-                   Aplikasi Bogor Ngawas hadir untuk mempermudah{`\n`}Masyarakat Kota Bogor dalam mencari rute perjalanan yang
-                {`\n`}memanfaatkan layanan Location Based Service (LBS) {`\n`}yang disediakan penyedia layanan internet serta telah {`\n`}menggabungkannya dengan Global Positioning System (GPS) yang terdapat pada perangkat smartphone anda.
+                   Aplikasi Bogor Ngawas hadir untuk mempermudah Masyarakat Kota Bogor dalam 
+                   mencari rute perjalanan yang memanfaatkan layanan Location Based Service 
+                   (LBS)yang disediakan penyedia layanan internet serta telah menggabungkannya 
+                   dengan Global Positioning System (GPS) yang terdapat pada perangkat smartphone anda.
                   </Text>
             </View>
               <View

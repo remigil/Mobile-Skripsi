@@ -552,7 +552,7 @@ export default props => {
                   style={{
                     width: responsiveWidth(10),
                     height: responsiveHeight(1),
-                    backgroundColor: '#FF0000',
+                    backgroundColor: '#000000',
                     borderRadius: responsiveWidth(2),
                   }}></View>
                 <View

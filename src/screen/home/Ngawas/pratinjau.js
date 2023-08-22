@@ -378,7 +378,7 @@ export default props => {
                           }),
                           marginBottom: widthPercentageToDP('1.5%'),
                         }}>
-                        Model Kendaraan
+                        Merk Kendaraan
                       </Text>
                     </View>
                     <View
@@ -414,7 +414,7 @@ export default props => {
                           }),
                           marginBottom: widthPercentageToDP('1.5%'),
                         }}>
-                        Nomor Registrasi
+                        Nomor Registrasi / Nomor Polisi
                       </Text>
                     </View>
                     <View

@@ -471,7 +471,7 @@ export default props => {
   const [index, setIndex] = React.useState(0);
   const {auth} = useSelector(state => state);
   const [routes] = React.useState([
-    {key: 'first', title: 'Data Diri'},
+    // {key: 'first', title: 'Data Diri'},
     {key: 'second', title: 'Data Kendaraan'},
   ]);
   const layout = useWindowDimensions();
@@ -479,7 +479,7 @@ export default props => {
     dataKendaraan: props.route.params != undefined ? [props.route.params] : [],
   };
   const [dataKendaraan, setDataKendaraan] = useState(initState.dataKendaraan);
-  // console.log(initState);
+  console.log(initState);
   const [modal, setModal] = useState(false);
   return (
     <BaseContainer

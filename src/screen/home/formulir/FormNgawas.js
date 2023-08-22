@@ -309,7 +309,7 @@ export default props => {
                         font: 'regular',
                       }),
                     }}>
-                    Masa Berlaku Sampai :{' '}
+                    Sampai :{' '}
                     {moment(dataNgawas.validity_period).format('DD MMMM YYYY')}
                   </Text>
                 </View>

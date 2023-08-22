@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "574559979289",
+    "project_id": "skripsi-f6870",
+    "storage_bucket": "skripsi-f6870.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574559979289:android:db4a8aff8f5fc9f5b9e788",
+        "android_client_info": {
+          "package_name": "com.k3iumum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574559979289-fei2jkosjckdlt32ftrkbdlth9g68p3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.k3iumum",
+            "certificate_hash": "2032c7c7b55def889c40bb2d6db58a6d85941080"
+          }
+        },
+        {
+          "client_id": "574559979289-r75tkvjrk7ogre3solg4uvq36p8qor7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADQbOIl1ollaSpkAlm8oNR2vEjd5nbhjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574559979289-r75tkvjrk7ogre3solg4uvq36p8qor7m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

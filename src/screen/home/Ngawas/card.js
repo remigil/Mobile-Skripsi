@@ -32,7 +32,7 @@ export default props => {
         console.log({response: response?.data?.data});
         setDataNgawas(response.data.data[0]);
         setDataPenumpang(response.data.data[0].penumpangs.length);
-        setDataKendaraan(response.data.data[0].type_brand_vehicle.type_name);
+        setDataKendaraan(response.data.data[0].type_vehicle.type_name);
         console.log('nah', response.data.data[0]);
       })
       .catch(err => {
@@ -133,7 +133,7 @@ export default props => {
                 }),
               }}>
               Berlaku untuk {dataPenumpang} orang dan 1 {dataKendaraan}
-              {/* {dataNgawas.type_brand_vehicle.type_name} */}
+              {/* {dataNgawas.type_vehicle.type_name} */}
             </Text>
             <View>
               <Text
@@ -173,10 +173,12 @@ export default props => {
                 Alhamdulillahil ladzi sakhkhoro lana hadza wa ma kunna lahu
                 muqrinina wa inna ila rabbina lamunqalibun.
               </Text>
-              <Text
+              {/* <Text
                 style={{
                   color: '#000',
                   lineHeight: 25,
+                  textAlign: 'justify',
+                  justifyContent: 'center',
                   ...Constanta({
                     font: 'regular',
                   }),
@@ -184,7 +186,7 @@ export default props => {
                 Artinya: “Segala puji bagi Allah yang telah menundukkan semua
                 ini bagi kami, padahal sebelumnya kami tidak mampu menguasainya,
                 dan sesungguhnya hanya kepada Tuhan kami-lah kami akan kembali.”
-              </Text>
+              </Text> */}
             </View>
             <Text
               style={{

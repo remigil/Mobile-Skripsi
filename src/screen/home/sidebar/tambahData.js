@@ -82,7 +82,7 @@ export default props => {
           ...list,
           title: list.type_name,
           valueToDatabase: list.id,
-          brand_vehicle: list.brand_vehicle.map(ers => ({
+          brand_vehicles: list.brand_vehicles.map(ers => ({
             ...ers,
             title: ers.brand_name,
             valueToDatabase: ers.id,
@@ -205,7 +205,7 @@ export default props => {
                 marginLeft: responsiveWidth(7.5),
                 marginBottom: responsiveHeight(2),
               }}>
-              Nomor Registrasi
+              Nomor Registrasi / Nomor Polisi
             </Text>
             <View
               style={{
@@ -348,7 +348,7 @@ export default props => {
                   let datas = jenisMerk.filter(er => er.id === value);
                   setListMerk([]);
                   setTimeout(() => {
-                    setListMerk(datas[0].brand_vehicle);
+                    setListMerk(datas[0].brand_vehicles);
                   }, 1000);
                   setFormProfilKendaraan({
                     ...formProfilKendaraan,
@@ -367,7 +367,7 @@ export default props => {
                 marginTop: heightPercentageToDP('1%'),
               }}>
               <DropdownOption
-                titleMaster={'Model Kendaraan'}
+                titleMaster={'Merk Kendaraan'}
                 AccordianData={{
                   title: 'Pilih Model',
                   data: listMerk,

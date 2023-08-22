@@ -362,7 +362,7 @@ export default props => {
         </Text> */}
         {/* Nomor Polisi */}
         <DropdownOption
-          titleMaster={'Nomor Registrasi'}
+          titleMaster={'Nomor Registrasi / Nomor Polisi'}
           AccordianData={{
             title: isSelectPolisi ? isSelectPolisi : 'Pilih Nopol',
             data: formKeterangan.nopol.data,
@@ -605,7 +605,7 @@ export default props => {
             backgroundColor: '#01796F',
             justifyContent: 'center',
             alignItems: 'center',
-            width: responsiveWidth(25),
+            width: responsiveWidth(35),
           }}>
           {/* <IconLanjut /> */}
           <Text

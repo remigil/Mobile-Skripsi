@@ -57,7 +57,7 @@ export default props => {
               font: 'bold',
             }),
           }}>
-          Wilujeung Sumping
+          Selamat Datang 
         </Text>
       </View>
 

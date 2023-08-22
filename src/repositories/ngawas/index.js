@@ -112,6 +112,21 @@ export const AddNgawas = async data => {
     return APIResponse;
   }
 };
+export const NgawasUpdate = async data => {
+  try {
+    return await APISender(
+      APICONFIG.BASE_URL + APICONFIG.TRIPON_URL.SCHEDULE_TO_HISTORY,
+      httpMethod.PUT,
+      data,
+      null,
+      ContentType.json,
+      res => res,
+    );
+  } catch (e) {
+    console.log(e.message);
+    return APIResponse;
+  }
+};
 
 export const GetNgawaS = async () => {
   try {

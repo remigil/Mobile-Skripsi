@@ -6,3 +6,4 @@ export { default as VerifikasiScreen } from './verifikasi';
 export { default as LupaPasswordScreen } from './lupaPassword';
 export { default as VerifikasiSandiScreen } from './verifikasiSandi';
 export { default as KonfirmasiSandiScreen } from './konfirmasiSandi';
+export { default as HomeScreen} from '../home/home';

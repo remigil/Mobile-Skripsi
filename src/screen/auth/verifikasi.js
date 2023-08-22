@@ -104,22 +104,43 @@ export default props => {
                 basicAlertVisible: true,
                 basicAlertShowButton: true,
                 withTitle: true,
-                basicAlertTitle: index.message,
+                basicAlertTitle: 'Berhasil',
+                basicAlertMessage: index.message,
+
                 basicAlertOnOk: () => {
                   closeBasicAlert();
+                  props.navigation.navigate('auth.login');
                 },
                 basicAlertOkBtnOnly: true,
-                basicAlertBtnOkText: 'Coba Lagi',
+                basicAlertBtnOkText: 'Selanjutnya',
               });
             }
           })
-          .catch(err => console.log(err))
+          .catch(err => {
+            setBasicAlertProps({
+              basicAlertVisible: true,
+              basicAlertShowButton: true,
+              withTitle: true,
+              basicAlertTitle: 'Berhasil',
+              basicAlertMessage: err.message,
+              basicAlertOnOk: () => {
+                closeBasicAlert();
+                props.navigation.navigate('auth.login');
+              },
+              basicAlertOkBtnOnly: true,
+              basicAlertBtnOkText: 'Selanjutnya',
+            });
+          })
           .finally(() => {});
       } else {
-        Alert.alert('nah');
+        alert('Field ' + isFilledField + ' masih kosong');
       }
-    } catch (error) {
-      console.log(error);
+    } catch (e) {
+      console.log(e);
+    } finally {
+      () => {
+        setIsLoading(false);
+      };
     }
   };
   return (

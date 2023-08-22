@@ -48,6 +48,7 @@ const FirstRoute = ({...props}) => {
         console.log({responsesss: response.data.data});
 
         setDataSchedule(response.data.data);
+        setDataNgawas(response.data.data);
       })
       .catch(err => {
         console.log({err});
@@ -61,6 +62,7 @@ const FirstRoute = ({...props}) => {
   const [dataSchedule, setDataSchedule] = useState([]);
   // console.log('ini data tripon yang lu mau', dataNgawas);
   console.log('ini data schedule', dataSchedule);
+  console.log('ini data ngawas', dataNgawas);
 
   const navigation = useNavigation();
 
@@ -248,7 +250,7 @@ const SecondRoute = ({...props}) => {
               {dataHistory.map(item => (
                 <Pressable
                   onPress={() => {
-                    navigation.navigate('CardHistory', item);
+                    navigation.navigate('PanicButton', item);
                   }}
                   key={item.id}
                   style={{

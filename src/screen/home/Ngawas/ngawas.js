@@ -142,7 +142,7 @@ export default props => {
       basicAlertProps={basicAlertProps}
       withActionBar={true}
       actionBarProps={{
-        title: 'Bogor Ngawas',
+        title: 'PERJALANAN',
         titleStyle: {
           color: 'white',
           backgrounColor: '#FCFDFF',
@@ -210,10 +210,11 @@ export default props => {
                       }),
                       color: 'black',
                     }}>
-                    Fitur utama dalam aplikasi Bogor Ngawas adalah fitur 
-                    perjalanan yang memungkinkan Anda dengan mudah menemukan 
-                    rute perjalanan yang Anda inginkan. Sebelum menggunakan fitur ini, 
-                    Anda diharapkan untuk mendaftarkan kendaraan Anda terlebih dahulu.
+                    Fitur utama dalam aplikasi Bogor Ngawas adalah fitur
+                    perjalanan yang membantu Anda dengan mudah menemukan
+                    rute perjalanan yang Anda inginkan. Sebelum menggunakan
+                    fitur ini, Anda diharapkan untuk mendaftarkan kendaraan Anda
+                    terlebih dahulu.
                   </Text>
                 </View>
                 {dataKendaraan.length ? (
@@ -233,6 +234,7 @@ export default props => {
                         style={{
                           flexDirection: 'row',
                           justifyContent: 'space-between',
+                          
                         }}>
                         <View>
                           <Text
@@ -249,17 +251,18 @@ export default props => {
                               color: '#4E4E4E',
                               ...Constanta({
                                 font: 'regular',
+                                alignSelf: 'center'
                               }),
                             }}>
                             {/* {kendaraan.tipe_kendaraan_title} */}
-                            {kendaraan?.type_brand_vehicle?.type_name}
+                            {kendaraan?.type_vehicle?.type_name}
                           </Text>
                         </View>
                         <View
                           style={{
                             alignSelf: 'center',
                           }}>
-                          <TouchableOpacity
+                      {/* <TouchableOpacity
                             onPress={() => {
                               props.navigation.navigate(
                                 'ngawas.profilKendaraan',
@@ -269,17 +272,17 @@ export default props => {
                             style={{
                               flexDirection: 'row',
                               justifyContent: 'space-around',
-                            }}>
+                            }}> */}
                             <Text
                               style={{
                                 ...Constanta({
                                   font: 'regular',
                                 }),
                               }}>
-                              Edit Data{' '}
+                              Kendaraan Terdaftar{' '}
                             </Text>
-                            <IconEditData />
-                          </TouchableOpacity>
+                            {/* </TouchableOpacity> */}
+                            {/* <IconEditData /> */}
                         </View>
                       </View>
                       <View
@@ -316,9 +319,11 @@ export default props => {
                       }),
                       color: 'black',
                     }}>
-                    Aplikasi Bogor Ngawas yaitu aplikasi yang dapat Memonitoring
-                    perjalanan warga bogor, untuk mengetahui penyimpangan rute
-                    yang ingin di lewati.
+                    Fitur utama dalam aplikasi Bogor Ngawas adalah fitur
+                    perjalanan yang membantu Anda dengan mudah menemukan
+                    rute perjalanan yang Anda inginkan. Sebelum menggunakan
+                    fitur ini, Anda diharapkan untuk mendaftarkan kendaraan Anda
+                    terlebih dahulu.
                   </Text>
                 </View>
                 <Image

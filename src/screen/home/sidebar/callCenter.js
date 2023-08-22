@@ -54,11 +54,12 @@ export default props => {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'center',
+            
           }}>
           <LogoCC />
           <View
             style={{
-              marginTop: responsiveHeight(2.5),
+              marginTop: responsiveHeight(-20),
             }}>
             <Text
               style={{
@@ -90,68 +91,87 @@ export default props => {
               <Text
                 style={{
                   color: '#01796F',
-                  textAlign: 'center',
+                  textAlign: 'justify',
+                  alignItems: 'center',
                   ...Constanta({
                     font: 'regular',
                   }),
                   fontSize: responsiveFontSize(2),
-                  lineHeight: 20,
+                  lineHeight: 25,
                   marginTop: responsiveHeight(2),
                 }}>
-                Aplikasi Bogor Ngawas hadir untuk{`\n`} mempermudah Masyarakat Kota Bogor dalam mencari rute perjalanan 
-                {`\n`}
-                Dan Bogor Ngawas ini terkoneksi pada web Bogor ngawas yang Memberikan Informasi Kepada pihak {`\n`}Berwenang berdasarkan data yang terdaftar {`\n`}serta memberikan keamanan Kepada Masyarakat yang sedang melakukan perjalanan.
+                Aplikasi Bogor Ngawas hadir untuk mempermudah Masyarakat Kota Bogor dalam mencari rute perjalanan.
+                Bogor Ngawas ini terkoneksi pada web Bogor ngawas yang Memberikan Informasi Kepada pihak Berwenang 
+                berdasarkan data yang terdaftar serta memberikan keamanan Kepada Masyarakat yang sedang melakukan 
+                perjalanan.
               </Text>
-              <Text
-                style={{
-                  marginTop: responsiveHeight(2),
-                  color: '#01796F',
-                  textAlign: 'center',
-                  ...Constanta({
-                    font: 'semibold',
-                  }),
-                  fontSize: responsiveFontSize(2),
-                  lineHeight: 20,
-                }}>
-                Sekian Dan{`\n`} Terima Kasih
-              </Text>
+              
+             
             </View>
             {/* <View></View> */}
           </View>
+          <Text
+              style={{
+                textAlign: 'center',
+                color: '#01796F',
+                fontSize: responsiveFontSize(2),
+                marginTop: heightPercentageToDP('20%'),
+
+                ...Constanta({
+                  font: 'bold',
+                }),
+              }}>
+             Menghubungi Hotline Admin
+            </Text>
           <View
             style={{
               flexDirection: 'row',
-              marginTop: heightPercentageToDP('4%'),
+              marginTop: heightPercentageToDP('1%'),
             }}>
-            {/*  */}
+              
+                <TouchableOpacity
+              onPress={() =>
+                // Linking.openURL(
+                //   `whatsapp://send?phone=${contact}$text=${message}`,
+                // );
+                Linking.openURL('https://wa.me/6285881691629')
+              }>
               <View
                 style={{
                   width: widthPercentageToDP('40%'),
-                  backgroundColor: '#01796FD',
-                  borderRadius: 20,
-                  marginHorizontal: 10,
+                  backgroundColor: '#A2C7FD',
+                  borderRadius: 28,
+                  marginHorizontal: 13,
                   justifyContent: 'center',
                   alignItems: 'center',
                   paddingVertical: 18,
                 }}>
-                <Logo />
+                <CC_Wa />
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    color: '#01796F',
+                    marginTop: 10,
+                    textAlign: 'center',
+                    ...Constanta({
+                      font: 'regular',
+                    }),
+                    fontSize: 10,
+                  }}>
+                  Hubungi{' '}
+                  {
+                    <Text
+                      style={{
+                        ...Constanta({
+                          font: 'bold',
+                        }),
+                      }}>
+                      WHATSAPP
+                    </Text>
+                  }
+                </Text>
               </View>
-          </View>
-          <View
-            style={{
-              marginTop: responsiveHeight(8),
-            }}>
-            <Text
-              style={{
-                color: 'black',
-                textAlign: 'center',
-                fontSize: 10,
-                ...Constanta({
-                  font: 'regular',
-                }),
-              }}>
-              Bogor Ngawas
-            </Text>
+            </TouchableOpacity>
           </View>
         </View>
       </ImageBackground>

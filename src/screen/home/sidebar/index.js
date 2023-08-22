@@ -650,10 +650,10 @@ const SecondRoute = ({kendaraan, ...props}) => {
 
   if (scrWidth > 411 || scrHeight <= 731) {
     lebarGambar = {width: widthPercentageToDP('41.5%')};
-    tinggiGambar = {height: heightPercentageToDP('30%')};
+    tinggiGambar = {height: heightPercentageToDP('25%')};
   } else {
     lebarGambar = {width: widthPercentageToDP('52%')};
-    tinggiGambar = {height: heightPercentageToDP('32%')};
+    tinggiGambar = {height: heightPercentageToDP('20%')};
   }
   const [isLoading, setIsLoading] = useState(false);
   const getKendaraan = () => {
@@ -822,7 +822,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
                               }),
                             }}>
                             {/* {kendaraan.tipe_kendaraan_title} */}
-                            {kendaraan?.type_brand_vehicle?.type_name}
+                            {kendaraan?.type_vehicle?.type_name}
                           </Text>
                         </View>
                         <View
@@ -895,12 +895,13 @@ const SecondRoute = ({kendaraan, ...props}) => {
               </>
             )}
 
-            <View
+            {/* <View
               style={{
                 flexDirection: 'row',
                 width: widthPercentageToDP('100%'),
                 justifyContent: 'space-evenly',
                 // justifyContent: 'space-around',
+                alignItems: 'center',
                 marginVertical: heightPercentageToDP('2%'),
               }}>
               <TouchableGradient
@@ -908,8 +909,8 @@ const SecondRoute = ({kendaraan, ...props}) => {
                 icon={<TambahKendaraan />}
                 onPressData={() => props.navigation.navigate('tambahData')}
                 {...props}
-              />
-              {dataKendaraan.length ? (
+              /> */}
+              {/* {dataKendaraan.length ? (
                 <>
                   {!formulirReady ? (
                     <TouchableOpacity
@@ -939,7 +940,7 @@ const SecondRoute = ({kendaraan, ...props}) => {
                               basicAlertMessage: null,
                               iconClose: false,
                             });
-                            // deleteKendaraanFunc(id);
+                            
                           },
                           basicAlertOnClosed: () => {
                             setBasicAlertProps({
@@ -974,29 +975,15 @@ const SecondRoute = ({kendaraan, ...props}) => {
                     </TouchableOpacity>
                   ) : (
                     <TouchableWithoutGradient
-                      title={'Isi Formulir'}
-                      icon={
-                        <Image
-                          source={require('../../../assets/ngawas/tambah_formulir.png')}
-                          style={{
-                            width: 17.5,
-                            height: 20,
-                          }}
-                        />
-                      }
-                      redirect={'ngawas.tanggalKeberangkatan'}
-                      {...props}
                     />
                   )}
                 </>
-              ) : (
+              ) : 
+              (
                 <TouchebleDisable
-                  title={'Isi Formulir'}
-                  icon={<IsiFormulir />}
-                  {...props}
                 />
-              )}
-            </View>
+              )} */}
+            {/* </View> */}
           </View>
         </ScrollView>
       )}
@@ -1044,15 +1031,16 @@ export default props => {
   const layout = useWindowDimensions();
 
   const initState = {
-    // dataKendaraan: props.route.params != undefined ? [props.route.params] : [],
+    dataKendaraan: props.route.params != undefined ? [props.route.params] : [],
     formulir: {
       foto: {
         value: '',
       },
     },
+    
   };
-  // console.log('pliss ada dongg', initState.formulir.foto);
-  // console.log('setformformulir', setFormFormulir);
+  console.log('pliss ada dongg', initState.formulir.foto);
+  console.log('setformformulir', setFormFormulir);
   const [formFormulir, setFormFormulir] = useState(initState.formulir);
 
   const compProps = {
@@ -1193,7 +1181,7 @@ export default props => {
               font: 'regular',
             }),
           }}>
-          Data Kendaraan Belum Lengkap
+          Pofile Akun Bogor Ngawas
         </Text>
       </View>
 

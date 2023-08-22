@@ -18,7 +18,8 @@ import {Mata, MataCoret} from '../../assets/Assets';
 import CheckBox from '@react-native-community/checkbox';
 import KeyboardAvoiding from '../../component/form/KeyboardAvoiding';
 import {authLogin as authLoginRedux} from '../../redux/auth/action';
-import {AuthLogin, GetProfileData} from '../../repositories/auth';
+import { authLoginGoogle as authLoginGoogleRedux} from '../../redux/auth/action';
+import {AuthLogin, GetProfileData,LoginGoogle} from '../../repositories/auth';
 import {BasicAlertProps} from '../../component/container/dialogContainer';
 import {
   InputTextCondition,
@@ -26,9 +27,34 @@ import {
   DialogContainer,
 } from '../../component';
 import Constanta from '../../lib/Constanta';
+import LinearGradient from 'react-native-linear-gradient';
 import {responsiveWidth} from 'react-native-responsive-dimensions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {API_AUTH_KEY} from '../../repositories/config';
+import {
+  GoogleSignin,
+  GoogleSigninButton,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
+import auth from '@react-native-firebase/auth';
+import { log } from 'react-native-reanimated';
+
+GoogleSignin.configure({
+  webClientId: '574559979289-im0c8nnjo31ha637sbqg2ssh7hjkbdqf.apps.googleusercontent.com',
+});
+const googleSignIn = async () => {
+  await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+  // Get the users ID token
+  const { idToken } = await GoogleSignin.signIn();
+
+  // Create a Google credential with the token
+  const googleCredential = await auth.GoogleAuthProvider.credential(idToken);
+
+  // Sign-in the user with the credential
+  const res = await auth().signInWithCredential(googleCredential);
+  console.log(res);
+}
+
 export default props => {
   const scrHeight = Dimensions.get('window').height;
 
@@ -39,6 +65,7 @@ export default props => {
     heightInput = {height: heightPercentageToDP('6%')};
   }
   const dispatch = useDispatch();
+  const {params: paramsData} = props.route;
   const initState = {
     login: {
       // username: {
@@ -59,11 +86,36 @@ export default props => {
     basicAlertProps: {
       ...BasicAlertProps,
     },
+    loginGoogle: {
+      email: {
+        value:
+          paramsData?.email === undefined ? '' : paramsData?.email,
+        require: true,
+        is_filled: true,
+      },
+      person_name: {
+        value: paramsData?.person_name === undefined ? '' : paramsData?.person_name,
+        require: true,
+        is_filled: true,
+      },
+      id_google: {
+        value: paramsData?.id_google === undefined ? '' : paramsData?.id_google,
+        isHidden: true,
+        require: true,
+        is_filled: true,
+      },
+    },
+    rememberMe: false,
+    basicAlertProps: {
+      ...BasicAlertProps,
+    },
+
   };
 
   const [basicAlertProps, setBasicAlertProps] = useState({
     ...initState.basicAlertProps,
   });
+  
 
   const closeBasicAlert = () => {
     setIsLoading(false);
@@ -76,6 +128,7 @@ export default props => {
     });
   };
   const [formLogin, setFormLogin] = useState(initState.login);
+  const [formLoginGoogle, setFormLoginGoogle] = useState(initState.loginGoogle);
   const [rememberMe, setRememberMe] = useState(initState.rememberMe);
   const [isLoading, setIsLoading] = useState(false);
   const [profilData, setProfilData] = useState({});
@@ -87,7 +140,7 @@ export default props => {
       let formData = new FormData();
       Object.keys(formLogin).forEach(field => {
         if (formLogin[field].value) {
-          formData.append(field, formLogin[field].value);
+          formData.append(field, formLogin [field].value);
         } else {
           isFilled = false;
           isFilledField = field;
@@ -119,24 +172,24 @@ export default props => {
         } else {
           await AsyncStorage.setItem(API_AUTH_KEY, authLogin.data.accessToken);
           setProfile(true);
-          // GetProfileData()
-          //   .then(res => {
-          //     setProfilData(res.data);
-          //     setBasicAlertProps({
-          //       basicAlertVisible: true,
-          //       basicAlertTitle: 'Login Berhasil',
-          //       basicAlertOnOk: () => {
-          //         closeBasicAlert();
-          //         dispatch(authLoginRedux(res.data));
-          //       },
-          //       basicAlertOkBtnOnly: true,
-          //       basicAlertBtnOkText: 'Masuk',
-          //     });
-          //   })
-          //   .catch(err => console.log(err))
-          //   .finally(() => {
-          //     setIsLoading(false);
-          //   });
+          GetProfileData()
+            .then(res => {
+              setProfilData(res.data);
+              setBasicAlertProps({
+                basicAlertVisible: true,
+                basicAlertTitle: 'Login Berhasil',
+                basicAlertOnOk: () => {
+                  closeBasicAlert();
+                  dispatch(authLoginRedux(res.data));
+                },
+                basicAlertOkBtnOnly: true,
+                basicAlertBtnOkText: 'Masuk',
+              });
+            })
+            .catch(err => console.log(err))
+            .finally(() => {
+              setIsLoading(false);
+            });
         }
       } else {
         setBasicAlertProps({
@@ -159,6 +212,7 @@ export default props => {
       console.log(error);
     }
   };
+  
   useEffect(() => {
     if (isProfile) {
       GetProfileData()
@@ -171,6 +225,119 @@ export default props => {
             basicAlertOnOk: () => {
               closeBasicAlert();
               dispatch(authLoginRedux(res.data));
+            },
+            basicAlertOkBtnOnly: true,
+            basicAlertBtnOkText: 'Masuk',
+            basicAlertShowButton: true,
+            withTitle: true,
+          });
+        })
+        .catch(err => {
+          console.log({error: err.message}, {err});
+        })
+        .finally(() => {
+          setIsLoading(false);
+          setProfilData(false);
+          setProfile(false);
+        });
+    }
+  }, [isProfile]);
+  const submitLoginGooogle = async (email, person_name, id_google) => {
+    try {
+      // let isFilled = true;
+      // let isFilledField = '';
+      // let formData = new FormData();
+      // Object.keys(formLoginGoogle).forEach(field => {
+      //   if (formLoginGoogle[field].value) {
+      //     formData.append(field, formLoginGoogle[field].value);
+      //   } else {
+      //     isFilled = false;
+      //     isFilledField = field;
+      //     return;
+      //   }
+      // });
+       {
+        setIsLoading(true);
+        const authLoginGoogle = await LoginGoogle(
+          // formLoginGoogle.setFormLoginGoogle('email', email),
+          // formLoginGoogle.setFormLoginGoogle('name', person_name),
+          // formLoginGoogle.setFormLoginGoogle('uid', id_google),
+        );
+        console.log({authLoginGoogle});
+        if (!authLoginGoogle.success) {
+          // console.log('0' + formLogin.phone.value);
+          setBasicAlertProps({
+            basicAlertVisible: true,
+            basicAlertTitle: 'Gagal',
+            basicAlertMessage: authLoginGoogle.message,
+            basicAlertOnOk: () => {
+              
+              closeBasicAlert();
+            },
+            basicAlertOkBtnOnly: true,
+            basicAlertBtnOkText: 'Coba lagi',
+            basicAlertBtnClosedText: 'Tutup juga',
+            basicAlertShowButton: true,
+            withTitle: true,
+          });
+        } else {
+          await AsyncStorage.setItem(API_AUTH_KEY, authLoginGoogle.data.accessToken);
+          setProfile(true);
+          GetProfileData()
+            .then(res => {
+              setProfilData(res.data);
+              setBasicAlertProps({
+                basicAlertVisible: true,
+                basicAlertTitle: 'Login Berhasil',
+                basicAlertOnOk: () => {
+                  
+                  closeBasicAlert();
+                  dispatch(authLoginGoogleRedux(res.data));
+                },
+                basicAlertOkBtnOnly: true,
+                basicAlertBtnOkText: 'Masuk',
+              });
+            })
+            .catch(err => console.log(err))
+            .finally(() => {
+              setIsLoading(false);
+            });
+        }
+      } 
+      // else {
+      //   setBasicAlertProps({
+      //     basicAlertVisible: true,
+      //     basicAlertTitle: 'Gagal',
+      //     basicAlertMessage: 'Field ' + isFilledField + ' masih kosong',
+      //     basicAlertShowButton: true,
+      //     withTitle: true,
+      //     basicAlertOnOk: () => {
+      //       closeBasicAlert();
+      //     },
+      //     basicAlertOkBtnOnly: true,
+      //     basicAlertBtnOkText: 'Ulangi lagi',
+      //     basicAlertBtnClosedText: 'Tutup juga',
+      //   });
+      //   // alert('Field ' + isFilledField + ' masih kosong');
+      //   setIsLoading(false);
+      // }
+    } 
+    catch (error) {
+    }
+  };
+  
+  useEffect(() => {
+    if (isProfile) {
+      GetProfileData()
+        .then(res => {
+          console.log({profil: res});
+          setProfilData(res.data);
+          setBasicAlertProps({
+            basicAlertVisible: true,
+            basicAlertTitle: 'Login Berhasil',
+            basicAlertOnOk: () => {
+              closeBasicAlert();
+              
             },
             basicAlertOkBtnOnly: true,
             basicAlertBtnOkText: 'Masuk',
@@ -413,6 +580,65 @@ export default props => {
                   Masuk
                 </Text>
               </Pressable>
+        <Text
+          style={{
+            textAlign: 'center',
+            marginVertical: heightPercentageToDP('2%'),
+            ...Constanta({
+              font: 'regular',
+            }),
+            color: '#01796F',
+          }}>
+          Atau
+        </Text>
+        <TouchableOpacity
+                onPress={() => {
+                  googleSignIn();
+                  submitLoginGooogle();
+                  props.navigation.navigate('home', {
+                      ...paramsData,
+                    });
+                  // props.navigation.jumpTo('home', {
+                  //   ...paramsData,
+                  // });
+
+              }}
+              style={[
+                {
+                  width: widthPercentageToDP('80%'),
+                  height: heightPercentageToDP('7%'),
+                  borderRadius: 5,
+                  marginTop: heightPercentageToDP('1%'),
+                },
+                props.styles,
+              ]}>
+              <LinearGradient
+                start={{x: 1.0, y: 1.0}}
+                end={{x: 0.0, y: 0.4}}
+                locations={[0, 0.7]}
+                colors={['#01796F', '#01796F']}
+                style={{
+                  flex: 1,
+                  borderRadius: 5,
+                  justifyContent: 'center',
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  height: heightPercentageToDP('80%'),
+                }}>
+                {/* <CarbonMap /> */}
+                <Text
+                  style={{
+                    color: '#FFF',
+                    textAlign: 'center',
+                    marginLeft: 10,
+                    ...Constanta({
+                      font: 'regular',
+                    }),
+                  }}>
+                  Login With Google
+                </Text>
+              </LinearGradient>
+            </TouchableOpacity>
               <View
                 style={{
                   flexDirection: 'row',

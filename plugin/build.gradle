@@ -10,7 +10,8 @@
 plugins {
     // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
     id 'java-gradle-plugin'
-
+    id 'com.google.gms.google-services' version '4.3.15' apply false
+    id 'com.google.gms.google-services'
     // Apply the Groovy plugin to add support for Groovy
     id 'groovy'
 }
@@ -36,7 +37,7 @@ testing {
             dependencies {
                 // functionalTest test suite depends on the production code in tests
                 implementation project
-            }
+            } 
 
             targets {
                 all {

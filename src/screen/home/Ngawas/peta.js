@@ -161,7 +161,7 @@ export default props => {
             </Marker>
             <Polyline
               coordinates={paramsData.route}
-              strokeColor={'red'}
+              strokeColor={'blue'}
               // strokeColors={'red'}
               // style={stylePolyline}
               strokeWidth={4}
@@ -208,7 +208,7 @@ export default props => {
                   }}
                   language="en"
                   strokeWidth={5}
-                  strokeColor="#00B0FF"
+                  strokeColor="#000000"
                   apikey={'AIzaSyAEY9jbE_zL8SV7c6meCf7-lV3JLcbKnlY'}
                   onStart={params => {
                     console.log(

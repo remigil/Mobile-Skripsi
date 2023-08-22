@@ -196,9 +196,9 @@ export default props => {
                               font: 'regular',
                             }),
                           }}>
-                          Edit Data{' '}
+                          Penumpang Telah ditambah{' '}
                         </Text>
-                        <IconEditData />
+                        {/* <IconEditData /> */}
                       </TouchableOpacity>
                     )}
                   </View>
@@ -271,7 +271,7 @@ export default props => {
             borderWidth: 1,
             justifyContent: 'center',
             alignItems: 'center',
-            width: responsiveWidth(25),
+            width: responsiveWidth(35),
           }}>
           {/* <IconKembali /> */}
           <Text
@@ -308,7 +308,7 @@ export default props => {
             backgroundColor: '#01796F',
             justifyContent: 'center',
             alignItems: 'center',
-            width: responsiveWidth(25),
+            width: responsiveWidth(35),
           }}>
           {/* <IconLanjut />
            */}

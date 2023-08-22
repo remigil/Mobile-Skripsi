@@ -138,7 +138,7 @@ export default props => {
           ...list,
           title: list.type_name,
           valueToDatabase: list.id,
-          brand_vehicle: list.brand_vehicle.map(ers => ({
+          brand_vehicle: list.brand_vehicles.map(ers => ({
             ...ers,
             title: ers.brand_name,
             valueToDatabase: ers.id,
@@ -272,7 +272,7 @@ export default props => {
               containerProps={{}}
               labelProps={{
                 status: true,
-                title: 'Nomor Registrasi',
+                title: 'Nomor Registrasi / Nomor Polisi',
                 style: {
                   fontSize: widthPercentageToDP('5%'),
                   color: '#01796F',
@@ -320,7 +320,7 @@ export default props => {
                 marginTop: heightPercentageToDP('1%'),
               }}>
               <DropdownOption
-                titleMaster={'Model Kendaraan'}
+                titleMaster={'Merk Kendaraan'}
                 AccordianData={{
                   title: 'Pilih Model',
                   data: listMerk,

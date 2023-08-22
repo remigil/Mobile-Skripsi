@@ -30,6 +30,7 @@ export const APICONFIG = {
     VALIDATE_FORGOT: '/forgot-password/validate_token_password',
     RESEND_FORGOT_PASS: '/forgot-password/resend_token_password',
     CHANGE_PASS: '/forgot-password/change_password',
+    LOGIN_GOOGLE : '/auth-society/loginGoogle',
   },
   DIRECTION_ROUTES: '/gmaps-api/direction-custom',
   REVERSE_GOOGLE: '/gmaps-api/reverse-geocode',
@@ -42,16 +43,17 @@ export const APICONFIG = {
     GET_MY_VEHICLE: '/public_vehicle/getbysocietyId',
     ADD_VEHICLE: '/public_vehicle/add',
     GET_VEHICLE: '/public_vehicle',
-    VEHICLE_TYPE: '/type_brand_vehicle',
+    VEHICLE_TYPE: '/type_vehicle',
     GET_VEHICLE_ID: '/public_vehicle/getId/',
     DELETE_VEHICLE: '/public_vehicle/delete',
     ADD_TRIPON: '/ngawas/add',
     GET_MY_TRIPON: '/ngawas/getbysocietyId',
     SCHEDULE: '/ngawas/schedule',
+    SCHEDULE_TO_HISTORY: '/ngawas/scheduleToHistory', 
     HISTORY: '/ngawas/history',
     CHECK_MY_TRIPON: '/ngawas/cekngawas',
   },
-  BERITA: '/news',
+  BERITA: '/news', 
   // BERITA_STAKEHOLDER: '/news/newsbycategory/',
   // CATEGORY_NEWS: '/category_news',
   GOOGLE_PLACE_PHOTO: '/gmaps-api/placePhotoGoogle',
@@ -110,11 +112,17 @@ export const API_PASSWORD_VALUE = 'password';
 export const API_USERNAME = 'person_name';
 export const API_EMAIL = 'email';
 export const API_NIK = 'no_hp';
+export const API_email = 'email';
+export const API_person_name = 'person_name';
+export const API_id_google = 'id_google';
 
 const generateAccessToken = async (attempt, token = null) => {
   const existingToken = await AsyncStorage.getItem(API_AUTH_KEY);
   const no_hp = await Sinfo.getItem(API_PHONE_VALUE, {...SinfoAttr});
   const password = await Sinfo.getItem(API_PASSWORD_VALUE, {...SinfoAttr});
+  const email = await Sinfo.getItem(API_email, {...SinfoAttr});
+  const person_name = await Sinfo.getItem(API_person_name, {...SinfoAttr});
+  const id_google = await Sinfo.getItem(API_id_google, {...SinfoAttr});
 
   if (token != null) return token;
   if (
@@ -148,6 +156,9 @@ const generateAccessToken = async (attempt, token = null) => {
 
       formData.append('no_hp', no_hp);
       formData.append('password', password);
+      formData.append('no_hp', email);
+      formData.append('name', person_name);
+      formData.append('uid', id_google);
       // console.log('no_hp', no_hp, 'password', password);
       const opts = {
         url: APICONFIG.BASE_URL + APICONFIG.AUTH_URL.LOGIN,
@@ -156,7 +167,14 @@ const generateAccessToken = async (attempt, token = null) => {
           'Content-Type': ContentType.formData,
         },
         method: 'POST',
-      };
+
+        url: APICONFIG.BASE_URL + APICONFIG.AUTH_URL.LOGIN_GOOGLE,
+        data: formData,
+        headers: {
+          'Content-Type': ContentType.formData,
+        },
+        method: 'POST'
+      }; 
 
       const res = await axios(opts);
       if (res?.data?.isSuccess) {
