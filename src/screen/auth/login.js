@@ -421,6 +421,7 @@ export default props => {
               inputProps={{
                 placeholder: 'Masukan No Telepon Seluler anda',
                 keyboardType: 'numeric',
+                maxLength: 11,
                 value: formLogin.phone.value,
                 placeholderTextColor: formLogin.phone.is_filled
                   ? '#9C9D9E'
@@ -502,36 +503,48 @@ export default props => {
                 placeholderTextColor: formLogin.password.is_filled
                   ? '#9C9D9E'
                   : '#CE2121',
-                onChangeText: value =>
-                  setFormLogin({
-                    ...formLogin,
-                    password: {
-                      ...formLogin.password,
-                      value: value,
-                      is_filled: value == '' ? false : true,
-                    },
-                  }),
+                  onChangeText: (value) => {
+                    const hasCapitalLetter = /[A-Z]/.test(value);
+                    const hasLowerCaseLetter = /[a-z]/.test(value);
+                    const isValid = hasCapitalLetter && hasLowerCaseLetter && value.length >= 8;
+                    setFormLogin((prevForm) => ({
+                      ...prevForm,
+                      password: {
+                        ...prevForm.password,
+                        value: value,
+                        is_filled: value !== '',
+                        is_valid: isValid,
+                      },
+                    }));
+                  },
                 style: {
                   flexDirection: 'row',
                   alignItems: 'center',
                   borderWidth: 1,
+                  color: '#9C9D9E',
+  
                   borderColor: formLogin.password.is_filled
                     ? '#01796F'
                     : '#CE2121',
-                  paddingLeft: widthPercentageToDP('3.5%'),
-                  borderRadius: widthPercentageToDP('2%'),
+                  paddingLeft: responsiveWidth(3.5),
+                  borderRadius: responsiveWidth(2),
                 },
               }}
               labelProps={{
                 status: true,
                 title: 'Kata Sandi',
                 style: {
-                  fontSize: widthPercentageToDP('5%'),
+                  fontSize: responsiveWidth(5),
+                  // color: '#01796F',
                   color: formLogin.password.is_filled ? '#01796F' : '#CE2121',
-                  fontWeight: '400',
-                  marginBottom: widthPercentageToDP('1.5%'),
+                  ...Constanta({
+                    font: 'semibold',
+                  }),
+                  marginBottom: responsiveWidth(1.5),
                 },
-                is_false: formLogin.password.is_filled,
+                require: formLogin.password.require,
+                is_false: !formLogin.password.is_valid && formLogin.password.is_filled,
+                otherTitleCondition: 'Pastikan password dengan benar',
               }}
             />
             <View

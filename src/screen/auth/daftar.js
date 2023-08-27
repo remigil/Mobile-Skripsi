@@ -437,7 +437,7 @@ export default props => {
               },
               require: formDaftar.password.require,
               is_false: !formDaftar.password.is_valid && formDaftar.password.is_filled,
-              otherTitleCondition: 'Harus memiliki setidaknya satu huruf kapital dan satu huruf biasa',
+              otherTitleCondition: 'Harus memiliki setidaknya satu huruf kapital dan terdiri 8 kata',
             }}
           />
           <InputTextWithIcon
@@ -538,6 +538,7 @@ export default props => {
             inputProps={{
               placeholder: 'Masukan No Telepon Seluler anda',
               keyboardType: 'numeric',
+              maxLength: 11,
               value: formDaftar.phone.value,
               onChangeText: value =>
                 setFormDaftar({
