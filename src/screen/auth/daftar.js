@@ -389,22 +389,27 @@ export default props => {
               </TouchableOpacity>
             }
             inputProps={{
-              placeholder: 'Masukan Sandi Akun Anda',
+              placeholder: 'Berisi 1 huruf besar  dan terdiri dari 8 kata',
               keyboardType: 'default',
               value: formDaftar.password.value,
               secureTextEntry: formDaftar.password.isHidden,
               placeholderTextColor: formDaftar.password.is_filled
                 ? '#9C9D9E'
                 : '#CE2121',
-              onChangeText: value =>
-                setFormDaftar({
-                  ...formDaftar,
-                  password: {
-                    ...formDaftar.password,
-                    value: value,
-                    is_filled: value == '' ? false : true,
-                  },
-                }),
+                onChangeText: (value) => {
+                  const hasCapitalLetter = /[A-Z]/.test(value);
+                  const hasLowerCaseLetter = /[a-z]/.test(value);
+                  const isValid = hasCapitalLetter && hasLowerCaseLetter && value.length >= 8;
+                  setFormDaftar((prevForm) => ({
+                    ...prevForm,
+                    password: {
+                      ...prevForm.password,
+                      value: value,
+                      is_filled: value !== '',
+                      is_valid: isValid,
+                    },
+                  }));
+                },
               style: {
                 flexDirection: 'row',
                 alignItems: 'center',
@@ -431,7 +436,8 @@ export default props => {
                 marginBottom: responsiveWidth(1.5),
               },
               require: formDaftar.password.require,
-              is_false: formDaftar.password.is_filled,
+              is_false: !formDaftar.password.is_valid && formDaftar.password.is_filled,
+              otherTitleCondition: 'Harus memiliki setidaknya satu huruf kapital dan satu huruf biasa',
             }}
           />
           <InputTextWithIcon
@@ -463,33 +469,41 @@ export default props => {
               </TouchableOpacity>
             }
             inputProps={{
-              placeholder: 'Masukan Sandi Akun Anda',
+              placeholder: 'Berisi 1 huruf besar  dan terdiri dari 8 kata',
               keyboardType: 'default',
               secureTextEntry: formDaftar.verifpassword.isHidden,
               value: formDaftar.verifpassword.value,
               placeholderTextColor: formDaftar.verifpassword.is_filled
                 ? '#9C9D9E'
                 : '#CE2121',
-              onChangeText: value =>
-                setFormDaftar({
-                  ...formDaftar,
-                  verifpassword: {
-                    ...formDaftar.verifpassword,
-                    value: value,
-                    is_filled: value == '' ? false : true,
-                  },
-                }),
-              style: {
-                flexDirection: 'row',
-                alignItems: 'center',
-                borderWidth: 1,
-                borderColor: formDaftar.verifpassword.is_filled
-                  ? '#01796F'
-                  : '#CE2121',
-                paddingLeft: responsiveWidth(3.5),
-                borderRadius: responsiveWidth(2),
-                color: '#9C9D9E',
-              },
+                onChangeText: (value) => {
+                  const isFilled = value !== '';
+                  const hasCapitalLetter = /[A-Z]/.test(value);
+                  const hasLowerCaseLetter = /[a-z]/.test(value);
+                  const isValid = isFilled && hasCapitalLetter && hasLowerCaseLetter;
+            
+                  setFormDaftar((prevForm) => ({
+                    ...prevForm,
+                    verifpassword: {
+                      ...prevForm.verifpassword,
+                      value: value,
+                      is_filled: isFilled,
+                      is_valid: isValid,
+                    },
+                  }));
+                },
+                style: {
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  borderWidth: 1,
+                  color: '#9C9D9E',
+  
+                  borderColor: formDaftar.password.is_filled
+                    ? '#01796F'
+                    : '#CE2121',
+                  paddingLeft: responsiveWidth(3.5),
+                  borderRadius: responsiveWidth(2),
+                },
             }}
             labelProps={{
               status: true,
@@ -504,18 +518,18 @@ export default props => {
               },
               require: true,
               is_false:
-                (formDaftar.verifpassword.value != formDaftar.password.value ||
-                  !formDaftar.verifpassword.is_filled) &&
-                formDaftar.verifpassword.value
-                  ? false
-                  : true,
-              otherTitleCondition:
-                (formDaftar.verifpassword.value == formDaftar.password.value &&
-                  formDaftar.password.value) ||
-                formDaftar.verifpassword.is_filled
-                  ? ''
-                  : 'Kombinasi Kata Sandi Tidak Sesuai',
-            }}
+              (!formDaftar.verifpassword.is_valid ||
+                formDaftar.verifpassword.value !== formDaftar.password.value) &&
+              formDaftar.verifpassword.value
+                ? 'Kombinasi Kata Sandi Tidak Sesuai'
+                : '',
+            otherTitleCondition:
+              (formDaftar.verifpassword.value === formDaftar.password.value &&
+                formDaftar.password.value) ||
+              formDaftar.verifpassword.is_filled
+                ? ''
+                : 'Kombinasi Kata Sandi Tidak Sesuai',
+          }}
             containerProps={{
               marginBottom: responsiveHeight(3),
             }}
@@ -629,11 +643,12 @@ export default props => {
             <Pressable
               onPress={() => submitDaftar()}
               style={{
-                backgroundColor: '#01796F',
+                backgroundColor: formDaftar.password.is_valid ? '#01796F' : '#9C9D9E',
                 width: responsiveWidth(80),
                 paddingVertical: responsiveWidth(4),
                 borderRadius: responsiveWidth(2),
-              }}>
+                opacity: formDaftar.password.is_valid ? 4 : 2,
+              }}disabled={!formDaftar.password.is_valid}>
               <Text
                 style={{
                   color: 'white',

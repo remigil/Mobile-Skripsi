@@ -44,9 +44,9 @@ export const LoginGoogle = async () => {
     return await APISenderBasic(
       APICONFIG.BASE_URL + APICONFIG.AUTH_URL.LOGIN_GOOGLE,
       httpMethod.POST,
+      formData,
       null,
-      null,
-      ContentType.json,
+      ContentType.formData,
       res => res,
     );
   } catch (e) {

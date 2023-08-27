@@ -178,7 +178,9 @@ const CustDrawer = props => {
           withTitle: true,
         });
       },
+      
     },
+    
   ];
   let styleElevation = {};
   if (Platform.OS == 'android') {

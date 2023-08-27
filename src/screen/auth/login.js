@@ -18,8 +18,8 @@ import {Mata, MataCoret} from '../../assets/Assets';
 import CheckBox from '@react-native-community/checkbox';
 import KeyboardAvoiding from '../../component/form/KeyboardAvoiding';
 import {authLogin as authLoginRedux} from '../../redux/auth/action';
-import { authLoginGoogle as authLoginGoogleRedux} from '../../redux/auth/action';
-import {AuthLogin, GetProfileData,LoginGoogle} from '../../repositories/auth';
+import {authLoginGoogle as authLoginGoogleRedux} from '../../redux/auth/action';
+import {AuthLogin, GetProfileData, LoginGoogle} from '../../repositories/auth';
 import {BasicAlertProps} from '../../component/container/dialogContainer';
 import {
   InputTextCondition,
@@ -37,23 +37,13 @@ import {
   statusCodes,
 } from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
-import { log } from 'react-native-reanimated';
+import {log} from 'react-native-reanimated';
+// import { WEB_CLIENT_ID } from '../utils/keys'
 
 GoogleSignin.configure({
-  webClientId: '574559979289-im0c8nnjo31ha637sbqg2ssh7hjkbdqf.apps.googleusercontent.com',
+  webClientId:
+    '574559979289-im0c8nnjo31ha637sbqg2ssh7hjkbdqf.apps.googleusercontent.com',
 });
-const googleSignIn = async () => {
-  await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
-  // Get the users ID token
-  const { idToken } = await GoogleSignin.signIn();
-
-  // Create a Google credential with the token
-  const googleCredential = await auth.GoogleAuthProvider.credential(idToken);
-
-  // Sign-in the user with the credential
-  const res = await auth().signInWithCredential(googleCredential);
-  console.log(res);
-}
 
 export default props => {
   const scrHeight = Dimensions.get('window').height;
@@ -88,19 +78,17 @@ export default props => {
     },
     loginGoogle: {
       email: {
-        value:
-          paramsData?.email === undefined ? '' : paramsData?.email,
+        value: '',
         require: true,
         is_filled: true,
       },
       person_name: {
-        value: paramsData?.person_name === undefined ? '' : paramsData?.person_name,
+        value: '',
         require: true,
         is_filled: true,
       },
       id_google: {
-        value: paramsData?.id_google === undefined ? '' : paramsData?.id_google,
-        isHidden: true,
+        value: '',
         require: true,
         is_filled: true,
       },
@@ -109,13 +97,11 @@ export default props => {
     basicAlertProps: {
       ...BasicAlertProps,
     },
-
   };
 
   const [basicAlertProps, setBasicAlertProps] = useState({
     ...initState.basicAlertProps,
   });
-  
 
   const closeBasicAlert = () => {
     setIsLoading(false);
@@ -133,6 +119,70 @@ export default props => {
   const [isLoading, setIsLoading] = useState(false);
   const [profilData, setProfilData] = useState({});
   const [isProfile, setProfile] = useState(false);
+
+  const googleSignIn = async () => {
+    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+    // Get the users ID token
+    const {idToken} = await GoogleSignin.signIn();
+
+    // Create a Google credential with the token
+    const googleCredential = await auth.GoogleAuthProvider.credential(idToken);
+
+    // Sign-in the user with the credential
+    const res = await auth().signInWithCredential(googleCredential);
+    console.log(res);
+    await postGoogleSignInData(
+      res.user.email,
+      res.user.displayName,
+      res.user.uid,
+    );
+  };
+  const postGoogleSignInData = async (email, name, uid) => {
+    const endpoint = 'http://108.136.137.131:3001/v1/auth-society/loginGoogle'; // Ganti dengan URL endpoint yang sesuai
+
+    const requestData = {
+      email: email,
+      person_name: name,
+      id_google: uid,
+    };
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json', // Sesuaikan dengan tipe data yang diterima oleh endpoint
+        },
+        body: JSON.stringify(requestData),
+      });
+
+      const responseGoogle = await response.json();
+
+      await AsyncStorage.setItem(API_AUTH_KEY, responseGoogle.data.accessToken);
+      setProfile(true);
+      GetProfileData()
+        .then(res => {
+          setProfilData(res.data);
+          setBasicAlertProps({
+            basicAlertVisible: true,
+            basicAlertTitle: 'Login Berhasil',
+            basicAlertOnOk: () => {
+              closeBasicAlert();
+              dispatch(authLoginRedux(res.data));
+            },
+            basicAlertOkBtnOnly: true,
+            basicAlertBtnOkText: 'Masuk',
+          });
+        })
+        .catch(err => console.log(err))
+        .finally(() => {
+          setIsLoading(false);
+        });
+
+      console.log('Response from endpoint:', responseGoogle);
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
+  };
   const submitLogin = async () => {
     try {
       let isFilled = true;
@@ -140,7 +190,7 @@ export default props => {
       let formData = new FormData();
       Object.keys(formLogin).forEach(field => {
         if (formLogin[field].value) {
-          formData.append(field, formLogin [field].value);
+          formData.append(field, formLogin[field].value);
         } else {
           isFilled = false;
           isFilledField = field;
@@ -212,7 +262,7 @@ export default props => {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     if (isProfile) {
       GetProfileData()
@@ -242,119 +292,81 @@ export default props => {
         });
     }
   }, [isProfile]);
-  const submitLoginGooogle = async (email, person_name, id_google) => {
+  // const fetch = require('node-fetch'); // Di lingkungan non-browser, seperti Node.js
+
+  // const userData = {
+  //   additionalUserInfo: {
+  //     isNewUser: false,
+  //     profile: {
+  //       // Data profil dari respons
+  //       // ...
+  //     },
+  //     providerId: 'google.com'
+  //   },
+  //   user: {
+
+  //     // Data pengguna dari respons
+  //     // ...
+  //   }
+  // };
+
+  // // Ganti dengan URL endpoint yang sesuai
+  // const endpointUrl = '108.136.137.131:3001/v1/';
+
+  // // Kirim data menggunakan metode POST
+  // fetch(endpointUrl, {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(userData)
+  // })
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     console.log('Data berhasil dikirim:', data);
+  //   })
+  //   .catch(error => {
+  //     console.error('Terjadi kesalahan:', error);
+  //   });
+
+  // const LoginGoogle = async (email, person_name, id_google) => {
+  //   const endpoint = '108.136.137.131:3001/v1/auth-society/loginGoogle'; // Ganti dengan URL endpoint yang sesuai
+
+  //   const requestData = {
+  //     email: email,
+  //     person_name: person_name,
+  //     id_google: id_google,
+  //   };
+
+  //   try {
+  //     const response = await fetch(endpoint, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': FormData, // Sesuaikan dengan tipe data yang diterima oleh endpoint
+  //       },
+  //       body: FormData(response.body),
+  //     });
+
+  //     const data = await response.formData();
+
+  //     // Lakukan sesuatu dengan data yang diterima dari endpoint
+  //     return data;
+  //   } catch (error) {
+  //     console.error('Error during login:', error);
+  //     throw error;
+  //   }
+  // };
+
+  // Kemudian dalam fungsi submitLoginGoogle
+  const submitLoginGoogle = async (email, name, uid) => {
     try {
-      // let isFilled = true;
-      // let isFilledField = '';
-      // let formData = new FormData();
-      // Object.keys(formLoginGoogle).forEach(field => {
-      //   if (formLoginGoogle[field].value) {
-      //     formData.append(field, formLoginGoogle[field].value);
-      //   } else {
-      //     isFilled = false;
-      //     isFilledField = field;
-      //     return;
-      //   }
-      // });
-       {
-        setIsLoading(true);
-        const authLoginGoogle = await LoginGoogle(
-          // formLoginGoogle.setFormLoginGoogle('email', email),
-          // formLoginGoogle.setFormLoginGoogle('name', person_name),
-          // formLoginGoogle.setFormLoginGoogle('uid', id_google),
-        );
-        console.log({authLoginGoogle});
-        if (!authLoginGoogle.success) {
-          // console.log('0' + formLogin.phone.value);
-          setBasicAlertProps({
-            basicAlertVisible: true,
-            basicAlertTitle: 'Gagal',
-            basicAlertMessage: authLoginGoogle.message,
-            basicAlertOnOk: () => {
-              
-              closeBasicAlert();
-            },
-            basicAlertOkBtnOnly: true,
-            basicAlertBtnOkText: 'Coba lagi',
-            basicAlertBtnClosedText: 'Tutup juga',
-            basicAlertShowButton: true,
-            withTitle: true,
-          });
-        } else {
-          await AsyncStorage.setItem(API_AUTH_KEY, authLoginGoogle.data.accessToken);
-          setProfile(true);
-          GetProfileData()
-            .then(res => {
-              setProfilData(res.data);
-              setBasicAlertProps({
-                basicAlertVisible: true,
-                basicAlertTitle: 'Login Berhasil',
-                basicAlertOnOk: () => {
-                  
-                  closeBasicAlert();
-                  dispatch(authLoginGoogleRedux(res.data));
-                },
-                basicAlertOkBtnOnly: true,
-                basicAlertBtnOkText: 'Masuk',
-              });
-            })
-            .catch(err => console.log(err))
-            .finally(() => {
-              setIsLoading(false);
-            });
-        }
-      } 
-      // else {
-      //   setBasicAlertProps({
-      //     basicAlertVisible: true,
-      //     basicAlertTitle: 'Gagal',
-      //     basicAlertMessage: 'Field ' + isFilledField + ' masih kosong',
-      //     basicAlertShowButton: true,
-      //     withTitle: true,
-      //     basicAlertOnOk: () => {
-      //       closeBasicAlert();
-      //     },
-      //     basicAlertOkBtnOnly: true,
-      //     basicAlertBtnOkText: 'Ulangi lagi',
-      //     basicAlertBtnClosedText: 'Tutup juga',
-      //   });
-      //   // alert('Field ' + isFilledField + ' masih kosong');
-      //   setIsLoading(false);
-      // }
-    } 
-    catch (error) {
+      setIsLoading(true);
+      const authLoginGoogle = await LoginGoogle(email, name, uid);
+    } catch (error) {
+      // Tangani error jika diperlukan
     }
   };
-  
-  useEffect(() => {
-    if (isProfile) {
-      GetProfileData()
-        .then(res => {
-          console.log({profil: res});
-          setProfilData(res.data);
-          setBasicAlertProps({
-            basicAlertVisible: true,
-            basicAlertTitle: 'Login Berhasil',
-            basicAlertOnOk: () => {
-              closeBasicAlert();
-              
-            },
-            basicAlertOkBtnOnly: true,
-            basicAlertBtnOkText: 'Masuk',
-            basicAlertShowButton: true,
-            withTitle: true,
-          });
-        })
-        .catch(err => {
-          console.log({error: err.message}, {err});
-        })
-        .finally(() => {
-          setIsLoading(false);
-          setProfilData(false);
-          setProfile(false);
-        });
-    }
-  }, [isProfile]);
+
   return (
     <View
       style={{
@@ -580,65 +592,64 @@ export default props => {
                   Masuk
                 </Text>
               </Pressable>
-        <Text
-          style={{
-            textAlign: 'center',
-            marginVertical: heightPercentageToDP('2%'),
-            ...Constanta({
-              font: 'regular',
-            }),
-            color: '#01796F',
-          }}>
-          Atau
-        </Text>
-        <TouchableOpacity
+              <Text
+                style={{
+                  textAlign: 'center',
+                  marginVertical: heightPercentageToDP('2%'),
+                  ...Constanta({
+                    font: 'regular',
+                  }),
+                  color: '#01796F',
+                }}>
+                Atau
+              </Text>
+              <TouchableOpacity
                 onPress={() => {
                   googleSignIn();
-                  submitLoginGooogle();
-                  props.navigation.navigate('home', {
-                      ...paramsData,
-                    });
+                  submitLoginGoogle();
+                  // props.navigation.navigate('home', {
+                  //   ...paramsData,
+                  // });
                   // props.navigation.jumpTo('home', {
                   //   ...paramsData,
                   // });
-
-              }}
-              style={[
-                {
-                  width: widthPercentageToDP('80%'),
-                  height: heightPercentageToDP('7%'),
-                  borderRadius: 5,
-                  marginTop: heightPercentageToDP('1%'),
-                },
-                props.styles,
-              ]}>
-              <LinearGradient
-                start={{x: 1.0, y: 1.0}}
-                end={{x: 0.0, y: 0.4}}
-                locations={[0, 0.7]}
-                colors={['#01796F', '#01796F']}
-                style={{
-                  flex: 1,
-                  borderRadius: 5,
-                  justifyContent: 'center',
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  height: heightPercentageToDP('80%'),
-                }}>
-                {/* <CarbonMap /> */}
-                <Text
+                }}
+                style={[
+                  {
+                    width: widthPercentageToDP('80%'),
+                    height: heightPercentageToDP('7%'),
+                    borderRadius: 5,
+                    marginTop: heightPercentageToDP('1%'),
+                  },
+                  props.styles,
+                ]}>
+                <LinearGradient
+                  start={{x: 1.0, y: 1.0}}
+                  end={{x: 0.0, y: 0.4}}
+                  locations={[0, 0.7]}
+                  colors={['#fffffF', '#ffffff']}
                   style={{
-                    color: '#FFF',
-                    textAlign: 'center',
-                    marginLeft: 10,
-                    ...Constanta({
-                      font: 'regular',
-                    }),
+                    backgroundColor: 'white',
+                    width: widthPercentageToDP('80%'),
+                    paddingVertical: widthPercentageToDP('4%'),
+                    borderRadius: widthPercentageToDP('2%'),
+                    borderColor: '#01796F',
+                    borderWidth: 1,
                   }}>
-                  Login With Google
-                </Text>
-              </LinearGradient>
-            </TouchableOpacity>
+                  {/* <CarbonMap /> */}
+                  <Text
+                    style={{
+                      color: '#01796F',
+                      textAlign: 'center',
+                      marginLeft: 10,
+                      ...Constanta({
+                        font: 'regular',
+                      }),
+                    }}>
+                    Login With Google
+                  </Text>
+                </LinearGradient>
+              </TouchableOpacity>
               <View
                 style={{
                   flexDirection: 'row',

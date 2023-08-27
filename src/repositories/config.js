@@ -112,17 +112,16 @@ export const API_PASSWORD_VALUE = 'password';
 export const API_USERNAME = 'person_name';
 export const API_EMAIL = 'email';
 export const API_NIK = 'no_hp';
-export const API_email = 'email';
-export const API_person_name = 'person_name';
-export const API_id_google = 'id_google';
+export const API_PERSON_NAME = 'person_name';
+export const API_ID_GOOGLE = 'id_google';
 
 const generateAccessToken = async (attempt, token = null) => {
   const existingToken = await AsyncStorage.getItem(API_AUTH_KEY);
   const no_hp = await Sinfo.getItem(API_PHONE_VALUE, {...SinfoAttr});
   const password = await Sinfo.getItem(API_PASSWORD_VALUE, {...SinfoAttr});
-  const email = await Sinfo.getItem(API_email, {...SinfoAttr});
-  const person_name = await Sinfo.getItem(API_person_name, {...SinfoAttr});
-  const id_google = await Sinfo.getItem(API_id_google, {...SinfoAttr});
+  const email = await Sinfo.getItem(API_EMAIL, {...SinfoAttr});
+  const person_name = await Sinfo.getItem(API_PERSON_NAME, {...SinfoAttr});
+  const id_google = await Sinfo.getItem(API_ID_GOOGLE, {...SinfoAttr});
 
   if (token != null) return token;
   if (

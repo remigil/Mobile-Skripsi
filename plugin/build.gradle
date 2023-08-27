@@ -10,8 +10,8 @@
 plugins {
     // Apply the Java Gradle plugin development plugin to add support for developing Gradle plugins
     id 'java-gradle-plugin'
-    id 'com.google.gms.google-services' version '4.3.15' apply false
-    id 'com.google.gms.google-services'
+    // id 'com.google.gms.google-services' version '4.3.15' apply false
+    // id 'com.google.gms.google-services'
     // Apply the Groovy plugin to add support for Groovy
     id 'groovy'
 }

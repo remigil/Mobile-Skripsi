@@ -8,6 +8,8 @@ require('moment/locale/id');
 import {AppNavigation} from './src/screen/navigations';
 import {Alert, BackHandler, Linking, LogBox} from 'react-native';
 import VersionCheck from 'react-native-version-check';
+// import React, { Fragment } from 'react';
+// import LoginController from './LoginController';
 
 LogBox.ignoreLogs([
   'ViewPropTypes will be removed',
@@ -18,6 +20,7 @@ LogBox.ignoreLogs([
   `null is not an object (evaluating 'RNVersionCheck.country')`,
   'No info about this app.'
 ]);
+// const App = () => {return (<LoginController/>);};
 
 export default App = () => {
   useEffect(() => {
